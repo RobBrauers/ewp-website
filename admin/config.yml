@@ -11,56 +11,67 @@ collections:
   - name: "paginas"
     label: "Pagina's"
     files:
+
       - label: "Homepage"
         name: "index"
-        file: "index.html"
+        file: "content/index.json"
         fields:
-          - { label: "Paginainhoud (HTML)", name: "body", widget: "text" }
+          - { label: "Eyebrow tekst (boven de titel)", name: "hero_tag", widget: "string" }
+          - { label: "Hoofdtitel", name: "hero_titel", widget: "text" }
+          - { label: "Introtekst", name: "hero_intro", widget: "text" }
+          - { label: "Swirl 1 — Tekst (Continue Waardestroom)", name: "swirl1_body", widget: "text" }
+          - { label: "Swirl 2 — Tekst (Continu Verbeteren)", name: "swirl2_body", widget: "text" }
+          - { label: "Swirl 3 — Tekst (Lerende Organisatie)", name: "swirl3_body", widget: "text" }
+          - { label: "Kern — Alinea 1", name: "kern_intro1", widget: "text" }
+          - { label: "Kern — Alinea 2", name: "kern_intro2", widget: "text" }
+          - { label: "Sectoren — Introtekst", name: "sectoren_intro", widget: "text" }
 
       - label: "Contact"
         name: "contact"
-        file: "contact.html"
+        file: "content/contact.json"
         fields:
-          - { label: "Paginainhoud (HTML)", name: "body", widget: "text" }
+          - { label: "Introtekst onder de titel", name: "hero_sub", widget: "text" }
 
       - label: "Visie — Passion Swirl"
         name: "visie-passion-swirl"
-        file: "visie-passion-swirl.html"
+        file: "content/visie-passion-swirl.json"
         fields:
-          - { label: "Paginainhoud (HTML)", name: "body", widget: "text" }
+          - { label: "Introtekst", name: "hero_intro", widget: "text" }
 
       - label: "Visie — Leiderschap"
         name: "visie-leiderschap"
-        file: "visie-leiderschap.html"
+        file: "content/visie-leiderschap.json"
         fields:
-          - { label: "Paginainhoud (HTML)", name: "body", widget: "text" }
+          - { label: "Introtekst", name: "hero_intro", widget: "text" }
+          - { label: "Diagnose — Alinea 1", name: "diagnose_intro1", widget: "text" }
+          - { label: "Diagnose — Alinea 2", name: "diagnose_intro2", widget: "text" }
 
       - label: "Visie — Hoe wij werken"
         name: "visie-hoe-wij-werken"
-        file: "visie-hoe-wij-werken.html"
+        file: "content/visie-hoe-wij-werken.json"
         fields:
-          - { label: "Paginainhoud (HTML)", name: "body", widget: "text" }
+          - { label: "Introtekst", name: "hero_intro", widget: "text" }
 
       - label: "Visie — Assessment"
         name: "visie-assessment"
-        file: "visie-assessment.html"
+        file: "content/visie-assessment.json"
         fields:
-          - { label: "Paginainhoud (HTML)", name: "body", widget: "text" }
+          - { label: "Introtekst", name: "hero_intro", widget: "text" }
 
       - label: "Sector — Industrie"
         name: "sector-industrie"
-        file: "sector-industrie.html"
+        file: "content/sector-industrie.json"
         fields:
-          - { label: "Paginainhoud (HTML)", name: "body", widget: "text" }
+          - { label: "Introtekst", name: "hero_intro", widget: "text" }
 
       - label: "Sector — Glastuinbouw"
         name: "sector-glastuinbouw"
-        file: "sector-glastuinbouw.html"
+        file: "content/sector-glastuinbouw.json"
         fields:
-          - { label: "Paginainhoud (HTML)", name: "body", widget: "text" }
+          - { label: "Introtekst", name: "hero_intro", widget: "text" }
 
       - label: "Succesverhaal — Bakkerij Fuite"
         name: "succesverhaal-bakkerij-fuite"
-        file: "succesverhaal-bakkerij-fuite.html"
+        file: "content/succesverhaal-bakkerij-fuite.json"
         fields:
-          - { label: "Paginainhoud (HTML)", name: "body", widget: "text" }
+          - { label: "Introtekst", name: "hero_intro", widget: "text" }
