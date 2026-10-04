@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>De Passion Swirl — Excellence with Passion</title>
+  <meta name="description" content="De Passion Swirl: drie samenhangende stromen die een organisatie omhoogbrengen. Lean zonder leren verstijft. Leren zonder discipline vervliegt.">
+
+  
+  <link rel="icon" type="image/png" sizes="16x16"   href="assets/img/ewp-favicon-16.png">
+  <link rel="icon" type="image/png" sizes="32x32"   href="assets/img/ewp-favicon-32.png">
+  <link rel="icon" type="image/png" sizes="64x64"   href="assets/img/ewp-favicon-64.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/img/ewp-favicon-192.png">
+  <link rel="apple-touch-icon"                      href="assets/img/ewp-favicon-512.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/main.css">
+
+  <style>
+    /* ── Overtuiging-blokken ── */
+    .ob-stack { display: flex; flex-direction: column; gap: 1px; }
+    .overtuiging-block {
+      padding: 1.75rem 2rem;
+      background: var(--cool-light);
+      position: relative;
+      border-left: 3px solid transparent;
+    }
+    .overtuiging-block:hover { border-left-color: var(--red); }
+    .ob-title { font-size: .9rem; font-weight: 500; color: var(--ink); margin-bottom: .4rem; }
+    .ob-body  { font-size: .82rem; line-height: 1.6; color: var(--ink); opacity: .6; }
+
+    /* ── Aanpak-sectie (mist) ── */
+    .aanpak-section { background: var(--mist); padding: 8rem 4rem; }
+    .aanpak-inner   { max-width: 1200px; margin: 0 auto; }
+    .aanpak-header  { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; margin-bottom: 5rem; align-items: end; }
+    .aanpak-title   { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem,3.5vw,3.5rem); font-weight: 300; line-height: 1.2; color: var(--ink); }
+    .aanpak-title em { font-style: italic; color: var(--red); }
+    .aanpak-intro   { font-size: .95rem; line-height: 1.85; color: var(--ink); opacity: .65; padding-top: 1rem; }
+
+    /* Swirl-stappen (3-kolom) */
+    .swirl-steps { display: grid; grid-template-columns: repeat(3,1fr); gap: 2px; }
+    .swirl-step  { background: white; padding: 3rem 2.5rem; position: relative; overflow: hidden; }
+    .step-accent { position: absolute; top: 0; left: 0; right: 0; height: 4px; }
+    .accent-grey  { background: var(--grey); }
+    .accent-red   { background: var(--red); }
+    .accent-amber { background: var(--amber); }
+
+    .step-num   { font-family: 'Cormorant Garamond', serif; font-size: 4rem; font-weight: 300; line-height: 1; margin-bottom: 1.5rem; color: var(--grey); opacity: .1; }
+    .step-label { font-size: .68rem; font-weight: 500; letter-spacing: .12em; text-transform: uppercase; margin-bottom: .75rem; }
+    .lbl-grey   { color: var(--grey-dark); }
+    .lbl-red    { color: var(--red); }
+    .lbl-amber  { color: var(--amber); }
+
+    .step-title   { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; font-weight: 600; color: var(--ink); margin-bottom: 1rem; line-height: 1.25; }
+    .step-body    { font-size: .88rem; line-height: 1.75; color: var(--ink); opacity: .65; margin-bottom: 1.75rem; }
+    .step-list    { display: flex; flex-direction: column; gap: .5rem; }
+    .step-item    { display: flex; align-items: center; gap: .6rem; font-size: .78rem; color: var(--ink); opacity: .7; }
+    .step-dash    { width: 16px; height: 1px; background: var(--red); flex-shrink: 0; }
+
+    /* ── Stagnatie-sectie (donker) ── */
+    .stagnatie-section { background: var(--ink); padding: 8rem 4rem; position: relative; overflow: hidden; }
+    .stagnatie-section::before {
+      content: '';
+      position: absolute;
+      top: -200px; right: -200px;
+      width: 600px; height: 600px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(227,0,27,.07) 0%, transparent 70%);
+    }
+    .stagnatie-inner  { max-width: 1200px; margin: 0 auto; }
+    .stagnatie-header { margin-bottom: 5rem; }
+
+    .stagnatie-cards { display: grid; grid-template-columns: repeat(4,1fr); gap: 2px; }
+    .stagnatie-card  {
+      padding: 2.5rem;
+      background: rgba(255,255,255,.04);
+      border: 1px solid rgba(255,255,255,.07);
+      position: relative;
+    }
+    .stagnatie-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; }
+    .sc-grey::before   { background: var(--grey); }
+    .sc-red::before    { background: var(--red); }
+    .sc-amber::before  { background: var(--amber); }
+    .sc-gold::before   { background: var(--gold); }
+
+    .stag-num      { font-family: 'Cormorant Garamond', serif; font-size: 3rem; font-weight: 300; line-height: 1; opacity: .08; color: white; margin-bottom: 1.25rem; }
+    .stag-scenario { font-size: .65rem; font-weight: 500; letter-spacing: .12em; text-transform: uppercase; margin-bottom: .75rem; }
+    .ss-grey  { color: rgba(157,158,160,.8); }
+    .ss-red   { color: #ff6060; }
+    .ss-amber { color: #e8a020; }
+    .ss-gold  { color: rgba(184,154,90,.8); }
+
+    .stag-title  { font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; font-weight: 600; color: white; margin-bottom: .75rem; line-height: 1.25; }
+    .stag-body   { font-size: .82rem; line-height: 1.7; color: rgba(255,255,255,.7); margin-bottom: 1.25rem; }
+    .stag-gevolg { padding: .9rem 1rem; background: rgba(255,255,255,.04); border-left: 2px solid rgba(255,96,96,.5); font-size: .78rem; line-height: 1.5; color: rgba(255,255,255,.62); font-style: italic; }
+
+    /* ── Wortels-sectie ── */
+    .wortels-section { padding: 8rem 4rem; max-width: 1200px; margin: 0 auto; }
+    .wortels-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: start; }
+    .tradition-block { padding: 1.75rem 2rem; border-left: 3px solid; }
+    .tb-grey  { border-color: var(--grey); background: var(--cool-light); }
+    .tb-red   { border-color: var(--red);  background: rgba(227,0,27,.04); }
+    .tb-gold  { border-color: var(--gold); background: rgba(184,154,90,.05); }
+    .tb-label { font-size: .68rem; font-weight: 500; letter-spacing: .12em; text-transform: uppercase; margin-bottom: .5rem; }
+    .tb-grey .tb-label  { color: var(--grey-dark); }
+    .tb-red .tb-label   { color: var(--red); }
+    .tb-gold .tb-label  { color: var(--gold); }
+    .tb-body  { font-size: .88rem; line-height: 1.65; color: var(--ink); opacity: .7; }
+
+    /* ── Negen-principes (donker) ── */
+    .principes-section { background: var(--ink); padding: 8rem 4rem; }
+    .principes-inner   { max-width: 1200px; margin: 0 auto; }
+
+    .principe-groep   { margin-bottom: 4rem; }
+    .pg-bar           { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem; padding-bottom: 1.5rem; border-bottom: 1px solid rgba(255,255,255,.08); }
+    .pg-num           { width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Cormorant Garamond', serif; font-size: .9rem; font-weight: 600; color: white; flex-shrink: 0; }
+    .pn-grey   { background: var(--grey-dark); }
+    .pn-red    { background: var(--red); }
+    .pn-amber  { background: var(--amber); }
+    .pg-swirl  { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; font-weight: 600; color: white; }
+
+    .principe-cards { display: grid; grid-template-columns: repeat(3,1fr); gap: 2px; }
+    .principe-card  { padding: 2.5rem; background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.06); position: relative; }
+    .principe-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; }
+    .pc-grey::before  { background: var(--grey); }
+    .pc-red::before   { background: var(--red); }
+    .pc-amber::before { background: var(--amber); }
+
+    .pc-num  { font-size: .65rem; font-weight: 500; letter-spacing: .12em; text-transform: uppercase; margin-bottom: .75rem; }
+    .pcn-grey  { color: rgba(157,158,160,.9); }
+    .pcn-red   { color: #ff6060; }
+    .pcn-amber { color: #e8a020; }
+    .pc-title  { font-family: 'Cormorant Garamond', serif; font-size: 1.15rem; font-weight: 600; color: white; margin-bottom: .75rem; }
+    .pc-body   { font-size: .82rem; line-height: 1.65; color: rgba(255,255,255,.7); margin-bottom: .9rem; }
+    .pc-zonder { font-size: .75rem; line-height: 1.5; color: #ff6060; font-style: italic; border-top: 1px solid rgba(255,255,255,.07); padding-top: .75rem; }
+
+    /* ── Leiderschap-band (goud) ── */
+    .lb-section { padding: 7rem 4rem; background: rgba(184,154,90,.05); border-top: 1px solid rgba(184,154,90,.2); border-bottom: 1px solid rgba(184,154,90,.2); }
+    .lb-inner   { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 2fr; gap: 6rem; align-items: center; }
+    .lb-title   { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem,3vw,3rem); font-weight: 300; color: var(--ink); line-height: 1.2; margin-bottom: 1.5rem; }
+    .lb-title em { font-style: italic; color: var(--red); }
+    .lb-body    { font-size: .95rem; line-height: 1.85; color: var(--ink); opacity: .7; margin-bottom: 2rem; }
+    .lb-right   { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; }
+    .lb-facet   { padding: 2rem; background: white; }
+    .lbf-num    { font-family: 'Cormorant Garamond', serif; font-size: .85rem; color: var(--gold); opacity: .6; margin-bottom: .4rem; }
+    .lbf-title  { font-size: .88rem; font-weight: 500; color: var(--ink); margin-bottom: .35rem; }
+    .lbf-journey { font-size: .78rem; font-style: italic; color: var(--red); opacity: .8; }
+
+    /* ── Responsief ── */
+    @media (max-width: 900px) {
+      .aanpak-section, .stagnatie-section, .wortels-section, .principes-section, .lb-section { padding: 5rem 2rem; }
+      .aanpak-header, .wortels-grid, .lb-inner, .lb-right { grid-template-columns: 1fr; gap: 2rem; }
+      .swirl-steps, .stagnatie-cards, .principe-cards { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<script src="assets/js/nav.js"></script>
+
+
+<!-- ── HERO ── -->
+<section class="hero">
+  <div class="hero-bg-grid"></div>
+  <div class="hero-bg-glow"></div>
+  <div class="hero-bg-glow-bottom"></div>
+  <div class="hero-content">
+    <div class="sector-badge sb-grey">Onze visie op verbeteren</div>
+    <h1 class="hero-q">
+      Lean zonder leren <em>verstijft.</em><br>
+      Leren zonder discipline<br>
+      <em>vervliegt.</em>
+    </h1>
+    <p class="hero-a">
+      Na dertig jaar in industrie en tuinbouw zien wij hetzelfde patroon. Organisaties die alleen in processen investeren zien verbeteringen niet beklijven. Organisaties die alleen leren zonder operationele structuur zien kennis verdampen. De kracht zit in het samenspel van drie stromen — aangedreven door leiderschap als kern.
+    </p>
+    <div class="cta-row">
+      <a href="#overtuiging" class="btn-primary">Onze overtuiging &rarr;</a>
+      <a href="#principes"   class="btn-ghost">De negen principes</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── OVERTUIGING ── -->
+<section class="sec" id="overtuiging">
+  <div class="sec-inner">
+    <div class="two-col">
+      <div>
+        <p class="eyebrow">Onze overtuiging</p>
+        <h2 class="sec-title" style="margin-bottom:2rem">
+          Dertig jaar in het werk.<br>
+          Eén conclusie:<br>
+          <em>samenhang maakt<br>het verschil.</em>
+        </h2>
+        <p class="body-t">
+          Wij hebben organisaties gezien die jarenlang investeerden in Lean — en vastliepen omdat mensen niet meeontwikkelden. We hebben organisaties gezien die uitgebreid trainden — en terugvielen omdat de processen niet stabiel genoeg waren om van te leren.
+        </p>
+        <p class="body-t">
+          De doorbraak komt altijd op hetzelfde moment: als processen, verbeteren en leren tegelijk in beweging zijn. Niet als drie losse projecten — maar als één samenhangende spiraal die omhoog beweegt. Met leiderschap als de kern die alles aandrijft.
+        </p>
+      </div>
+      <div class="ob-stack">
+        <div class="overtuiging-block">
+          <div class="ob-title">Verbeteren zonder leren is symptoombestrijding</div>
+          <div class="ob-body">Problemen worden opgelost maar de oorzaak wordt niet weggenomen. Dezelfde issues keren terug.</div>
+        </div>
+        <div class="overtuiging-block">
+          <div class="ob-title">Leren zonder structuur verdampt</div>
+          <div class="ob-body">Mensen doen ervaringen op maar zonder stabiele standaard leert men niet wat écht beter kan.</div>
+        </div>
+        <div class="overtuiging-block">
+          <div class="ob-title">Processen zonder mensen verstijven</div>
+          <div class="ob-body">Tools en systemen worden ingevoerd maar eigenaarschap ontstaat niet. De organisatie is kwetsbaar.</div>
+        </div>
+        <div class="overtuiging-block">
+          <div class="ob-title">Leiderschap zonder routines vervliegt</div>
+          <div class="ob-body">Goede intenties zijn niet genoeg. Leiderschap dat beklijft vraagt vaste gedragingen — elke dag opnieuw.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── DE DRIE SWIRLS ── -->
+<section class="aanpak-section" id="swirls">
+  <div class="aanpak-inner">
+    <div class="aanpak-header">
+      <h2 class="aanpak-title">
+        De Passion Swirl —<br>
+        <em>drie stromen,<br>één beweging omhoog</em>
+      </h2>
+      <p class="aanpak-intro">
+        Succesvol verbeteren vraagt om drie stromen die elkaar continu versterken. Ze zijn onlosmakelijk verbonden. Achterblijven in één stroom blokkeert altijd de andere twee. Wij noemen dit de Passion Swirl.
+      </p>
+    </div>
+    <div class="swirl-steps">
+      <div class="swirl-step">
+        <div class="step-accent accent-grey"></div>
+        <div class="step-num">01</div>
+        <div class="step-label lbl-grey">Continue Waardestroom</div>
+        <h3 class="step-title">Excellente processen die waarde leveren</h3>
+        <p class="step-body">Processen die voorspelbaar stromen, kwaliteit inbouwen en aangestuurd worden door echte klantvraag — niet door interne aannames of voorraadbuffers.</p>
+        <div class="step-list">
+          <div class="step-item"><div class="step-dash"></div>Kwaliteit ontstaat in het proces, niet erna</div>
+          <div class="step-item"><div class="step-dash"></div>Waarde stroomt ononderbroken naar de klant</div>
+          <div class="step-item"><div class="step-dash"></div>De klantvraag stuurt het ritme van het werk</div>
+        </div>
+      </div>
+      <div class="swirl-step">
+        <div class="step-accent accent-red"></div>
+        <div class="step-num">02</div>
+        <div class="step-label lbl-red">Continu Verbeteren</div>
+        <h3 class="step-title">Probleemoplossend vermogen dat groeit</h3>
+        <p class="step-body">Standaarden als vertrekpunt, afwijkingen als leerbron, verbeteringen die beklijven omdat ze cyclisch worden geborgd in nieuwe standaarden.</p>
+        <div class="step-list">
+          <div class="step-item"><div class="step-dash"></div>De standaard is het vertrekpunt van elke verbetering</div>
+          <div class="step-item"><div class="step-dash"></div>Afwijkingen worden onmiddellijk zichtbaar en bespreekbaar</div>
+          <div class="step-item"><div class="step-dash"></div>Verbeteren en borgen wisselen elkaar cyclisch af</div>
+        </div>
+      </div>
+      <div class="swirl-step">
+        <div class="step-accent accent-amber"></div>
+        <div class="step-num">03</div>
+        <div class="step-label lbl-amber">Continu Lerende Organisatie</div>
+        <h3 class="step-title">Betrokken mensen die blijven groeien</h3>
+        <p class="step-body">Vakmanschap dat zich ontwikkelt in het dagelijkse werk. Kennis die collectief eigendom wordt. Leiderschap dat de condities schept waarin leren mogelijk is.</p>
+        <div class="step-list">
+          <div class="step-item"><div class="step-dash"></div>Vakmanschap ontwikkelt zich door te doen en te reflecteren</div>
+          <div class="step-item"><div class="step-dash"></div>Kennis wordt gedeeld zodat de organisatie leert</div>
+          <div class="step-item"><div class="step-dash"></div>Leiderschap creëert de condities waarin leren mogelijk is</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── STAGNATIE ── -->
+<section class="stagnatie-section">
+  <div class="stagnatie-inner">
+    <div class="stagnatie-header">
+      <p class="eyebrow-dim" style="font-size:.72rem;font-weight:500;letter-spacing:.15em;text-transform:uppercase;margin-bottom:1.25rem;display:block">Wanneer stokt de spiraal?</p>
+      <h2 class="sec-title-light" style="margin-bottom:1.5rem">
+        Achterblijven in één stroom<br>
+        <em>blokkeert altijd de andere drie</em>
+      </h2>
+      <p style="font-size:.95rem;line-height:1.8;color:rgba(255,255,255,.7);max-width:60ch">
+        Dit zijn de vier meest voorkomende patronen. Herkent u er één? Dan weet u precies waar de groeikans ligt.
+      </p>
+    </div>
+    <div class="stagnatie-cards">
+      <div class="stagnatie-card sc-grey">
+        <div class="stag-num">01</div>
+        <div class="stag-scenario ss-grey">Waardestroom achterblijft</div>
+        <h3 class="stag-title">Verbeteren op drijfzand</h3>
+        <p class="stag-body">Processen zijn instabiel. Verbeterinitiatieven verzanden in dagelijkse crisisbeheersing. Er is geen stabiele basis om van te leren.</p>
+        <div class="stag-gevolg">Elke verbetering is tijdelijk. De organisatie herstelt voortdurend in plaats van te groeien.</div>
+      </div>
+      <div class="stagnatie-card sc-red">
+        <div class="stag-num">02</div>
+        <div class="stag-scenario ss-red">Continu verbeteren achterblijft</div>
+        <h3 class="stag-title">Processen die verstijven</h3>
+        <p class="stag-body">Er zijn goede processen maar geen feedbackloops. Standaarden worden niet aangescherpt. De organisatie presteert stabiel maar groeit niet.</p>
+        <div class="stag-gevolg">De organisatie loopt tegen een plafond aan. Inzet en ambitie zijn aanwezig maar de volgende stap blijft uit.</div>
+      </div>
+      <div class="stagnatie-card sc-amber">
+        <div class="stag-num">03</div>
+        <div class="stag-scenario ss-amber">Lerende organisatie achterblijft</div>
+        <h3 class="stag-title">Kennis die niet beklijft</h3>
+        <p class="stag-body">Processen worden verbeterd maar kennis blijft bij individuen. Als mensen vertrekken, begint de organisatie opnieuw.</p>
+        <div class="stag-gevolg">Verbeteringen beklijven niet. Eigenaarschap is fragiel. De organisatie is kwetsbaar bij elke wisseling.</div>
+      </div>
+      <div class="stagnatie-card sc-gold">
+        <div class="stag-num">04</div>
+        <div class="stag-scenario ss-gold">Leiderschap ontbreekt als kern</div>
+        <h3 class="stag-title">Spiraal zonder aandrijving</h3>
+        <p class="stag-body">Goede intenties, goede tools — maar geen leiderschapsroutines die het systeem bij elkaar houden en aansturen. Verbeteren is persoonsafhankelijk.</p>
+        <div class="stag-gevolg">De spiraal draait maar niet omhoog. Zonder de kern die alle drie aandrijft, is groei altijd tijdelijk.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── WORTELS: Toyota + Senge ── -->
+<section class="wortels-section">
+  <div class="wortels-grid">
+    <div>
+      <p class="eyebrow eyebrow-gold">Waarop bouwen wij?</p>
+      <h2 class="sec-title" style="margin-bottom:2rem">
+        Toyota vormt gedrag.<br>
+        Senge vormt denken.<br>
+        <em>Beide zijn nodig.</em>
+      </h2>
+      <p class="body-t">
+        De Passion Swirl staat op de schouders van twee intellectuele tradities die elkaar versterken — en waar wij bewust de spanning tussen hebben opgezocht. Toyota leert hoe je leert in het werk. Senge leert hoe je leert als systeem.
+      </p>
+      <p class="body-t">
+        In een instabiele operatie begin je met Toyota: standaarden, dagstarts, directe feedback. Als de basis stabiel is open je de Senge-laag: waarom doen we dit zo, welke aannames zitten hieronder, wat ziet het systeem dat wij niet zien?
+      </p>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:1.5rem;padding-top:1rem">
+      <div class="tradition-block tb-grey">
+        <div class="tb-label">Toyota — gedrag in het werk</div>
+        <p class="tb-body">Leiders leren via standaarden, dagstarts, gemba walks en probleemoplossing begeleiden. Gedrag vormt denkvermogen — systematisch en herhaalbaar.</p>
+      </div>
+      <div class="tradition-block tb-red">
+        <div class="tb-label">Senge — denken als systeem</div>
+        <p class="tb-body">Leiders bouwen gedeelde visie, stimuleren teamleren en bevragen mentale modellen. Denken vormt nieuw gedrag op alle niveaus.</p>
+      </div>
+      <div class="tradition-block tb-gold">
+        <div class="tb-label">EwP — de bewuste volgorde</div>
+        <p class="tb-body">Eerst structuur en routines (Toyota-laag), dan verdieping en systeemdenken (Senge-laag). Die volgorde is geen toeval — het is de spiraal.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── NEGEN PRINCIPES ── -->
+<section class="principes-section" id="principes">
+  <div class="principes-inner">
+    <div style="margin-bottom:5rem">
+      <p class="eyebrow-dim" style="font-size:.72rem;font-weight:500;letter-spacing:.15em;text-transform:uppercase;margin-bottom:1.25rem;display:block">De negen ontwerpprincipes</p>
+      <h2 class="sec-title-light" style="margin-bottom:1.5rem">Principes zijn <em>keuzes</em> — geen regels</h2>
+      <p style="font-size:.95rem;line-height:1.8;color:rgba(255,255,255,.7);max-width:60ch">
+        Elk principe beschrijft niet alleen wat het inhoudt maar ook wat er mis gaat als je het niet hanteert. Zo worden ze toetsbaar in de dagelijkse praktijk.
+      </p>
+    </div>
+
+    <div class="principe-groep">
+      <div class="pg-bar">
+        <div class="pg-num pn-grey">1</div>
+        <div class="pg-swirl">Continue Waardestroom</div>
+      </div>
+      <div class="principe-cards">
+        <div class="principe-card pc-grey">
+          <div class="pc-num pcn-grey">Principe 1</div>
+          <div class="pc-title">Ingebouwde kwaliteit</div>
+          <div class="pc-body">Kwaliteit wordt niet achteraf gecontroleerd maar ingebouwd op elk procespunt. Fouten worden voorkomen waar ze ontstaan.</div>
+          <div class="pc-zonder">Zonder dit: herstelwerk verstoort de stroom en kwaliteitsproblemen bereiken de klant.</div>
+        </div>
+        <div class="principe-card pc-grey">
+          <div class="pc-num pcn-grey">Principe 2</div>
+          <div class="pc-title">Flow</div>
+          <div class="pc-body">Waarde stroomt ononderbroken door het proces. Elke stap voegt waarde toe. Stilstand is verspilling — zichtbaar en bespreekbaar.</div>
+          <div class="pc-zonder">Zonder dit: wachttijden en buffers worden onzichtbaar en gewoon.</div>
+        </div>
+        <div class="principe-card pc-grey">
+          <div class="pc-num pcn-grey">Principe 3</div>
+          <div class="pc-title">Behoeftesturing</div>
+          <div class="pc-body">Activiteiten volgen echte klantvraag, niet interne aannames. De klantvraag stuurt het ritme van het werk.</div>
+          <div class="pc-zonder">Zonder dit: overproductie en activiteiten die geen waarde toevoegen voor de klant.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="principe-groep">
+      <div class="pg-bar">
+        <div class="pg-num pn-red">2</div>
+        <div class="pg-swirl">Continu Verbeteren</div>
+      </div>
+      <div class="principe-cards">
+        <div class="principe-card pc-red">
+          <div class="pc-num pcn-red">Principe 4</div>
+          <div class="pc-title">Standaardisatie</div>
+          <div class="pc-body">De beste bekende werkwijze wordt vastgelegd. Standaarden maken afwijkingen zichtbaar en vakmanschap overdraagbaar.</div>
+          <div class="pc-zonder">Zonder dit: elk probleem wordt ad hoc opgelost en niemand weet of een verandering verbetering is.</div>
+        </div>
+        <div class="principe-card pc-red">
+          <div class="pc-num pcn-red">Principe 5</div>
+          <div class="pc-title">Onmiddellijke feedback</div>
+          <div class="pc-body">Elke afwijking valt direct op — dicht op het werk, dicht op het moment. Zo leren mensen snel en sturen bij.</div>
+          <div class="pc-zonder">Zonder dit: problemen worden ontdekt als ze al groot zijn. Leren is altijd te laat.</div>
+        </div>
+        <div class="principe-card pc-red">
+          <div class="pc-num pcn-red">Principe 6</div>
+          <div class="pc-title">SDCA / PDCA</div>
+          <div class="pc-body">Verbeteren en borgen wisselen elkaar cyclisch af. SDCA stabiliseert. PDCA verbetert. Samen zorgen ze dat verbeteringen beklijven.</div>
+          <div class="pc-zonder">Zonder dit: verbeteringen zijn tijdelijk. De organisatie valt steeds terug.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="principe-groep">
+      <div class="pg-bar">
+        <div class="pg-num pn-amber">3</div>
+        <div class="pg-swirl">Continu Lerende Organisatie</div>
+      </div>
+      <div class="principe-cards">
+        <div class="principe-card pc-amber">
+          <div class="pc-num pcn-amber">Principe 7</div>
+          <div class="pc-title">Vakmanschap in het werk</div>
+          <div class="pc-body">Vakmanschap ontwikkelt zich door te doen én te reflecteren — in de dagelijkse praktijk, via problemen en bewuste terugblik.</div>
+          <div class="pc-zonder">Zonder dit: iemand die twintig jaar hetzelfde doet zonder reflectie wordt routineuzer — niet beter.</div>
+        </div>
+        <div class="principe-card pc-amber">
+          <div class="pc-num pcn-amber">Principe 8</div>
+          <div class="pc-title">Teamleren</div>
+          <div class="pc-body">Kennis wordt gedeeld zodat de organisatie leert — niet alleen het individu. Individuele ervaring wordt collectief eigendom.</div>
+          <div class="pc-zonder">Zonder dit: kennis verdwijnt als mensen vertrekken en de organisatie begint steeds opnieuw.</div>
+        </div>
+        <div class="principe-card pc-amber">
+          <div class="pc-num pcn-amber">Principe 9</div>
+          <div class="pc-title">Lerend leiderschap</div>
+          <div class="pc-body">Leiders creëren de condities waarin leren mogelijk is. Ze stellen vragen, bouwen veiligheid en verbinden leren aan de richting van de organisatie.</div>
+          <div class="pc-zonder">Zonder dit: leren stokt zodra het spannend wordt. Psychologische veiligheid is een ontwerprequirement.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── LEIDERSCHAP ALS KERN ── -->
+<section class="lb-section">
+  <div class="lb-inner">
+    <div>
+      <p class="eyebrow eyebrow-gold">Leiderschap als kern</p>
+      <h2 class="lb-title">
+        Niet de vierde swirl.<br>
+        <em>De kern die alle drie<br>in beweging brengt.</em>
+      </h2>
+      <p class="lb-body">
+        Leiderschap is van een andere orde dan de drie swirls. Het is niet een element naast de andere drie — maar de kracht die ze verbindt, aandrijft en versnelt. Zes leiderschapsfacetten bepalen hoe snel en hoe diep de spiraal zich ontwikkelt.
+      </p>
+      <a href="visie-leiderschap.html" class="btn-gold">Ontdek de zes facetten &rarr;</a>
+    </div>
+    <div class="lb-right">
+      <div class="lb-facet">
+        <div class="lbf-num">01</div>
+        <div class="lbf-title">Leiden van Zichzelf</div>
+        <div class="lbf-journey">Van afhankelijk naar onafhankelijk individu</div>
+      </div>
+      <div class="lb-facet">
+        <div class="lbf-num">02</div>
+        <div class="lbf-title">Leiden van het Individu &amp; het Team</div>
+        <div class="lbf-journey">Van samen werken naar werkelijk samenwerken</div>
+      </div>
+      <div class="lb-facet">
+        <div class="lbf-num">03</div>
+        <div class="lbf-title">Leiden van het Proces</div>
+        <div class="lbf-journey">Van brandjes blussen naar continu verbeteren</div>
+      </div>
+      <div class="lb-facet">
+        <div class="lbf-num">04</div>
+        <div class="lbf-title">Leiden van de Organisatie</div>
+        <div class="lbf-journey">Van overleven naar de lerende organisatie</div>
+      </div>
+      <div class="lb-facet">
+        <div class="lbf-num">05</div>
+        <div class="lbf-title">Zichtbaar Leiderschap</div>
+        <div class="lbf-journey">Van "moeten" naar "willen"</div>
+      </div>
+      <div class="lb-facet">
+        <div class="lbf-num">06</div>
+        <div class="lbf-title">Leider Standaard Werk</div>
+        <div class="lbf-journey">Van losse delen naar samenhang</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CTA ── -->
+<div class="cta-band">
+  <p class="cta-ey">De volgende stap</p>
+  <h2 class="cta-t">Draait de spiraal bij u <em class="em-red">omhoog?</em></h2>
+  <p class="cta-b">Dat is de vraag die er toe doet. Niet welke tools u gebruikt — maar of de drie stromen en het leiderschap als kern tegelijk in beweging zijn en elkaar versterken.</p>
+  <div class="cta-btns">
+    <a href="visie-assessment.html"   class="btn-dark">Doe het assessment</a>
+    <a href="visie-leiderschap.html"  class="btn-outline">Leiderschap als kern &rarr;</a>
+  </div>
+</div>
+
+<footer>
+  <a href="index.html" class="footer-logo">
+    <img src="assets/img/ewp-logo-v3-white.png" alt="Excellence with Passion" class="footer-logo-img">
+  </a>
+  <div class="footer-nav">
+    <a href="visie-leiderschap.html" class="footer-link">Leiderschap &rarr;</a>
+    <a href="visie-assessment.html"  class="footer-link">Assessment &rarr;</a>
+    <span class="footer-copy">info@excellencewithpassion.com</span>
+  </div>
+</footer>
+
+</body>
+</html>

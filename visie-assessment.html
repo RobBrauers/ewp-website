@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assessment — Excellence with Passion</title>
+  <meta name="description" content="Vier vragen. Vier niveaus. Een eerlijk beeld van waar uw organisatie staat en welke stroom de meeste groeikans heeft.">
+
+  
+  <link rel="icon" type="image/png" sizes="16x16"   href="assets/img/ewp-favicon-16.png">
+  <link rel="icon" type="image/png" sizes="32x32"   href="assets/img/ewp-favicon-32.png">
+  <link rel="icon" type="image/png" sizes="64x64"   href="assets/img/ewp-favicon-64.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/img/ewp-favicon-192.png">
+  <link rel="apple-touch-icon"                      href="assets/img/ewp-favicon-512.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/main.css">
+
+  <style>
+    /* ── Sleutelvragen ── */
+    .vraag-list { display: flex; flex-direction: column; gap: 2px; }
+    .vraag-block { padding: 2.5rem; position: relative; overflow: hidden; }
+    .vb-grey  { background: var(--cool-light);        border-left: 3px solid var(--grey); }
+    .vb-red   { background: rgba(227,0,27,.05);        border-left: 3px solid var(--red); }
+    .vb-amber { background: rgba(192,120,0,.05);       border-left: 3px solid var(--amber); }
+    .vb-gold  { background: rgba(184,154,90,.06);      border-left: 3px solid var(--gold); }
+
+    .vb-n   { font-family: 'Cormorant Garamond', serif; font-size: 3rem; font-weight: 300; opacity: .1; line-height: 1; margin-bottom: 1rem; float: right; margin-left: 1rem; }
+    .vb-grey .vb-n  { color: var(--grey); }
+    .vb-red .vb-n   { color: var(--red); }
+    .vb-amber .vb-n { color: var(--amber); }
+    .vb-gold .vb-n  { color: var(--gold); }
+
+    .vb-lbl { font-size: .68rem; font-weight: 500; letter-spacing: .12em; text-transform: uppercase; margin-bottom: .75rem; }
+    .vb-grey .vb-lbl  { color: var(--grey-dark); }
+    .vb-red .vb-lbl   { color: var(--red); }
+    .vb-amber .vb-lbl { color: var(--amber); }
+    .vb-gold .vb-lbl  { color: var(--gold); }
+
+    .vb-t { font-family: 'Cormorant Garamond', serif; font-size: 1.25rem; font-weight: 600; color: var(--ink); line-height: 1.35; margin-bottom: .75rem; }
+    .vb-b { font-size: .85rem; line-height: 1.65; color: var(--ink); opacity: .65; }
+
+    /* ── Vier volwassenheidsniveaus (mist) ── */
+    .niveau-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 2px; }
+    .ng-card { padding: 2.5rem; position: relative; }
+    .ng-1 { background: var(--cool-light); }
+    .ng-2 { background: rgba(227,0,27,.06); }
+    .ng-3 { background: rgba(192,120,0,.06); }
+    .ng-4 { background: rgba(184,154,90,.08); }
+    .ng-n { font-family: 'Cormorant Garamond', serif; font-size: 3.5rem; font-weight: 300; opacity: .15; line-height: 1; margin-bottom: 1.25rem; }
+    .ng-lbl { font-size: .68rem; font-weight: 500; letter-spacing: .12em; text-transform: uppercase; margin-bottom: .75rem; }
+    .ng-1 .ng-lbl { color: var(--grey-dark); }
+    .ng-2 .ng-lbl { color: var(--red); }
+    .ng-3 .ng-lbl { color: var(--amber); }
+    .ng-4 .ng-lbl { color: var(--gold); }
+    .ng-t { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; font-weight: 600; color: var(--ink); margin-bottom: .75rem; }
+    .ng-b { font-size: .85rem; line-height: 1.65; color: var(--ink); opacity: .65; margin-bottom: 1.5rem; }
+
+    /* ── Per swirl (donker) ── */
+    .swirl-niveau-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 2px; }
+    .sn-niveau-card { padding: 2.5rem; background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.07); }
+    .snc-lbl { font-size: .68rem; font-weight: 500; letter-spacing: .12em; text-transform: uppercase; margin-bottom: .75rem; }
+    .snc-grey  { color: rgba(157,158,160,.9); }
+    .snc-red   { color: #ff6060; }
+    .snc-amber { color: #e8a020; }
+    .snc-t { font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; font-weight: 600; color: white; margin-bottom: .75rem; }
+    .snc-b { font-size: .85rem; line-height: 1.65; color: rgba(255,255,255,.5); }
+
+    /* ── Stappen-blokken ── */
+    .stap-block { padding: 2rem; border-left: 3px solid; }
+    .sb-grey  { background: var(--cool-light); border-color: var(--grey); }
+    .sb-red   { background: rgba(227,0,27,.05); border-color: var(--red); }
+    .sb-amber { background: rgba(192,120,0,.05); border-color: var(--amber); }
+    .sb-lbl   { font-size: .72rem; font-weight: 500; letter-spacing: .12em; text-transform: uppercase; margin-bottom: .75rem; }
+    .sb-grey .sb-lbl  { color: var(--grey-dark); }
+    .sb-red .sb-lbl   { color: var(--red); }
+    .sb-amber .sb-lbl { color: var(--amber); }
+    .sb-body  { font-size: .88rem; line-height: 1.65; color: var(--ink); opacity: .7; }
+
+    /* ── Responsief ── */
+    @media (max-width: 900px) {
+      .niveau-grid, .swirl-niveau-grid { grid-template-columns: 1fr; gap: 2rem; }
+    }
+  </style>
+</head>
+<body>
+
+<script src="assets/js/nav.js"></script>
+
+
+<!-- ── HERO ── -->
+<section class="hero" style="min-height:80vh">
+  <div class="hero-bg-grid"></div>
+  <div class="hero-bg-glow"></div>
+  <div class="hero-content">
+    <div class="sector-badge sb-red">Zelfreflectie</div>
+    <h1 class="hero-q">
+      Waar stokt de<br>
+      spiraal bij <em>u?</em>
+    </h1>
+    <p class="hero-a">
+      Vier vragen. Vier niveaus. Een eerlijk beeld van waar uw organisatie staat en welke stroom — of welk leiderschapsfacet — de meeste groeikans heeft.
+    </p>
+    <div class="cta-row">
+      <a href="#vragen"  class="btn-primary">Begin het assessment &rarr;</a>
+      <a href="#niveaus" class="btn-ghost">Bekijk de niveaus</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── VIER VRAGEN ── -->
+<section class="sec" id="vragen">
+  <div class="sec-inner">
+    <div style="display:grid;grid-template-columns:1fr 2fr;gap:6rem;align-items:start">
+      <div>
+        <p class="eyebrow">Vier sleutelvragen</p>
+        <h2 class="sec-title" style="margin-bottom:2rem">
+          Herkenbaar.<br>
+          <em>Eerlijk.</em><br>
+          Richtinggevend.
+        </h2>
+        <p class="body-t">
+          Deze vier vragen zijn geen vragenlijst maar een reflectie-instrument. Ze zijn ontworpen om het gesprek op gang te brengen — intern, met uw team, of met ons.
+        </p>
+        <p class="body-t">
+          Er zijn geen goede of foute antwoorden. Alleen eerlijke antwoorden die richting geven aan de volgende stap.
+        </p>
+      </div>
+      <div class="vraag-list">
+        <div class="vraag-block vb-grey">
+          <div class="vb-n">1</div>
+          <div class="vb-lbl">Continue Waardestroom</div>
+          <h3 class="vb-t">Hoe stabiel en voorspelbaar stroomt waarde door uw processen?</h3>
+          <p class="vb-b">Wordt kwaliteit ingebouwd of achteraf gecorrigeerd? Volgt het ritme van werken de echte klantvraag of interne aannames? Zijn wachttijden en verspillingen zichtbaar en bespreekbaar?</p>
+        </div>
+        <div class="vraag-block vb-red">
+          <div class="vb-n">2</div>
+          <div class="vb-lbl">Continu Verbeteren</div>
+          <h3 class="vb-t">In welke mate worden afwijkingen structureel omgezet in verbeteringen?</h3>
+          <p class="vb-b">Heeft uw organisatie standaarden als vertrekpunt voor verbeteren? Worden afwijkingen direct zichtbaar en besproken? Beklijven verbeteringen — of keert u over een jaar terug op hetzelfde punt?</p>
+        </div>
+        <div class="vraag-block vb-amber">
+          <div class="vb-n">3</div>
+          <div class="vb-lbl">Continu Lerende Organisatie</div>
+          <h3 class="vb-t">Groeit het lerend vermogen van uw organisatie mee met de processen?</h3>
+          <p class="vb-b">Leert uw team dagelijks in het werk — of alleen in trainingen? Wordt kennis collectief geborgd, of verdwijnt die als mensen vertrekken? Stelt leiderschap vragen of geeft het antwoorden?</p>
+        </div>
+        <div class="vraag-block vb-gold">
+          <div class="vb-n">4</div>
+          <div class="vb-lbl">Leiderschap als accelerator</div>
+          <h3 class="vb-t">Versnelt leiderschap de groei van de drie stromen — of vertraagt het die?</h3>
+          <p class="vb-b">Zijn leiderschapsroutines zichtbaar en consistent? Wordt er gestuurd op leren of op oplossen? Is leiderschap voelbaar op de werkvloer — en weet iedereen wat van hen wordt verwacht?</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── VIER NIVEAUS ── -->
+<section class="sec sec-mist" id="niveaus">
+  <div class="sec-inner">
+    <div style="margin-bottom:4rem">
+      <p class="eyebrow">Vier volwassenheidsniveaus</p>
+      <h2 class="sec-title" style="margin-bottom:1rem">
+        Waar staat uw <em>organisatie?</em>
+      </h2>
+      <p class="body-t" style="max-width:65ch">
+        Per stroom en per leiderschapsfacet onderscheiden wij vier niveaus van volwassenheid. Herkenning is de eerste stap — niet als beoordeling maar als oriëntatie voor de groeikans.
+      </p>
+    </div>
+    <div class="niveau-grid">
+      <div class="ng-card ng-1">
+        <div class="ng-n">1</div>
+        <div class="ng-lbl">Fase 1</div>
+        <h3 class="ng-t">Bewustwording</h3>
+        <p class="ng-b">Leren en verbeteren zijn incidenteel. Kennis zit in mensen. Problemen worden ad hoc opgelost. Leiderschap lost op in plaats van te ontwikkelen.</p>
+        <div class="dash-list">
+          <div class="dash-item"><div class="dash"></div><span>Geen vaste verbeterroutines</span></div>
+          <div class="dash-item"><div class="dash"></div><span>Kwaliteitsproblemen worden herstelwerkzaamheden</span></div>
+          <div class="dash-item"><div class="dash"></div><span>Dezelfde problemen keren terug</span></div>
+          <div class="dash-item"><div class="dash"></div><span>Kennis verdwijnt als mensen vertrekken</span></div>
+        </div>
+      </div>
+      <div class="ng-card ng-2">
+        <div class="ng-n">2</div>
+        <div class="ng-lbl">Fase 2</div>
+        <h3 class="ng-t">Structuur</h3>
+        <p class="ng-b">Eerste verbeterroutines zijn zichtbaar. Teams bespreken prestaties regelmatig. Standaarden worden gebruikt. Leiders stimuleren reflectie maar nog niet systematisch.</p>
+        <div class="dash-list">
+          <div class="dash-item"><div class="dash"></div><span>Dagstarts en prestatieborden aanwezig</span></div>
+          <div class="dash-item"><div class="dash"></div><span>Eerste verbeterprojecten lopen</span></div>
+          <div class="dash-item"><div class="dash"></div><span>Afwijkingen worden benoemd</span></div>
+          <div class="dash-item"><div class="dash"></div><span>Leiderschapsgedrag nog niet consistent</span></div>
+        </div>
+      </div>
+      <div class="ng-card ng-3">
+        <div class="ng-n">3</div>
+        <div class="ng-lbl">Fase 3</div>
+        <h3 class="ng-t">Integraal verbeteren</h3>
+        <p class="ng-b">Leren en verbeteren zijn onderdeel van de besturing. Kennis wordt gedeeld tussen disciplines. Leiders coachen op denken. Verbeteringen worden geborgd in standaarden.</p>
+        <div class="dash-list">
+          <div class="dash-item"><div class="dash"></div><span>Standaard werk als basis voor CI</span></div>
+          <div class="dash-item"><div class="dash"></div><span>A3 en PDCA als dagelijkse routine</span></div>
+          <div class="dash-item"><div class="dash"></div><span>Teamleren over disciplines heen</span></div>
+          <div class="dash-item"><div class="dash"></div><span>Leider Standaard Werk zichtbaar</span></div>
+        </div>
+      </div>
+      <div class="ng-card ng-4">
+        <div class="ng-n">4</div>
+        <div class="ng-lbl">Fase 4</div>
+        <h3 class="ng-t">Continu lerende organisatie</h3>
+        <p class="ng-b">Verbeteren is dagelijks ritme. Data stuurt leren. Teams anticiperen op afwijkingen. Leiderschap versnelt en verbindt de drie stromen. Kennis is organisatie-eigendom.</p>
+        <div class="dash-list">
+          <div class="dash-item"><div class="dash"></div><span>Strategische verbeteragenda gedragen door iedereen</span></div>
+          <div class="dash-item"><div class="dash"></div><span>Cross-functioneel leren als standaard</span></div>
+          <div class="dash-item"><div class="dash"></div><span>Leiderschap als zichtbare accelerator</span></div>
+          <div class="dash-item"><div class="dash"></div><span>Organisatie ontwikkelt zichzelf continu</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── PER SWIRL ── -->
+<section class="sec sec-dark">
+  <div class="sec-inner">
+    <div style="margin-bottom:4rem">
+      <p class="eyebrow-dim" style="font-size:.72rem;font-weight:500;letter-spacing:.15em;text-transform:uppercase;margin-bottom:1.25rem;display:block">Per stroom</p>
+      <h2 class="sec-title-light">
+        Hoe de vier niveaus er concreet uitzien<br>
+        <em>per swirl</em>
+      </h2>
+    </div>
+    <div class="swirl-niveau-grid">
+      <div class="sn-niveau-card">
+        <div class="snc-lbl snc-grey">Continue Waardestroom</div>
+        <h3 class="snc-t">Processen en kwaliteit</h3>
+        <p class="snc-b">Fase 1: Storingen worden opgelost zodra ze optreden. Fase 2: Storingen worden geregistreerd en besproken. Fase 3: Root causes worden onderzocht en standaarden aangepast. Fase 4: Teams voorspellen verstoringen en verbeteren preventief.</p>
+      </div>
+      <div class="sn-niveau-card">
+        <div class="snc-lbl snc-red">Continu Verbeteren</div>
+        <h3 class="snc-t">Verbetergedrag en routines</h3>
+        <p class="snc-b">Fase 1: Ad hoc problemen oplossen zonder leerproces. Fase 2: Verbeterteams worden gevormd. Fase 3: PDCA/SDCA als dagelijkse cyclus, verbeteringen geborgd. Fase 4: Continu verbeteren is de manier van werken — niet een apart programma.</p>
+      </div>
+      <div class="sn-niveau-card">
+        <div class="snc-lbl snc-amber">Lerende Organisatie</div>
+        <h3 class="snc-t">Leren en kennisborging</h3>
+        <p class="snc-b">Fase 1: Kennis zit bij individuen. Fase 2: Reflectiemomenten worden ingepland. Fase 3: Kennis wordt systematisch gedeeld en geborgd. Fase 4: De organisatie leert sneller dan de markt verandert.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── WAT HET OPLEVERT ── -->
+<section class="sec">
+  <div class="sec-inner">
+    <div class="two-col">
+      <div>
+        <p class="eyebrow">Wat het assessment oplevert</p>
+        <h2 class="sec-title" style="margin-bottom:2rem">
+          Geen score.<br>
+          Wel <em>richting.</em>
+        </h2>
+        <p class="body-t">
+          Het assessment is geen eindpunt maar een startpunt. Het resultaat is geen rapport maar een gesprek — over welke stroom achterblijft, welk leiderschapsfacet de meeste groeikans heeft en wat de eerste concrete stap is.
+        </p>
+        <p class="body-t">
+          Organisaties die het assessment gebruiken stellen typisch drie vragen: Waar staan wij nu? Welke systemen ontbreken nog? En hoe maken we leren onderdeel van het dagelijkse verbeteren?
+        </p>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:1.5rem">
+        <div class="stap-block sb-grey">
+          <div class="sb-lbl">Stap 1 — Zelfbeoordeling</div>
+          <p class="sb-body">U beantwoordt de vier vragen voor uw eigen organisatie. Per vraag bepaalt u welk niveau het beste omschrijft waar u nu staat. Dit geeft een eerste richtinggevend beeld.</p>
+        </div>
+        <div class="stap-block sb-red">
+          <div class="sb-lbl">Stap 2 — Verdiepend gesprek</div>
+          <p class="sb-body">We gaan in gesprek over uw beeld. Waar herkent u de situatie? Waar twijfelt u? Wat zijn de patronen die steeds terugkomen? Dit gesprek brengt de echte groeikans in beeld.</p>
+        </div>
+        <div class="stap-block sb-amber">
+          <div class="sb-lbl">Stap 3 — Voorstel op maat</div>
+          <p class="sb-body">Op basis van het gesprek formuleren we een eerste voorstel. Niet een standaard programma — maar een aanpak die past bij de fase, sector en specifieke situatie van uw organisatie.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CTA ── -->
+<div class="cta-band">
+  <p class="cta-ey">Klaar voor het gesprek?</p>
+  <h2 class="cta-t">Draait de spiraal bij u <em class="em-red">omhoog?</em></h2>
+  <p class="cta-b">Plan een vrijblijvend oriëntatiegesprek. We stellen de juiste vragen — en samen brengen we in kaart waar de grootste groeikans ligt voor uw organisatie.</p>
+  <div class="cta-btns">
+    <a href="contact.html"     class="btn-primary">Plan een gesprek &rarr;</a>
+    <a href="visie-hoe-wij-werken.html" class="btn-outline">Hoe wij werken</a>
+  </div>
+</div>
+
+<footer>
+  <a href="index.html" class="footer-logo">
+    <img src="assets/img/ewp-logo-v3-white.png" alt="Excellence with Passion" class="footer-logo-img">
+  </a>
+  <div class="footer-nav">
+    <a href="visie-hoe-wij-werken.html"    class="footer-link">&larr; Hoe wij werken</a>
+    <a href="sector-industrie.html" class="footer-link">Industrie</a>
+    <span class="footer-copy">info@excellencewithpassion.com</span>
+  </div>
+</footer>
+
+</body>
+</html>

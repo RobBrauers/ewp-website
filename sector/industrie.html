@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Industrie &amp; Maakindustrie — Excellence with Passion</title>
+  <meta name="description" content="U verbetert al jaren. Waarom beklijven verbeteringen niet? De missing link is bijna altijd dezelfde: de lerende organisatie en het leiderschap dat haar aandrijft.">
+
+  
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/ewp-favicon-32.png">
+  
+  <link rel="apple-touch-icon"               href="../assets/img/ewp-favicon-512.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../assets/css/main.css">
+
+  <style>
+    /* ── Diagnose ── */
+    .diagnose-title    { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem,3vw,3rem); font-weight: 300; line-height: 1.2; color: var(--ink); margin-bottom: 2rem; }
+    .diagnose-title em { font-style: italic; color: var(--grey-dark); }
+
+    .symptom-stack { display: flex; flex-direction: column; gap: 1px; padding-top: 1rem; }
+    .symptom-block { padding: 1.75rem 2rem; background: var(--cool-light); position: relative; }
+    .symptom-num   { font-family: 'Cormorant Garamond', serif; font-size: .85rem; color: var(--grey); opacity: .6; margin-bottom: .5rem; }
+    .symptom-title { font-size: .9rem; font-weight: 500; color: var(--ink); margin-bottom: .4rem; }
+    .symptom-body  { font-size: .82rem; line-height: 1.6; color: var(--ink); opacity: .6; }
+
+    /* ── Aanpak-sectie (mist, 4-kolom) ── */
+    .aanpak-section { background: var(--mist); padding: 8rem 4rem; }
+    .aanpak-inner   { max-width: 1200px; margin: 0 auto; }
+    .aanpak-header  { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; margin-bottom: 5rem; align-items: end; }
+    .aanpak-title   { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem,3.5vw,3.5rem); font-weight: 300; line-height: 1.2; color: var(--ink); }
+    .aanpak-title em { font-style: italic; color: var(--red); }
+    .aanpak-intro   { font-size: .95rem; line-height: 1.85; color: var(--ink); opacity: .65; padding-top: 1rem; }
+
+    .swirl-steps-4 { display: grid; grid-template-columns: repeat(4,1fr); gap: 2px; }
+    .swirl-step    { background: white; padding: 2.5rem; position: relative; overflow: hidden; }
+    .step-accent   { position: absolute; top: 0; left: 0; right: 0; height: 4px; }
+    .accent-grey   { background: var(--grey); }
+    .accent-red    { background: var(--red); }
+    .accent-amber  { background: var(--amber); }
+    .accent-gold   { background: var(--gold); }
+
+    .step-num   { font-family: 'Cormorant Garamond', serif; font-size: 3rem; font-weight: 300; line-height: 1; margin-bottom: 1.25rem; color: var(--grey); opacity: .1; }
+    .step-label { font-size: .65rem; font-weight: 500; letter-spacing: .12em; text-transform: uppercase; margin-bottom: .6rem; }
+    .lbl-grey   { color: var(--grey-dark); }
+    .lbl-red    { color: var(--red); }
+    .lbl-amber  { color: var(--amber); }
+    .lbl-gold   { color: var(--gold); }
+
+    .step-title { font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; font-weight: 600; color: var(--ink); margin-bottom: .75rem; line-height: 1.25; }
+    .step-body  { font-size: .82rem; line-height: 1.7; color: var(--ink); opacity: .65; margin-bottom: 1.25rem; }
+    .step-list  { display: flex; flex-direction: column; gap: .4rem; }
+    .step-item  { display: flex; align-items: center; gap: .55rem; font-size: .75rem; color: var(--ink); opacity: .65; }
+    .step-dash  { width: 14px; height: 1px; background: var(--red); flex-shrink: 0; }
+
+    /* ── Groei-niveaus ── */
+    .groei-section { padding: 8rem 4rem; max-width: 1200px; margin: 0 auto; }
+    .groei-title   { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem,3vw,3rem); font-weight: 300; line-height: 1.2; color: var(--ink); margin-bottom: 3rem; }
+    .groei-grid    { display: grid; grid-template-columns: 1fr 2fr; gap: 6rem; align-items: start; }
+    .groei-right   { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; }
+    .groei-block   { padding: 2.5rem; background: var(--cool-light); position: relative; }
+    .groei-block::after { content: attr(data-level); position: absolute; bottom: 1.5rem; right: 1.5rem; font-family: 'Cormorant Garamond', serif; font-size: 4rem; font-weight: 300; color: var(--grey); opacity: .06; line-height: 1; }
+    .groei-lbl   { font-size: .68rem; font-weight: 500; letter-spacing: .12em; text-transform: uppercase; color: var(--red); margin-bottom: .75rem; }
+    .groei-t     { font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; font-weight: 600; color: var(--ink); margin-bottom: .75rem; }
+    .groei-b     { font-size: .82rem; line-height: 1.65; color: var(--ink); opacity: .65; }
+
+    /* ── Cases (donker, industrie-kleur) ── */
+    .cases-section { background: var(--industry); padding: 8rem 4rem; }
+    .cases-inner   { max-width: 1200px; margin: 0 auto; }
+    .cases-header  { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 4rem; }
+    .cases-title   { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.8rem,3vw,3rem); font-weight: 300; color: white; }
+    .cases-link    { font-size: .78rem; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; color: var(--red-dim); text-decoration: none; }
+    .case-cards    { display: grid; grid-template-columns: repeat(3,1fr); gap: 2px; }
+    .case-card     { padding: 2.5rem; background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.07); text-decoration: none; display: block; }
+    .case-sector-tag { font-size: .65rem; font-weight: 500; letter-spacing: .12em; text-transform: uppercase; color: var(--red-dim); margin-bottom: 1.5rem; }
+    .case-company    { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; font-weight: 600; color: white; margin-bottom: .75rem; }
+    .case-challenge  { font-size: .85rem; line-height: 1.65; color: rgba(255,255,255,.5); margin-bottom: 2rem; }
+    .case-result     { font-size: .82rem; font-weight: 500; color: rgba(255,255,255,.7); border-top: 1px solid rgba(255,255,255,.1); padding-top: 1.25rem; }
+    .case-result span { color: var(--red-dim); }
+
+
+    /* Sector-tag stroomt mee in hero-content (niet absoluut) */
+    .hero-content .hero-sector-tag {
+      position: static;
+      top: auto; left: auto;
+      margin-bottom: 2rem;
+    }
+    /* ── Responsief ── */
+    @media (max-width: 900px) {
+      .aanpak-section, .cases-section, .groei-section { padding: 5rem 2rem; }
+      .aanpak-header, .groei-grid, .groei-right { grid-template-columns: 1fr; gap: 2rem; }
+      .swirl-steps-4, .case-cards { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="../index.html" class="nav-logo">
+    <img src="../assets/img/ewp-logo-v2.png" alt="Excellence with Passion" class="nav-logo-img">
+  </a>
+  <ul class="nav-links">
+    <li><a href="../visie/passion-swirl.html">Visie</a></li>
+    <li><a href="../contact.html">Contact</a></li>
+  </ul>
+  <a href="glastuinbouw.html" class="nav-back">Naar Glastuinbouw &rarr;</a>
+</nav>
+
+<!-- ── HERO ── -->
+<section class="hero">
+  <div class="hero-bg-grid"></div>
+  <div class="hero-bg-glow"></div>
+  <div class="hero-content">
+    <div class="hero-sector-tag">
+      <div class="sector-badge sb-ind">Industrie &amp; Maakindustrie</div>
+      <span class="sector-years">30 jaar ervaring</span>
+    </div>
+    <h1 class="hero-q">
+      U verbetert al jaren.<br>
+      Waarom <em>beklijven</em><br>
+      verbeteringen niet?
+    </h1>
+    <p class="hero-a">
+      De methoden zijn bekend. PDCA, A3, standaard werk — uw organisatie heeft het allemaal. Maar verbeteringen verdampen, kennis blijft bij individuen en de volgende stap laat op zich wachten. De missing link is bijna altijd dezelfde: de lerende organisatie en het leiderschap dat haar aandrijft.
+    </p>
+    <div class="cta-row">
+      <a href="#diagnose" class="btn-primary">Dit herken ik &rarr;</a>
+      <a href="#aanpak"   class="btn-ghost">Onze aanpak</a>
+    </div>
+  </div>
+  <div class="hero-scroll"><div class="scroll-line"></div><span>Scroll</span></div>
+</section>
+
+<!-- ── DIAGNOSE ── -->
+<section class="sec" id="diagnose">
+  <div class="sec-inner">
+    <div class="two-col">
+      <div>
+        <p class="eyebrow">De diagnose</p>
+        <h2 class="diagnose-title">
+          Wij herkennen<br>
+          uw organisatie<br>
+          <em>voordat u belt.</em>
+        </h2>
+        <p class="body-t">
+          Na dertig jaar in de maakindustrie herkennen wij het patroon. Organisaties investeren jaren in Lean en continu verbeteren — en bereiken echte resultaten. Maar op een gegeven moment stokt de groei. Niet door gebrek aan methoden, maar door gebrek aan lerend vermogen en leiderschapsroutines die het systeem bij elkaar houden.
+        </p>
+        <p class="body-t">
+          De verbeteringen zitten in de tools. Maar de volgende stap zit in de mensen, de lerende organisatie en het leiderschap dat beide verbindt.
+        </p>
+      </div>
+      <div class="symptom-stack">
+        <div class="symptom-block">
+          <div class="symptom-num">01</div>
+          <div class="symptom-title">Verbeteringen herhalen zich</div>
+          <div class="symptom-body">Hetzelfde probleem keert terug. De oplossing was er al — maar het leren is niet geborgd in een nieuwe standaard.</div>
+        </div>
+        <div class="symptom-block">
+          <div class="symptom-num">02</div>
+          <div class="symptom-title">Kennis verdwijnt als mensen vertrekken</div>
+          <div class="symptom-body">Ervaring zit in mensen, niet in systemen. Bij elke personeelswisseling begint u opnieuw.</div>
+        </div>
+        <div class="symptom-block">
+          <div class="symptom-num">03</div>
+          <div class="symptom-title">Verbeterenergie zit bij enkelingen</div>
+          <div class="symptom-body">Enkele enthousiastelingen trekken het. De rest wacht af. Eigenaarschap is nog niet breed verankerd.</div>
+        </div>
+        <div class="symptom-block">
+          <div class="symptom-num">04</div>
+          <div class="symptom-title">Leren en verbeteren zijn gescheiden werelden</div>
+          <div class="symptom-body">Opleidingen staan los van de praktijk. Verbeteringen worden niet bewust gebruikt als leermechanisme.</div>
+        </div>
+        <div class="symptom-block">
+          <div class="symptom-num">05</div>
+          <div class="symptom-title">Leiders weten het maar doen het niet systematisch</div>
+          <div class="symptom-body">Leiders kennen de principes van goed leiderschap maar missen de routines die het dagelijks herhaalbaar maken. Goede intenties zonder Leader Standard Work.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── AANPAK ── -->
+<section class="aanpak-section" id="aanpak">
+  <div class="aanpak-inner">
+    <div class="aanpak-header">
+      <h2 class="aanpak-title">
+        De Passion Swirl<br>
+        in uw <em>industrie</em>
+      </h2>
+      <p class="aanpak-intro">
+        Onze aanpak werkt via vier samenhangende elementen. In de industrie ligt de nadruk op verdieping: van procesbeheersing naar een organisatie die structureel leert — met leiderschap als de verbindende accelerator.
+      </p>
+    </div>
+    <div class="swirl-steps-4">
+      <div class="swirl-step">
+        <div class="step-accent accent-grey"></div>
+        <div class="step-num">01</div>
+        <div class="step-label lbl-grey">Continue Waardestroom</div>
+        <h3 class="step-title">Stabiele processen als fundament</h3>
+        <p class="step-body">Zonder stabiele, voorspelbare stroom is verbeteren symptoombestrijding. Wij maken zichtbaar waar flow verstoord wordt en waar kwaliteit nog niet ingebouwd is.</p>
+        <div class="step-list">
+          <div class="step-item"><div class="step-dash"></div>Kwaliteit ingebouwd op elk procespunt</div>
+          <div class="step-item"><div class="step-dash"></div>Flow zonder onnodige wachttijden</div>
+          <div class="step-item"><div class="step-dash"></div>Pull-sturing op echte klantvraag</div>
+        </div>
+      </div>
+      <div class="swirl-step">
+        <div class="step-accent accent-red"></div>
+        <div class="step-num">02</div>
+        <div class="step-label lbl-red">Continu Verbeteren</div>
+        <h3 class="step-title">Van losse projecten naar dagelijkse discipline</h3>
+        <p class="step-body">Verbeteren als dagelijks ritme, niet als periodiek project. Standaarden als vertrekpunt, afwijkingen als gespreksstof, PDCA/SDCA als vanzelfsprekende cyclus.</p>
+        <div class="step-list">
+          <div class="step-item"><div class="step-dash"></div>Standaard als basis voor elke verbetering</div>
+          <div class="step-item"><div class="step-dash"></div>Afwijkingen direct zichtbaar en bespreekbaar</div>
+          <div class="step-item"><div class="step-dash"></div>Verbeteren en borgen cyclisch</div>
+        </div>
+      </div>
+      <div class="swirl-step">
+        <div class="step-accent accent-amber"></div>
+        <div class="step-num">03</div>
+        <div class="step-label lbl-amber">Lerende Organisatie</div>
+        <h3 class="step-title">De volgende groeistap</h3>
+        <p class="step-body">Vakmanschap groeit in het werk. Kennis wordt collectief eigendom. Leiderschap creëert de condities. Dit is waar de meeste industriebedrijven de grootste winst laten liggen.</p>
+        <div class="step-list">
+          <div class="step-item"><div class="step-dash"></div>Vakmanschap groeit in het dagelijkse werk</div>
+          <div class="step-item"><div class="step-dash"></div>Kennis wordt gedeeld, niet vastgehouden</div>
+          <div class="step-item"><div class="step-dash"></div>Leiderschap creëert condities voor leren</div>
+        </div>
+      </div>
+      <div class="swirl-step">
+        <div class="step-accent accent-gold"></div>
+        <div class="step-num">04</div>
+        <div class="step-label lbl-gold">Leiderschap als kern</div>
+        <h3 class="step-title">Van technisch competent naar systemisch leidend</h3>
+        <p class="step-body">Leader Standard Work verbindt alle verbeterroutines tot één coherent systeem. Felt Leadership maakt leiderschap voelbaar op de werkvloer. Van goede intenties naar vaste gedragingen.</p>
+        <div class="step-list">
+          <div class="step-item"><div class="step-dash"></div>Leader Standard Work ingevoerd</div>
+          <div class="step-item"><div class="step-dash"></div>Leider als rolmodel en teacher</div>
+          <div class="step-item"><div class="step-dash"></div>Van zes facetten naar dagelijkse praktijk</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── VIER GROEIFASEN ── -->
+<section class="groei-section">
+  <div class="groei-grid">
+    <div>
+      <p class="eyebrow">Waar staat u?</p>
+      <h2 class="groei-title">Vier stappen naar een lerende organisatie</h2>
+    </div>
+    <div class="groei-right">
+      <div class="groei-block" data-level="1">
+        <div class="groei-lbl">Fase 1</div>
+        <div class="groei-t">Bewustwording</div>
+        <div class="groei-b">Problemen worden ad hoc opgelost. Kennis zit in mensen. Verbeteren is incidenteel.</div>
+      </div>
+      <div class="groei-block" data-level="2">
+        <div class="groei-lbl">Fase 2</div>
+        <div class="groei-t">Structuur</div>
+        <div class="groei-b">Vaste verbeterroutines ontstaan. Standaarden worden gebruikt. Eerste feedbackloops werken.</div>
+      </div>
+      <div class="groei-block" data-level="3">
+        <div class="groei-lbl">Fase 3</div>
+        <div class="groei-t">Integraal verbeteren</div>
+        <div class="groei-b">Leren is onderdeel van besturing. Kennis wordt gedeeld. Leiders coachen op denken. LSW zichtbaar.</div>
+      </div>
+      <div class="groei-block" data-level="4">
+        <div class="groei-lbl">Fase 4</div>
+        <div class="groei-t">Continu lerende organisatie</div>
+        <div class="groei-b">Verbeteren is dagelijks ritme. Leiderschap versnelt en verbindt. De organisatie anticipeert.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── SUCCESVERHALEN ── -->
+<section class="cases-section">
+  <div class="cases-inner">
+    <div class="cases-header">
+      <h2 class="cases-title">Succesverhalen uit de industrie</h2>
+      <a href="#" class="cases-link">Alle verhalen &rarr;</a>
+    </div>
+    <div class="case-cards">
+      <a href="#" class="case-card">
+        <div class="case-sector-tag">Industrie — Bulk &amp; Logistiek</div>
+        <div class="case-company">European Bulk Services</div>
+        <div class="case-challenge">Een complexe omgeving waar verbeteringen niet beklijfden en kennis bij individuen bleef.</div>
+        <div class="case-result"><span>Resultaat:</span> Dagelijks management verankerd, eigenaarschap breed gedragen op de werkvloer.</div>
+      </a>
+      <a href="#" class="case-card">
+        <div class="case-sector-tag">Industrie — Maakindustrie</div>
+        <div class="case-company">Sif Group</div>
+        <div class="case-challenge">Snelle groei vroeg om een organisatie die leren en verbeteren kon opschalen.</div>
+        <div class="case-result"><span>Resultaat:</span> Verbetercultuur opgebouwd die schaalt met de organisatiegroei.</div>
+      </a>
+      <a href="#" class="case-card">
+        <div class="case-sector-tag">Industrie — Food</div>
+        <div class="case-company">Bakkerij Fuite</div>
+        <div class="case-challenge">Van dorpsbakker naar World Class Bakery — volledige ontwikkeling van alle drie de swirls.</div>
+        <div class="case-result"><span>Resultaat:</span> Zelfsturende teams, coachend leiderschap, dagelijks verbeteren als standaard.</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ── CTA ── -->
+<div class="cta-band">
+  <p class="cta-ey">De volgende stap</p>
+  <h2 class="cta-t">Waar stokt de spiraal<br>in uw <em class="em-sector">organisatie?</em></h2>
+  <p class="cta-b">In een verkennend gesprek brengen we samen in kaart welke swirl achterblijft en waar de grootste groeikans ligt. Geen standaardpresentatie — een eerlijk gesprek op basis van uw situatie.</p>
+  <div class="cta-btns">
+    <a href="../visie/assessment.html"   class="btn-dark">Doe het assessment</a>
+    <a href="../visie/leiderschap.html"  class="btn-outline">Leiderschap als accelerator &rarr;</a>
+  </div>
+</div>
+
+<footer>
+  <a href="../index.html" class="footer-logo">
+    <img src="../assets/img/ewp-logo-v2-white.png" alt="Excellence with Passion" class="footer-logo-img">
+  </a>
+  <div class="footer-nav">
+    <a href="glastuinbouw.html" class="footer-link">Naar Glastuinbouw &rarr;</a>
+    <span class="footer-copy">info@excellencewithpassion.com</span>
+  </div>
+</footer>
+
+</body>
+</html>

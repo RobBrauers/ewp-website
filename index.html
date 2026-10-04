@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Excellence with Passion — De Passion Swirl</title>
+  <meta name="description" content="Duurzame groei vraagt drie krachten tegelijk: excellente processen, systematisch verbeteren en een lerende organisatie. Leiderschap is de kern.">
+
+  <link rel="icon" type="image/png" sizes="16x16"   href="assets/img/ewp-favicon-16.png">
+  <link rel="icon" type="image/png" sizes="32x32"   href="assets/img/ewp-favicon-32.png">
+  <link rel="icon" type="image/png" sizes="64x64"   href="assets/img/ewp-favicon-64.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/img/ewp-favicon-192.png">
+  <link rel="apple-touch-icon"                      href="assets/img/ewp-favicon-512.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/main.css">
+
+  <style>
+    /* ── Hero ── */
+    .home-hero {
+      min-height: 100vh;
+      background: var(--ink);
+      display: flex;
+      align-items: flex-end;
+      padding: 120px 4rem 8rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .home-hero-bg { position: absolute; inset: 0; background: radial-gradient(ellipse 80% 60% at 70% 40%, rgba(227,0,27,.07) 0%, transparent 60%); pointer-events: none; }
+    .home-hero-content { position: relative; z-index: 1; max-width: 720px; }
+    .home-tag { font-size: .68rem; font-weight: 500; letter-spacing: .15em; text-transform: uppercase; color: var(--kleur-verbeteren); margin-bottom: 2rem; }
+    .home-q { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.8rem,5vw,5rem); font-weight: 300; line-height: 1.1; color: #fff; margin: 0 0 2rem; }
+    .home-a { font-size: 1rem; line-height: 1.8; color: rgba(255,255,255,.6); max-width: 52ch; margin-bottom: 3rem; }
+    .home-cta-row { display: flex; gap: 1rem; flex-wrap: wrap; }
+    .btn-sector { display: inline-block; padding: .75rem 1.75rem; font-size: .75rem; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; text-decoration: none; border: 1px solid rgba(255,255,255,.2); color: rgba(255,255,255,.7); transition: border-color .2s, color .2s; }
+    .btn-sector:hover { border-color: rgba(255,255,255,.5); color: #fff; }
+
+    /* ── Drie Swirls ── */
+    .swirls-section { background: var(--kleur-achtergrond); padding: 6rem 4rem; }
+    .swirls-label { font-size: .68rem; font-weight: 500; letter-spacing: .15em; text-transform: uppercase; color: var(--kleur-waardestroom); margin-bottom: 1rem; }
+    .swirls-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.8rem,3vw,2.8rem); font-weight: 300; color: var(--kleur-tekst); margin-bottom: 4rem; }
+    .swirls-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; }
+    .swirl-card { padding: 2.5rem; border-top: 3px solid var(--card-color, var(--kleur-waardestroom)); background: #fff; }
+    .swirl-num { font-family: 'Cormorant Garamond', serif; font-size: 3rem; font-weight: 300; color: var(--card-color); line-height: 1; margin-bottom: 1rem; }
+    .swirl-t { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; font-weight: 600; color: var(--kleur-tekst); margin-bottom: .5rem; }
+    .swirl-sub { font-size: .78rem; font-style: italic; color: var(--card-color); margin-bottom: 1.25rem; }
+    .swirl-body { font-size: .88rem; line-height: 1.75; color: #555; margin-bottom: 1.5rem; }
+    .swirl-items { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: .6rem; }
+    .swirl-items li { font-size: .82rem; color: #666; padding-left: 1.2rem; position: relative; }
+    .swirl-items li::before { content: '—'; position: absolute; left: 0; color: var(--card-color); }
+
+    /* ── Samenhang / Kern ── */
+    .samenhang-section { background: var(--kleur-industrie); padding: 6rem 4rem; }
+    .samenhang-label { font-size: .68rem; font-weight: 500; letter-spacing: .15em; text-transform: uppercase; color: var(--kleur-verbeteren); margin-bottom: 1.5rem; }
+    .samenhang-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem,4vw,3.5rem); font-weight: 300; color: #fff; line-height: 1.2; margin-bottom: 2rem; }
+    .samenhang-body { font-size: .95rem; line-height: 1.85; color: rgba(255,255,255,.6); margin-bottom: 1.5rem; max-width: 60ch; }
+    .samenhang-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.5rem; margin-top: 3rem; }
+    .samenhang-item { padding: 1.75rem; border: 1px solid rgba(255,255,255,.1); }
+    .si-label { font-size: .68rem; font-weight: 500; letter-spacing: .12em; text-transform: uppercase; color: rgba(255,255,255,.4); margin-bottom: .75rem; }
+    .si-body { font-size: .85rem; line-height: 1.65; color: rgba(255,255,255,.65); }
+
+    /* ── Sectoren ── */
+    .sectoren-section { background: var(--kleur-achtergrond); padding: 6rem 4rem; }
+    .sectoren-label { font-size: .68rem; font-weight: 500; letter-spacing: .15em; text-transform: uppercase; color: var(--kleur-waardestroom); margin-bottom: 1rem; }
+    .sectoren-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.8rem,3vw,2.8rem); font-weight: 300; color: var(--kleur-tekst); margin-bottom: 1rem; }
+    .sectoren-intro { font-size: .95rem; line-height: 1.75; color: #666; margin-bottom: 3rem; max-width: 55ch; }
+    .sectoren-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem; }
+    .sector-card { padding: 3rem; position: relative; overflow: hidden; text-decoration: none; display: block; }
+    .sector-card-ind { background: var(--kleur-industrie); }
+    .sector-card-glas { background: var(--kleur-glastuinbouw); }
+    .sector-card-tag { font-size: .65rem; font-weight: 500; letter-spacing: .15em; text-transform: uppercase; color: rgba(255,255,255,.45); margin-bottom: 1.5rem; }
+    .sector-card-title { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-weight: 300; color: #fff; line-height: 1.2; margin-bottom: 1.25rem; }
+    .sector-card-body { font-size: .88rem; line-height: 1.75; color: rgba(255,255,255,.6); margin-bottom: 2rem; }
+    .sector-card-link { font-size: .72rem; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; color: rgba(255,255,255,.5); }
+    .sector-card-letter { position: absolute; bottom: -1rem; right: 1.5rem; font-family: 'Cormorant Garamond', serif; font-size: 10rem; font-weight: 300; color: rgba(255,255,255,.05); line-height: 1; pointer-events: none; }
+    .sector-card:hover .sector-card-link { color: #fff; }
+
+    @media (max-width: 768px) {
+      .home-hero, .swirls-section, .samenhang-section, .sectoren-section { padding-left: 1.5rem; padding-right: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+<div id="nav-root"></div>
+<script src="assets/js/nav.js"></script>
+
+<!-- ── Hero ── -->
+<section class="home-hero">
+  <div class="home-hero-bg"></div>
+  <div class="home-hero-content">
+    <div class="home-tag">De Passion Swirl — 30 jaar ervaring</div>
+    <h1 class="home-q">
+      Veel organisaties<br>
+      verbeteren.<br>
+      Weinig organisaties<br>
+      leren van hun<br>
+      verbeteringen.
+    </h1>
+    <p class="home-a">Duurzame groei vraagt dat drie krachten tegelijk ontwikkelen: excellente processen, systematisch verbeteren en een organisatie die leert. Leiderschap is de kern die alle drie in beweging brengt.</p>
+    <div class="home-cta-row">
+      <a href="sector-industrie.html" class="btn-sector">Industrie</a>
+      <a href="sector-glastuinbouw.html" class="btn-sector">Glastuinbouw</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── Drie Swirls ── -->
+<section class="swirls-section">
+  <div class="swirls-label">De drie swirls</div>
+  <h2 class="swirls-title">Één model. Drie krachten.</h2>
+  <div class="swirls-grid">
+
+    <div class="swirl-card" style="--card-color: var(--kleur-waardestroom);">
+      <div class="swirl-num">01</div>
+      <div class="swirl-t">Continue Waardestroom</div>
+      <div class="swirl-sub">Waarde stroomt ononderbroken naar de klant</div>
+      <p class="swirl-body">Elk proces is zo ingericht dat waarde vloeiend stroomt, in het ritme van de klantvraag — zonder verspilling, wachttijden of kwaliteitsverlies. Kwaliteit ontstaat in het proces.</p>
+      <ul class="swirl-items">
+        <li>Stabiele processen en daardoor voorspelbare doorlooptijden</li>
+        <li>Teelt, techniek en logistiek naadloos op elkaar afgestemd, zeker bij schaalvergroting.</li>
+      </ul>
+    </div>
+
+    <div class="swirl-card" style="--card-color: var(--kleur-verbeteren);">
+      <div class="swirl-num">02</div>
+      <div class="swirl-t">Continu Verbeteren</div>
+      <div class="swirl-sub">Elke afwijking is een kans om beter te worden</div>
+      <p class="swirl-body">Verbeteren is geen project maar een dagelijkse werkwijze. Standaarden zijn het vertrekpunt. Afwijkingen worden onmiddellijk zichtbaar en bespreekbaar. Verbeteringen worden geborgd — en vormen de volgende standaard.</p>
+      <ul class="swirl-items">
+        <li>Van losse projecten naar integraal dagelijks verbeteren</li>
+        <li>Standaarden brengen stabiliteit, bijv. minder handelingsschade, in het werk en ruimte voor groei.</li>
+      </ul>
+    </div>
+
+    <div class="swirl-card" style="--card-color: var(--kleur-lerende-org);">
+      <div class="swirl-num">03</div>
+      <div class="swirl-t">Continu Lerende Organisatie</div>
+      <div class="swirl-sub">Mensen groeien mee met de organisatie</div>
+      <p class="swirl-body">Vakmanschap ontwikkelt zich in het dagelijkse werk. Kennis wordt collectief eigendom van de organisatie. Leiderschap creëert de condities waarin leren veilig, zichtbaar en gewoon is.</p>
+      <ul class="swirl-items">
+        <li>Van individuele expertise naar organisatieleren</li>
+        <li>Vakkennis in de aansturende laag overdraagbaar maken voor de hele organisatie</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<!-- ── Samenhang / Kern ── -->
+<section class="samenhang-section">
+  <div class="samenhang-label">De kern</div>
+  <h2 class="samenhang-title">Drie stromen.<br>Één kern.<br>Eén spiraal omhoog.</h2>
+  <p class="samenhang-body">De drie stromen zijn geen stappenplan. Ze zijn een zichzelf versterkende spiraal. De waardestroom maakt afwijkingen zichtbaar. Verbeteren zet die afwijkingen om in groei. De lerende organisatie zorgt dat mensen en kennis meegroeien.</p>
+  <p class="samenhang-body">Leiderschap is niet één van de drie stromen. Het is de kern die bepaalt hoe snel en hoe diep alle drie zich ontwikkelen. Achterblijven in één stroom blokkeert altijd de andere twee.</p>
+  <div class="samenhang-grid">
+    <div class="samenhang-item">
+      <div class="si-label">Swirl 1 — Proces</div>
+      <div class="si-body">De waardestroom levert het ritme en maakt afwijkingen zichtbaar.</div>
+    </div>
+    <div class="samenhang-item">
+      <div class="si-label">Swirl 2 — Verbeteren</div>
+      <div class="si-body">Continu verbeteren zet elke afwijking om in structurele groei.</div>
+    </div>
+    <div class="samenhang-item">
+      <div class="si-label">Swirl 3 — Leren</div>
+      <div class="si-body">De lerende organisatie zorgt dat kennis zich ophoopt — en niet verdwijnt.</div>
+    </div>
+    <div class="samenhang-item">
+      <div class="si-label">Kern — Leiderschap</div>
+      <div class="si-body">Leiderschap is de accelerator. Zonder de kern draait de spiraal — maar niet omhoog.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Sectoren ── -->
+<section class="sectoren-section">
+  <div class="sectoren-label">Onze sectoren</div>
+  <h2 class="sectoren-title">Waar staat uw organisatie?</h2>
+  <p class="sectoren-intro">Hetzelfde model. Twee werelden. Kies uw sector en ontdek wat de volgende groeistap voor uw organisatie betekent.</p>
+  <div class="sectoren-grid">
+    <a href="sector-industrie.html" class="sector-card sector-card-ind">
+      <div class="sector-card-tag">30 jaar ervaring</div>
+      <div class="sector-card-title">Industrie &amp;<br>Maakindustrie</div>
+      <p class="sector-card-body">U werkt al jaren met Lean of continu verbeteren. De methoden zijn bekend. Maar verbeteringen beklijven niet altijd, kennis blijft bij individuen en de derde swirl — de lerende organisatie — is nog onderontwikkeld. Wij helpen u de volgende stap zetten.</p>
+      <div class="sector-card-link">Ontdek onze aanpak →</div>
+      <div class="sector-card-letter">I</div>
+    </a>
+    <a href="sector-glastuinbouw.html" class="sector-card sector-card-glas">
+      <div class="sector-card-tag">Groeiende expertise</div>
+      <div class="sector-card-title">Glastuinbouw &amp;<br>Tuinbouw</div>
+      <p class="sector-card-body">Uw organisatie heeft enorme vakkennis, rijke data en een sterk seizoensritme. Maar leren gebeurt nog vaak impliciet. Kennis zit in mensen, niet in systemen. Wij vertalen de Passion Swirl naar de taal van uw sector.</p>
+      <div class="sector-card-link">Ontdek onze aanpak →</div>
+      <div class="sector-card-letter">G</div>
+    </a>
+  </div>
+</section>
+
+<!-- ── Footer ── -->
+<footer>
+  <a href="index.html" class="footer-logo">
+    <img src="assets/img/ewp-logo-v3-white.png" alt="Excellence with Passion" class="footer-logo-img">
+  </a>
+  <div class="footer-nav">
+    <a href="visie-passion-swirl.html" class="footer-link">Visie</a>
+    <a href="sector-industrie.html"    class="footer-link">Industrie</a>
+    <a href="sector-glastuinbouw.html" class="footer-link">Glastuinbouw</a>
+    <span class="footer-copy">Deurne, Nederland &nbsp;·&nbsp; info@excellencewithpassion.com</span>
+  </div>
+</footer>
+
+</body>
+</html>

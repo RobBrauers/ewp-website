@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//Users/robbrauers/Library/Application Support/Claude/local-agent-mode-sessions/skills-plugin/d218ac61-4b30-4c57-84ec-f10f7b627179/c2225bf5-7ac1-44bd-aac4-14257904cf5b/skills/pptx/**)",
+      "Bash(python3 scripts/thumbnail.py '/Users/robbrauers/Downloads/ewp-website/assets/01 Module 1 Gericht verbeteren met SGA \\(12052025\\).pptx' ewp-module1)",
+      "Bash(python3 -c 'import zipfile, sys; zipfile.ZipFile\\(sys.argv[1]\\).extractall\\(sys.argv[2]\\)' '/Users/robbrauers/Downloads/ewp-website/assets/01 Module 1 Gericht verbeteren met SGA \\(12052025\\).pptx' /private/tmp/claude-501/-Users-robbrauers-Downloads-ewp-website/bebf243e-777b-46aa-9ac5-0dd1733c85ce/scratchpad/pptx-unpacked)",
+      "Bash(python3 -)",
+      "Bash(rm -f '/Users/robbrauers/Downloads/ewp-website/assets/01 Module 1 Gericht verbeteren met SGA \\(12052025\\) - EwP v3.pptx')",
+      "Bash(zip -Xr '/Users/robbrauers/Downloads/ewp-website/assets/01 Module 1 Gericht verbeteren met SGA \\(12052025\\) - EwP v3.pptx' . -q)",
+      "Bash(python3 scripts/office/soffice.py --headless --convert-to pdf '/Users/robbrauers/Downloads/ewp-website/assets/01 Module 1 Gericht verbeteren met SGA \\(12052025\\) - EwP v3.pptx')",
+      "Bash(which soffice *)",
+      "Bash(python3 -c 'import zipfile, sys; zipfile.ZipFile\\(sys.argv[1]\\).extractall\\(sys.argv[2]\\)' '/Users/robbrauers/Downloads/ewp-website/assets/01 Module 1 Gericht verbeteren met SGA \\(12052025\\) - EwP v3.pptx' /private/tmp/claude-501/-Users-robbrauers-Downloads-ewp-website/bebf243e-777b-46aa-9ac5-0dd1733c85ce/scratchpad/pptx-verify)",
+      "Bash(gh --version)"
+    ]
+  }
+}

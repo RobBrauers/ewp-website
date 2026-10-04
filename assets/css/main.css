@@ -1,0 +1,685 @@
+/* ═══════════════════════════════════════════════════════════════
+   Excellence with Passion — Gedeelde stijlen v3
+   --kleur-verbeteren   #e3001b  (Continu Verbeteren)
+   --kleur-lerende-org  #c07800  (Lerende Organisatie)
+   --kleur-waardestroom #9d9ea0  (Continue Waardestroom)
+   --kleur-industrie    #1e2d3d  (sector donkerblauw)
+   --kleur-glastuinbouw #1a2e22  (sector donkergroen)
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ── 1. CSS Custom Properties ─────────────────────────────── */
+
+:root {
+  /* ── Definitieve merkkleur (semantisch) ── */
+  --kleur-waardestroom:   #9d9ea0;  /* grijs  — Continue Waardestroom  */
+  --kleur-verbeteren:     #e3001b;  /* rood   — Continu Verbeteren     */
+  --kleur-lerende-org:    #c07800;  /* amber  — Lerende Organisatie    */
+  --kleur-industrie:      #1e2d3d;  /* donkerblauw — sectorkleur       */
+  --kleur-glastuinbouw:   #1a2e22;  /* donkergroen — sectorkleur       */
+  --kleur-achtergrond:    #f5f2ec;  /* warm wit                        */
+  --kleur-tekst:          #1a1a18;  /* donker                          */
+  --kleur-mist:           #e8e4db;  /* lichte secties                  */
+
+  /* ── Aliassen voor bestaande CSS (backward-compat) ── */
+  --red:          var(--kleur-verbeteren);
+  --red-dim:      #ff4d60;
+  --amber:        var(--kleur-lerende-org);
+  --amber-dim:    #e09030;
+  --grey:         var(--kleur-waardestroom);
+  --grey-dark:    #6d6e70;
+  --grey-light:   #f0f0f1;
+
+  --industry:        var(--kleur-industrie);
+  --industry-dark:   #131d27;
+  --greenhouse:      var(--kleur-glastuinbouw);
+  --greenhouse-dark: #111e17;
+  --greenhouse-light:#e8efe9;
+
+  --gold:       #b89a5a;
+  --gold-light: #d4b87a;
+
+  --ink:        var(--kleur-tekst);
+  --paper:      var(--kleur-achtergrond);
+  --mist:       var(--kleur-mist);
+  --cool-light: #eef1f4;
+}
+
+/* ── 2. Reset & Basis ─────────────────────────────────────── */
+
+*,
+*::before,
+*::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 1rem;
+  background: var(--paper);
+  color: var(--ink);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+img { max-width: 100%; height: auto; display: block; }
+
+/* ── 3. Navigatie ─────────────────────────────────────────── */
+
+nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 4rem;
+  background: rgba(245,242,236,.96);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(26,26,24,.08);
+}
+
+/* Logo */
+.nav-logo        { display: flex; align-items: center; text-decoration: none; }
+.nav-logo-img    { height: 64px; width: auto; display: block; }
+
+/* Link-lijst */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  list-style: none;
+  margin: 0; padding: 0;
+}
+.nav-links > li { position: relative; }
+
+/* Gewone links en dropdown-toggle basisstijl */
+.nav-links > li > a,
+.nav-dropdown-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: .3rem;
+  padding: .4rem .9rem;
+  font-family: 'DM Sans', sans-serif;
+  font-size: .78rem;
+  font-weight: 500;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--ink);
+  text-decoration: none;
+  opacity: .75;
+  background: none;
+  border: none;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: opacity .15s;
+}
+.nav-links > li > a:hover,
+.nav-dropdown-toggle:hover   { opacity: 1; }
+.nav-links > li > a.active,
+.nav-dropdown-toggle.active  { opacity: 1; color: var(--red); }
+
+/* Chevron icoon */
+.nav-chevron { flex-shrink: 0; transition: transform .2s; }
+.has-dropdown.open .nav-chevron { transform: rotate(180deg); }
+
+/* Dropdown-menu */
+.nav-dropdown-menu {
+  position: absolute;
+  top: calc(100% + .5rem);
+  left: 0;
+  min-width: 210px;
+  background: white;
+  border: 1px solid rgba(26,26,24,.1);
+  box-shadow: 0 8px 28px rgba(0,0,0,.1);
+  list-style: none;
+  margin: 0; padding: .4rem 0;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-6px);
+  transition: opacity .18s, transform .18s;
+}
+.has-dropdown:hover .nav-dropdown-menu,
+.has-dropdown.open  .nav-dropdown-menu {
+  opacity: 1;
+  pointer-events: all;
+  transform: translateY(0);
+}
+.nav-dropdown-menu a {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  padding: .6rem 1.2rem;
+  font-size: .8rem;
+  font-weight: 400;
+  letter-spacing: .04em;
+  text-transform: none;
+  color: var(--ink);
+  text-decoration: none;
+  opacity: .75;
+  transition: opacity .12s, color .12s;
+}
+.nav-dropdown-menu a:hover  { opacity: 1; color: var(--red); }
+.nav-dropdown-menu a.active { opacity: 1; color: var(--red); font-weight: 500; }
+.nav-icon { font-style: normal; }
+
+/* CTA-knop */
+.nav-cta {
+  display: inline-flex !important;
+  align-items: center;
+  margin-left: .75rem;
+  padding: .55rem 1.3rem !important;
+  background: var(--red) !important;
+  color: white !important;
+  opacity: 1 !important;
+  font-size: .75rem !important;
+  font-weight: 500 !important;
+  letter-spacing: .07em !important;
+  text-transform: uppercase !important;
+  text-decoration: none;
+  transition: background .15s;
+}
+.nav-cta:hover  { background: #bf0016 !important; }
+.nav-cta.active { background: #bf0016 !important; }
+
+/* Hamburger */
+.nav-hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 36px; height: 36px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 101;
+}
+.nav-hamburger span {
+  display: block;
+  width: 22px; height: 1.5px;
+  background: var(--ink);
+  transition: transform .22s, opacity .22s;
+  transform-origin: center;
+}
+nav.menu-open .nav-hamburger span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+nav.menu-open .nav-hamburger span:nth-child(2) { opacity: 0; }
+nav.menu-open .nav-hamburger span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+
+/* Overlay */
+.nav-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.45);
+  z-index: 98;
+}
+nav.menu-open .nav-overlay { display: block; }
+
+/* ── 4. (sub-nav vervangen door dropdown — zie hierboven) ─── */
+
+/* ── 5. Knoppen ───────────────────────────────────────────── */
+
+/* Primair — rood */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  padding: 1rem 2.2rem;
+  background: var(--red);
+  color: white;
+  font-size: .82rem;
+  font-weight: 500;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.btn-primary:hover { background: #bf0016; }
+
+/* Ghost — transparant op donkere achtergrond */
+.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  padding: 1rem 2.2rem;
+  background: transparent;
+  color: rgba(255,255,255,.7);
+  font-size: .82rem;
+  font-weight: 500;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 1px solid rgba(255,255,255,.25);
+}
+.btn-ghost:hover { color: white; border-color: rgba(255,255,255,.5); }
+
+/* Donker — industrie-kleur */
+.btn-dark {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  padding: 1rem 2.5rem;
+  background: var(--industry);
+  color: white;
+  font-size: .82rem;
+  font-weight: 500;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.btn-dark:hover { background: var(--industry-dark); }
+
+/* Glastuinbouw */
+.btn-greenhouse {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  padding: 1rem 2.2rem;
+  background: var(--greenhouse);
+  color: white;
+  font-size: .82rem;
+  font-weight: 500;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.btn-greenhouse:hover { background: var(--greenhouse-dark); }
+
+/* Goud */
+.btn-gold {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  padding: 1rem 2rem;
+  background: var(--gold);
+  color: white;
+  font-size: .78rem;
+  font-weight: 500;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+/* Outline op lichte achtergrond */
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  padding: 1rem 2.5rem;
+  background: transparent;
+  color: var(--ink);
+  font-size: .82rem;
+  font-weight: 500;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 1.5px solid rgba(26,26,24,.25);
+}
+.btn-outline:hover { border-color: rgba(26,26,24,.55); }
+
+/* ── 6. Sectie-utilities ──────────────────────────────────── */
+
+.sec        { padding: 8rem 4rem; }
+.sec-inner  { max-width: 1200px; margin: 0 auto; }
+.sec-dark   { background: var(--ink); }
+.sec-mist   { background: var(--mist); }
+.sec-gold   {
+  background: rgba(184,154,90,.05);
+  border-top: 1px solid rgba(184,154,90,.15);
+  border-bottom: 1px solid rgba(184,154,90,.15);
+}
+
+/* ── 7. Typografie-utilities ──────────────────────────────── */
+
+.eyebrow {
+  display: block;
+  font-size: .72rem;
+  font-weight: 500;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+  color: var(--red);
+  margin-bottom: 1.5rem;
+}
+.eyebrow-amber    { color: var(--amber); }
+.eyebrow-gold     { color: var(--gold); }
+.eyebrow-dim      { color: var(--red-dim); }
+.eyebrow-gold-dim { color: var(--gold-light); }
+
+.sec-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2rem, 3.5vw, 3.5rem);
+  font-weight: 300;
+  color: var(--ink);
+  line-height: 1.2;
+}
+.sec-title em { font-style: italic; color: var(--red); }
+
+.sec-title-light {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2rem, 3.5vw, 3.5rem);
+  font-weight: 300;
+  color: white;
+  line-height: 1.2;
+}
+.sec-title-light em { font-style: italic; color: var(--red-dim); }
+.sec-title-light em.em-gold { color: var(--gold-light); }
+
+.body-t {
+  font-size: .95rem;
+  line-height: 1.85;
+  color: var(--ink);
+  opacity: .7;
+  margin-bottom: 1.5rem;
+}
+
+/* ── 8. Lay-out rasters ───────────────────────────────────── */
+
+.two-col    { display: grid; grid-template-columns: 1fr 1fr;       gap: 6rem; align-items: start; }
+.two-col-12 { display: grid; grid-template-columns: 1fr 2fr;       gap: 6rem; align-items: start; }
+.three-col  { display: grid; grid-template-columns: repeat(3,1fr); gap: 2px; }
+.four-grid  { display: grid; grid-template-columns: 1fr 1fr;       gap: 2px; }
+
+/* ── 9. Hero (donker, subpagina's) ───────────────────────── */
+
+.hero {
+  min-height: 100vh;
+  background: var(--industry);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  padding: 120px 4rem 8rem;
+}
+.hero-greenhouse { background: var(--greenhouse); }
+
+.hero-bg-grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px);
+  background-size: 60px 60px;
+  pointer-events: none;
+}
+
+.hero-bg-glow {
+  position: absolute;
+  top: -100px; right: -100px;
+  width: 700px; height: 700px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(227,0,27,.1) 0%, transparent 65%);
+  pointer-events: none;
+}
+.hero-bg-glow-gold {
+  position: absolute;
+  top: -100px; right: -100px;
+  width: 700px; height: 700px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(184,154,90,.12) 0%, transparent 65%);
+  pointer-events: none;
+}
+.hero-bg-glow-bottom {
+  position: absolute;
+  bottom: -150px; left: -100px;
+  width: 500px; height: 500px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(192,120,0,.07) 0%, transparent 65%);
+  pointer-events: none;
+}
+
+.hero-sector-tag {
+  position: absolute;
+  top: 8rem; left: 4rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.sector-years {
+  font-size: .72rem;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--red-dim);
+  opacity: .85;
+}
+
+.hero-scroll {
+  position: absolute;
+  bottom: 3rem; right: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .5rem;
+  font-size: .65rem;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.25);
+  pointer-events: none;
+}
+.scroll-line {
+  width: 1px; height: 50px;
+  background: linear-gradient(to bottom, rgba(255,255,255,.25), transparent);
+}
+
+.hero-content { position: relative; z-index: 2; max-width: 800px; }
+
+.hero-q {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2.5rem, 5vw, 5.5rem);
+  font-weight: 300;
+  line-height: 1.1;
+  color: white;
+  margin-bottom: 2.5rem;
+}
+.hero-q em          { font-style: italic; color: var(--red-dim); }
+.hero-q em.em-gold  { color: var(--gold-light); }
+
+.hero-a {
+  font-size: 1.05rem;
+  font-weight: 300;
+  line-height: 1.8;
+  color: rgba(255,255,255,.6);
+  max-width: 55ch;
+  margin-bottom: 3rem;
+}
+
+.cta-row { display: flex; gap: 1rem; flex-wrap: wrap; }
+
+/* Sector-badge */
+.sector-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  padding: .4rem 1rem;
+  font-size: .7rem;
+  font-weight: 500;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+.sb-red  { background: rgba(227,0,27,.2);   border: 1px solid rgba(227,0,27,.3);   color: var(--red-dim); }
+.sb-grey { background: rgba(157,158,160,.15); border: 1px solid rgba(255,255,255,.12); color: rgba(255,255,255,.7); }
+.sb-gold { background: rgba(184,154,90,.2);  border: 1px solid rgba(184,154,90,.3);  color: var(--gold-light); }
+.sb-ind  { background: rgba(30,45,61,.5);    border: 1px solid rgba(255,255,255,.12); color: rgba(255,255,255,.7); }
+.sb-grh  { background: rgba(26,46,34,.5);    border: 1px solid rgba(255,255,255,.12); color: rgba(255,255,255,.7); }
+
+/* ── 10. Insight-blokken (donkere achtergrond) ────────────── */
+
+.insight-block {
+  padding: 1.75rem 2rem;
+  border-left: 2px solid;
+  background: rgba(255,255,255,.03);
+}
+.ib-grey  { border-color: var(--grey); }
+.ib-red   { border-color: var(--red); }
+.ib-amber { border-color: var(--amber); }
+.ib-gold  { border-color: var(--gold); }
+
+.insight-label {
+  font-size: .68rem;
+  font-weight: 500;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.5);
+  margin-bottom: .5rem;
+}
+.insight-text {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.15rem;
+  font-weight: 400;
+  color: white;
+  line-height: 1.5;
+}
+
+/* ── 11. Streepjeslijst ───────────────────────────────────── */
+
+.dash-list { display: flex; flex-direction: column; gap: .5rem; }
+.dash-item { display: flex; align-items: flex-start; gap: .6rem; }
+.dash-item span { font-size: .82rem; line-height: 1.5; color: var(--ink); opacity: .7; }
+.dash-item-light span { color: rgba(255,255,255,.55); }
+.dash {
+  width: 16px; height: 1px;
+  margin-top: .58rem;
+  flex-shrink: 0;
+  background: var(--red);
+}
+.dash-light { background: var(--red-dim); }
+
+/* ── 12. CTA-band ─────────────────────────────────────────── */
+
+.cta-band {
+  padding: 8rem 4rem;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.cta-ey {
+  display: block;
+  font-size: .72rem;
+  font-weight: 500;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+  color: var(--red);
+  margin-bottom: 1.5rem;
+}
+.cta-t {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2rem, 3.5vw, 3.5rem);
+  font-weight: 300;
+  line-height: 1.2;
+  color: var(--ink);
+  margin-bottom: 1.5rem;
+}
+.cta-t em           { font-style: italic; color: var(--grey-dark); }
+.cta-t em.em-red    { color: var(--red); }
+.cta-t em.em-gold   { color: var(--gold); }
+.cta-t em.em-sector { color: var(--industry); }
+.cta-b {
+  font-size: .95rem;
+  line-height: 1.8;
+  color: var(--ink);
+  opacity: .65;
+  margin-bottom: 3rem;
+}
+.cta-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+
+/* ── 13. Footer ───────────────────────────────────────────── */
+
+footer {
+  background: var(--ink);
+  padding: 2rem 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+  text-decoration: none;
+}
+.footer-logo-img { height: 40px; width: auto; }
+.footer-logo-text {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: white;
+  letter-spacing: .05em;
+}
+.footer-logo-text .accent { color: var(--red-dim); }
+.footer-nav { display: flex; gap: 2rem; align-items: center; }
+.footer-link {
+  font-size: .72rem;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.62);
+  text-decoration: none;
+}
+.footer-link:hover { color: rgba(255,255,255,.65); }
+.footer-copy { font-size: .75rem; color: rgba(255,255,255,.55); letter-spacing: .06em; }
+
+/* ── 14. Responsief ───────────────────────────────────────── */
+
+@media (max-width: 900px) {
+  nav { padding: 1.2rem 2rem; }
+
+  /* Hamburger zichtbaar */
+  .nav-hamburger { display: flex; }
+
+  /* Nav-links als slide-in panel */
+  .nav-links {
+    position: fixed;
+    top: 0; right: -100%;
+    width: min(300px, 85vw);
+    height: 100vh;
+    background: white;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 5.5rem 1.5rem 2rem;
+    gap: .25rem;
+    z-index: 99;
+    transition: right .28s ease;
+    overflow-y: auto;
+    border-left: 1px solid rgba(26,26,24,.08);
+  }
+  nav.menu-open .nav-links { right: 0; }
+
+  .nav-links > li { width: 100%; }
+  .nav-links > li > a,
+  .nav-dropdown-toggle {
+    width: 100%;
+    justify-content: space-between;
+    padding: .65rem .5rem;
+    border-bottom: 1px solid rgba(26,26,24,.06);
+    opacity: .75;
+  }
+
+  /* Dropdown inline in mobiel menu */
+  .nav-dropdown-menu {
+    position: static;
+    box-shadow: none;
+    border: none;
+    opacity: 1;
+    pointer-events: all;
+    transform: none;
+    display: none;
+    padding: .25rem 0 .25rem .75rem;
+    background: var(--cool-light);
+  }
+  .has-dropdown.open .nav-dropdown-menu { display: block; }
+  .nav-dropdown-menu a { padding: .5rem .75rem; font-size: .82rem; }
+
+  /* CTA in mobiel menu */
+  .nav-cta {
+    margin-left: 0 !important;
+    width: 100%;
+    justify-content: center;
+    margin-top: .5rem;
+  }
+
+  .hero              { padding: 120px 2rem 6rem; }
+  .hero-scroll       { display: none; }
+
+  .sec        { padding: 5rem 2rem; }
+  .two-col, .two-col-12, .three-col, .four-grid { grid-template-columns: 1fr; gap: 2rem; }
+
+  .cta-band   { padding: 5rem 2rem; }
+
+  footer      { padding: 2rem; flex-direction: column; gap: 1rem; text-align: center; }
+  .footer-nav { flex-direction: column; gap: .75rem; }
+}

@@ -1,0 +1,59 @@
+[build]
+  publish = "."
+
+[[redirects]]
+  from = "/visie"
+  to   = "/visie-passion-swirl.html"
+  status = 301
+
+[[redirects]]
+  from = "/visie/passion-swirl.html"
+  to   = "/visie-passion-swirl.html"
+  status = 301
+
+[[redirects]]
+  from = "/visie/leiderschap.html"
+  to   = "/visie-leiderschap.html"
+  status = 301
+
+[[redirects]]
+  from = "/visie/hoe-wij-werken.html"
+  to   = "/visie-hoe-wij-werken.html"
+  status = 301
+
+[[redirects]]
+  from = "/visie/assessment.html"
+  to   = "/visie-assessment.html"
+  status = 301
+
+[[redirects]]
+  from = "/sector"
+  to   = "/sector-industrie.html"
+  status = 301
+
+[[redirects]]
+  from = "/sector/industrie.html"
+  to   = "/sector-industrie.html"
+  status = 301
+
+[[redirects]]
+  from = "/sector/glastuinbouw.html"
+  to   = "/sector-glastuinbouw.html"
+  status = 301
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options        = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy        = "strict-origin-when-cross-origin"
+
+[[headers]]
+  for = "/assets/css/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/assets/img/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"

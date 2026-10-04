@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Excellence with Passion</title>
+  <meta name="description" content="Wil je alles halen uit het productieproces van uw organisatie? Neem contact op met Excellence with Passion voor een vrijblijvend gesprek.">
+
+  <link rel="icon" type="image/png" sizes="16x16"   href="assets/img/ewp-favicon-16.png">
+  <link rel="icon" type="image/png" sizes="32x32"   href="assets/img/ewp-favicon-32.png">
+  <link rel="icon" type="image/png" sizes="64x64"   href="assets/img/ewp-favicon-64.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/img/ewp-favicon-192.png">
+  <link rel="apple-touch-icon"                      href="assets/img/ewp-favicon-512.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/main.css">
+
+  <style>
+    /* ── Contact-hero ── */
+    .contact-hero {
+      min-height: 55vh;
+      background: var(--paper);
+      display: flex;
+      align-items: flex-end;
+      padding: 140px 4rem 6rem;
+      border-bottom: 1px solid rgba(26,26,24,.07);
+    }
+    .contact-hero-inner { max-width: 1200px; width: 100%; margin: 0 auto; }
+    .contact-hero-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.8rem, 5vw, 5rem);
+      font-weight: 300;
+      line-height: 1.1;
+      color: var(--ink);
+      margin-bottom: 1.5rem;
+    }
+    .contact-hero-title em { font-style: italic; color: var(--red); }
+    .contact-hero-sub {
+      font-size: 1rem;
+      line-height: 1.8;
+      color: var(--ink);
+      opacity: .65;
+      max-width: 52ch;
+    }
+
+    /* ── Contact grid ── */
+    .contact-section { padding: 7rem 4rem; }
+    .contact-grid {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1.4fr;
+      gap: 8rem;
+      align-items: start;
+    }
+
+    /* ── Linkerkolom: info ── */
+    .contact-info-label {
+      font-size: .72rem;
+      font-weight: 500;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+      color: var(--red);
+      margin-bottom: 2.5rem;
+      display: block;
+    }
+    .contact-block { margin-bottom: 2.5rem; }
+    .contact-block-label {
+      font-size: .68rem;
+      font-weight: 500;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--grey-dark);
+      margin-bottom: .6rem;
+    }
+    .contact-block-value {
+      font-size: .95rem;
+      line-height: 1.7;
+      color: var(--ink);
+    }
+    .contact-block-value a {
+      color: var(--ink);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(26,26,24,.2);
+    }
+    .contact-block-value a:hover { border-bottom-color: var(--red); color: var(--red); }
+
+    .contact-divider {
+      width: 40px;
+      height: 1px;
+      background: var(--red);
+      margin: 2.5rem 0;
+    }
+
+    .expertise-list { display: flex; flex-direction: column; gap: .5rem; }
+    .expertise-item { display: flex; align-items: flex-start; gap: .75rem; font-size: .85rem; line-height: 1.5; color: var(--ink); opacity: .75; }
+    .exp-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--red); flex-shrink: 0; margin-top: .45rem; }
+
+    /* ── Rechterkolom: formulier ── */
+    .form-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+      font-weight: 300;
+      line-height: 1.2;
+      color: var(--ink);
+      margin-bottom: 2.5rem;
+    }
+    .form-title em { font-style: italic; color: var(--red); }
+
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 1.5rem; }
+    .form-group { display: flex; flex-direction: column; gap: .5rem; margin-bottom: 1.5rem; }
+    .form-label {
+      font-size: .72rem;
+      font-weight: 500;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--ink);
+      opacity: .6;
+    }
+    .form-input, .form-select, .form-textarea {
+      padding: .85rem 1rem;
+      border: 1px solid rgba(26,26,24,.15);
+      background: white;
+      font-family: 'DM Sans', sans-serif;
+      font-size: .9rem;
+      color: var(--ink);
+      width: 100%;
+      outline: none;
+      -webkit-appearance: none;
+    }
+    .form-input:focus, .form-select:focus, .form-textarea:focus {
+      border-color: var(--red);
+    }
+    .form-textarea { min-height: 140px; resize: vertical; }
+    .form-select { cursor: pointer; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='7'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%231a1a18' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 1rem center; padding-right: 2.5rem; }
+    .form-note { font-size: .78rem; color: var(--ink); opacity: .45; margin-bottom: 2rem; line-height: 1.6; }
+    .btn-submit {
+      display: inline-flex;
+      align-items: center;
+      gap: .6rem;
+      padding: 1.1rem 2.8rem;
+      background: var(--red);
+      color: white;
+      font-family: 'DM Sans', sans-serif;
+      font-size: .82rem;
+      font-weight: 500;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      justify-content: center;
+    }
+
+    /* ── Sectie: Waarom EwP ── */
+    .waarom-section {
+      background: var(--industry);
+      padding: 7rem 4rem;
+    }
+    .waarom-inner { max-width: 1200px; margin: 0 auto; }
+    .waarom-grid  { display: grid; grid-template-columns: repeat(3,1fr); gap: 2px; margin-top: 4rem; }
+    .waarom-card  { padding: 2.5rem; background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.07); }
+    .wc-num  { font-family: 'Cormorant Garamond', serif; font-size: 2.5rem; font-weight: 300; color: var(--red-dim); opacity: .4; margin-bottom: 1.25rem; }
+    .wc-t    { font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; font-weight: 600; color: white; margin-bottom: .75rem; }
+    .wc-b    { font-size: .82rem; line-height: 1.7; color: rgba(255,255,255,.68); }
+
+    /* ── Responsief ── */
+    @media (max-width: 900px) {
+      .contact-hero { padding: 120px 2rem 4rem; }
+      .contact-section { padding: 5rem 2rem; }
+      .contact-grid { grid-template-columns: 1fr; gap: 4rem; }
+      .form-row { grid-template-columns: 1fr; }
+      .waarom-section { padding: 5rem 2rem; }
+      .waarom-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<script src="assets/js/nav.js"></script>
+
+<!-- ── HERO ── -->
+<div class="contact-hero">
+  <div class="contact-hero-inner">
+    <p class="eyebrow">Laten we kennis maken</p>
+    <h1 class="contact-hero-title">
+      Een gesprek kost<br>
+      niets. <em>Stilstand</em> wel.
+    </h1>
+    <p class="contact-hero-sub">
+      In een verkennend gesprek van een uur brengen we samen in kaart waar uw organisatie staat en waar de grootste groeikans ligt. Geen standaardpresentatie — een eerlijk gesprek op basis van uw situatie.
+    </p>
+  </div>
+</div>
+
+<!-- ── CONTACT GRID ── -->
+<section class="contact-section">
+  <div class="contact-grid">
+
+    <!-- Linkerkolom: contactinfo -->
+    <div>
+      <span class="contact-info-label">Directe weg</span>
+
+      <div class="contact-block">
+        <div class="contact-block-label">E-mail</div>
+        <div class="contact-block-value">
+          <a href="mailto:info@excellencewithpassion.com">info@excellencewithpassion.com</a>
+        </div>
+      </div>
+
+      <div class="contact-block">
+        <div class="contact-block-label">Website</div>
+        <div class="contact-block-value">
+          <a href="https://www.excellencewithpassion.com" target="_blank" rel="noopener">excellencewithpassion.com</a>
+        </div>
+      </div>
+
+      <div class="contact-divider"></div>
+
+      <div class="contact-block">
+        <div class="contact-block-label">Werkgebied</div>
+        <div class="contact-block-value">
+          Industrie &amp; maakindustrie<br>
+          Glastuinbouw &amp; tuinbouw<br>
+          Nederland &amp; België
+        </div>
+      </div>
+
+      <div class="contact-divider"></div>
+
+      <div class="contact-block">
+        <div class="contact-block-label">Expertise</div>
+        <div class="expertise-list">
+          <div class="expertise-item"><div class="exp-dot"></div><span>Continue Waardestroom (Lean / Value Stream)</span></div>
+          <div class="expertise-item"><div class="exp-dot"></div><span>Continu Verbeteren (PDCA, A3, Kaizen)</span></div>
+          <div class="expertise-item"><div class="exp-dot"></div><span>Lerende Organisatie</span></div>
+          <div class="expertise-item"><div class="exp-dot"></div><span>Leiderschapsontwikkeling (Zichtbaar Leiderschap, Leider Standaard Werk)</span></div>
+          <div class="expertise-item"><div class="exp-dot"></div><span>Organisatie-assessments</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Rechterkolom: formulier -->
+    <div>
+      <h2 class="form-title">
+        Vertel ons over<br>
+        uw <em>organisatie</em>
+      </h2>
+
+      <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="contact">
+        <p style="display:none"><label>Niet invullen: <input name="bot-field"></label></p>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="naam">Naam *</label>
+            <input class="form-input" type="text" id="naam" name="naam" required placeholder="Uw naam">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="organisatie">Organisatie *</label>
+            <input class="form-input" type="text" id="organisatie" name="organisatie" required placeholder="Bedrijfsnaam">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="email">E-mail *</label>
+            <input class="form-input" type="email" id="email" name="email" required placeholder="u@bedrijf.nl">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="telefoon">Telefoon</label>
+            <input class="form-input" type="tel" id="telefoon" name="telefoon" placeholder="+31 6 ...">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="sector">Sector</label>
+          <select class="form-select" id="sector" name="sector">
+            <option value="" disabled selected>Selecteer uw sector</option>
+            <option value="industrie">Industrie &amp; Maakindustrie</option>
+            <option value="glastuinbouw">Glastuinbouw &amp; Tuinbouw</option>
+            <option value="overig">Overig</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="vraag">Uw vraag of situatie *</label>
+          <textarea class="form-textarea" id="vraag" name="vraag" required placeholder="Beschrijf kort waar uw organisatie nu staat en wat uw grootste uitdaging is…"></textarea>
+        </div>
+
+        <p class="form-note">
+          Wij reageren binnen &eacute;&eacute;n werkdag. Uw gegevens worden uitsluitend gebruikt voor het beantwoorden van uw vraag en worden niet gedeeld met derden.
+        </p>
+
+        <button type="submit" class="btn-submit">Verstuur bericht &rarr;</button>
+      </form>
+    </div>
+
+  </div>
+</section>
+
+<!-- ── WAAROM EWP ── -->
+<section class="waarom-section">
+  <div class="waarom-inner">
+    <p class="eyebrow eyebrow-dim">Waarom Excellence with Passion</p>
+    <h2 class="sec-title-light">
+      Dertig jaar <em>bewezen</em> in de praktijk
+    </h2>
+    <div class="waarom-grid">
+      <div class="waarom-card">
+        <div class="wc-num">01</div>
+        <div class="wc-t">Diepgaande sectorkennis</div>
+        <div class="wc-b">Wij spreken de taal van uw sector — van dagstart op de fabrieksvloer tot seizoensevaluatie in de kas. Onze aanpak is geen generieke methode maar verankerd in uw dagelijkse werkelijkheid.</div>
+      </div>
+      <div class="waarom-card">
+        <div class="wc-num">02</div>
+        <div class="wc-t">Drie elementen tegelijk</div>
+        <div class="wc-b">De Passion Swirl verbindt Continue Waardestroom, Continu Verbeteren en Lerende Organisatie. Niet als losse trajecten maar als samenhangende krachten die elkaar versterken.</div>
+      </div>
+      <div class="waarom-card">
+        <div class="wc-num">03</div>
+        <div class="wc-t">Leiderschap als kern</div>
+        <div class="wc-b">Duurzame verbetering begint bij leiderschap dat denken ontwikkelt in plaats van antwoorden geeft. Leiderschapsontwikkeling is altijd onderdeel van onze aanpak.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <a href="index.html" class="footer-logo">
+    <img src="assets/img/ewp-logo-v3-white.png" alt="Excellence with Passion" class="footer-logo-img">
+  </a>
+  <div class="footer-nav">
+    <a href="visie-passion-swirl.html" class="footer-link">Visie</a>
+    <a href="sector-industrie.html"    class="footer-link">Industrie</a>
+    <a href="sector-glastuinbouw.html" class="footer-link">Glastuinbouw</a>
+    <span class="footer-copy">info@excellencewithpassion.com</span>
+  </div>
+</footer>
+
+</body>
+</html>

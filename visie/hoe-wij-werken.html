@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hoe wij werken — Excellence with Passion</title>
+  <meta name="description" content="Onze aanpak begint met respect voor het verleden. Drie fasen die op elkaar voortbouwen — van zichtbaar maken naar in beweging brengen naar borgen.">
+
+  
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/ewp-favicon-32.png">
+  
+  <link rel="apple-touch-icon"               href="../assets/img/ewp-favicon-512.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../assets/css/main.css">
+
+  <style>
+    /* ── Bewust-raster (veranderprincipes) ── */
+    .bewust-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 2px; }
+    .bw-card { padding: 2.5rem; }
+    .bw-1 { background: var(--cool-light); }
+    .bw-2 { background: rgba(227,0,27,.05); }
+    .bw-3 { background: rgba(192,120,0,.05); }
+    .bw-n { font-family: 'Cormorant Garamond', serif; font-size: 2.5rem; font-weight: 300; opacity: .12; line-height: 1; margin-bottom: 1.25rem; }
+    .bw-1 .bw-n { color: var(--grey); }
+    .bw-2 .bw-n { color: var(--red); }
+    .bw-3 .bw-n { color: var(--amber); }
+    .bw-lbl { font-size: .68rem; font-weight: 500; letter-spacing: .12em; text-transform: uppercase; margin-bottom: .75rem; }
+    .bw-1 .bw-lbl { color: var(--grey-dark); }
+    .bw-2 .bw-lbl { color: var(--red); }
+    .bw-3 .bw-lbl { color: var(--amber); }
+    .bw-t { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; font-weight: 600; color: var(--ink); margin-bottom: .75rem; }
+    .bw-b { font-size: .85rem; line-height: 1.7; color: var(--ink); opacity: .65; }
+
+    /* ── Drie fasen (donker) ── */
+    .phase-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 2px; }
+    .phase-card {
+      padding: 3rem 2.5rem;
+      background: rgba(255,255,255,.04);
+      border: 1px solid rgba(255,255,255,.07);
+      position: relative;
+    }
+    .phase-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; }
+    .ph-grey::before  { background: var(--grey); }
+    .ph-red::before   { background: var(--red); }
+    .ph-amber::before { background: var(--amber); }
+    .ph-n   { font-family: 'Cormorant Garamond', serif; font-size: 3.5rem; font-weight: 300; color: white; opacity: .08; line-height: 1; margin-bottom: 1.5rem; }
+    .ph-lbl { font-size: .68rem; font-weight: 500; letter-spacing: .12em; text-transform: uppercase; color: rgba(255,255,255,.35); margin-bottom: .75rem; }
+    .ph-t   { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; font-weight: 600; color: white; line-height: 1.25; margin-bottom: .75rem; }
+    .ph-b   { font-size: .88rem; line-height: 1.75; color: rgba(255,255,255,.55); margin-bottom: 1.5rem; }
+
+    /* ── Leiderschap per fase-blokken ── */
+    .fase-block { padding: 1.75rem 2rem; border-left: 3px solid; }
+    .fb-grey  { background: var(--cool-light); border-color: var(--grey); }
+    .fb-red   { background: rgba(227,0,27,.05); border-color: var(--red); }
+    .fb-amber { background: rgba(192,120,0,.05); border-color: var(--amber); }
+    .fb-lbl   { font-size: .68rem; font-weight: 500; letter-spacing: .12em; text-transform: uppercase; margin-bottom: .5rem; }
+    .fb-grey .fb-lbl  { color: var(--grey-dark); }
+    .fb-red .fb-lbl   { color: var(--red); }
+    .fb-amber .fb-lbl { color: var(--amber); }
+    .fb-body  { font-size: .88rem; line-height: 1.65; color: var(--ink); opacity: .7; }
+
+    /* ── Veranderlagen (EwP-structuur) ── */
+    .vl-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 2px; }
+    .vl-card { padding: 2.5rem; }
+    .vl-1 { background: var(--cool-light); }
+    .vl-2 { background: rgba(227,0,27,.05); border: 1px solid rgba(227,0,27,.1); }
+    .vl-3 { background: rgba(192,120,0,.05); border: 1px solid rgba(192,120,0,.12); }
+    .vl-n { font-family: 'Cormorant Garamond', serif; font-size: 3rem; font-weight: 300; opacity: .1; line-height: 1; margin-bottom: 1.5rem; }
+    .vl-1 .vl-n { color: var(--grey); }
+    .vl-2 .vl-n { color: var(--red); }
+    .vl-3 .vl-n { color: var(--amber); }
+    .vl-lbl { font-size: .68rem; font-weight: 500; letter-spacing: .12em; text-transform: uppercase; margin-bottom: .75rem; }
+    .vl-1 .vl-lbl { color: var(--grey-dark); }
+    .vl-2 .vl-lbl { color: var(--red); }
+    .vl-3 .vl-lbl { color: var(--amber); }
+    .vl-t { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; font-weight: 600; color: var(--ink); margin-bottom: 1rem; }
+
+    /* ── Responsief ── */
+    @media (max-width: 900px) {
+      .bewust-grid, .phase-grid, .vl-grid { grid-template-columns: 1fr; gap: 2rem; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="../index.html" class="nav-logo">
+    <img src="../assets/img/ewp-logo-v2.png" alt="Excellence with Passion" class="nav-logo-img">
+  </a>
+  <ul class="nav-links">
+    <li><a href="passion-swirl.html" class="active">Visie</a></li>
+    <li><a href="../contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="sub-nav">
+  <a href="passion-swirl.html">De Passion Swirl</a>
+  <a href="leiderschap.html">Leiderschap</a>
+  <a href="hoe-wij-werken.html" class="active">Hoe wij werken</a>
+  <a href="assessment.html">Assessment</a>
+</div>
+
+<!-- ── HERO ── -->
+<section class="hero">
+  <div class="hero-bg-grid"></div>
+  <div class="hero-bg-glow"></div>
+  <div class="hero-content">
+    <div class="sector-badge sb-red">Onze aanpak</div>
+    <h1 class="hero-q">
+      Respect voor het verleden.<br>
+      Bouwen op <em>wat goed is.</em><br>
+      Werken aan <em>wat inspireert.</em>
+    </h1>
+    <p class="hero-a">
+      Onze aanpak begint niet met een methodiek. Ze begint met begrijpen wat er al is en wat er mogelijk is. Vanuit die basis brengen we de drie stromen tegelijk in beweging — met leiderschap als de verbindende kracht.
+    </p>
+    <div class="cta-row">
+      <a href="#aanpak"          class="btn-primary">Onze werkwijze &rarr;</a>
+      <a href="assessment.html"  class="btn-ghost">Assessment</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── VERANDERFILOSOFIE ── -->
+<section class="sec">
+  <div class="sec-inner">
+    <div style="display:grid;grid-template-columns:1fr 2fr;gap:6rem;align-items:start">
+      <div>
+        <p class="eyebrow">Veranderprincipes</p>
+        <h2 class="sec-title" style="margin-bottom:2rem">
+          Hoe wij naar<br>
+          verandering <em>kijken</em>
+        </h2>
+        <p class="body-t">
+          Verbeteren gaat altijd hand in hand met veranderen. De uitgangspunten die een organisatie hebben gebracht waar ze nu is, zijn niet vanzelfsprekend ook de principes die haar naar de volgende fase brengen. Soms moeten aannames worden bijgesteld.
+        </p>
+        <p class="body-t">
+          Door te begrijpen waarom je wilt verbeteren, en samen de consequenties van die verandering te accepteren, groeit de kans dat de verbetering daadwerkelijk beklijft.
+        </p>
+      </div>
+      <div class="bewust-grid">
+        <div class="bw-card bw-1">
+          <div class="bw-n">1</div>
+          <div class="bw-lbl">Bewust worden van</div>
+          <h3 class="bw-t">Respect voor het verleden</h3>
+          <p class="bw-b">We beginnen met begrijpen hoe de organisatie geworden is wat ze is. Verleden is geen ballast maar context. We identificeren wat goed werkt en bouwen daarop. We werken aan wat inspireert — niet aan wat toevallig urgent is.</p>
+        </div>
+        <div class="bw-card bw-2">
+          <div class="bw-n">2</div>
+          <div class="bw-lbl">Bewust kiezen voor</div>
+          <h3 class="bw-t">Passie voor excellence</h3>
+          <p class="bw-b">Alles kan beter — dat is de drijvende overtuiging. We kiezen voor een evenwichtige ontwikkeling van alle drie swirls tegelijk. Krachtig leiderschap versnelt die ontwikkeling. Zonder die keuze blijft verbeteren een project in plaats van een manier van werken.</p>
+        </div>
+        <div class="bw-card bw-3">
+          <div class="bw-n">3</div>
+          <div class="bw-lbl">Bewust doen door</div>
+          <h3 class="bw-t">Iedereen zinvol betrekken</h3>
+          <p class="bw-b">We ontwerpen een verliesvrije manier van werken. We betrekken de juiste mensen bij de gevraagde verbetering en verhelderen het waarom, hoe en wat. Elk individu weet wat zijn bijdrage is — in het dagelijkse werk én bij het verbeteren van dat werk.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── DRIE FASEN ── -->
+<section class="sec sec-dark" id="aanpak">
+  <div class="sec-inner">
+    <div style="margin-bottom:5rem">
+      <p class="eyebrow-dim" style="font-size:.72rem;font-weight:500;letter-spacing:.15em;text-transform:uppercase;margin-bottom:1.25rem;display:block">Onze werkwijze</p>
+      <h2 class="sec-title-light" style="margin-bottom:1.5rem">
+        Drie fasen. <em>Eén samenhangende beweging.</em>
+      </h2>
+      <p style="font-size:.95rem;line-height:1.8;color:rgba(255,255,255,.5);max-width:60ch">
+        Wij werken niet met losse interventies. Elke samenwerking volgt drie fasen die op elkaar voortbouwen — van zichtbaar maken naar in beweging brengen naar borgen. Leiderschap is in alle drie aanwezig.
+      </p>
+    </div>
+    <div class="phase-grid">
+      <div class="phase-card ph-grey">
+        <div class="ph-n">01</div>
+        <div class="ph-lbl">Fase 1 — Oriëntatie</div>
+        <h3 class="ph-t">Zichtbaar maken waar de organisatie staat</h3>
+        <p class="ph-b">We beginnen niet met een diagnose van buiten maar met een gezamenlijk beeld van binnenuit. Wat werkt al? Welke stroom blijft achter? Welke patronen herhalen zich? Dat beeld wordt co-gecreëerd met de mensen in de organisatie — niet opgelegd.</p>
+        <div class="dash-list">
+          <div class="dash-item dash-item-light"><div class="dash dash-light"></div><span>Interviews en werkvloer-observaties</span></div>
+          <div class="dash-item dash-item-light"><div class="dash dash-light"></div><span>Assessment van de drie swirls</span></div>
+          <div class="dash-item dash-item-light"><div class="dash dash-light"></div><span>Leiderschapsscan</span></div>
+          <div class="dash-item dash-item-light"><div class="dash dash-light"></div><span>Gezamenlijke prioritering</span></div>
+        </div>
+      </div>
+      <div class="phase-card ph-red">
+        <div class="ph-n">02</div>
+        <div class="ph-lbl">Fase 2 — Ontwikkeling</div>
+        <h3 class="ph-t">Drie stromen tegelijk in beweging brengen</h3>
+        <p class="ph-b">We werken aan alle drie swirls tegelijk — want ze versterken elkaar. Procesverbetering zonder lerende organisatie beklijft niet. Lerende organisatie zonder stabiele waardestroom is vrijblijvend. Leiderschap verbindt alles. We werken in het werk, niet ernaast.</p>
+        <div class="dash-list">
+          <div class="dash-item dash-item-light"><div class="dash dash-light"></div><span>Dagstarts en verbeterroutines opzetten</span></div>
+          <div class="dash-item dash-item-light"><div class="dash dash-light"></div><span>Leiderschapsontwikkeling in de praktijk</span></div>
+          <div class="dash-item dash-item-light"><div class="dash dash-light"></div><span>Teams leren probleemoplossend te denken</span></div>
+          <div class="dash-item dash-item-light"><div class="dash dash-light"></div><span>Kennis van individu naar organisatie brengen</span></div>
+        </div>
+      </div>
+      <div class="phase-card ph-amber">
+        <div class="ph-n">03</div>
+        <div class="ph-lbl">Fase 3 — Borging</div>
+        <h3 class="ph-t">Verbeteringen beklijven door systeem en leiderschap</h3>
+        <p class="ph-b">Borging is geen evaluatie achteraf. Het begint al in fase 2 — door verbeteringen direct te verankeren in standaarden, routines en leiderschapsgedrag. Leider Standaard Werk speelt hierin een cruciale rol: van incidenteel naar systematisch.</p>
+        <div class="dash-list">
+          <div class="dash-item dash-item-light"><div class="dash dash-light"></div><span>Standaarden vastleggen en bewaken</span></div>
+          <div class="dash-item dash-item-light"><div class="dash dash-light"></div><span>Leider Standaard Werk implementeren</span></div>
+          <div class="dash-item dash-item-light"><div class="dash dash-light"></div><span>Interne coaches en verbeterkampioenen</span></div>
+          <div class="dash-item dash-item-light"><div class="dash dash-light"></div><span>Evaluatie en volgende groeicyclus bepalen</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── LEIDERSCHAP IN DE AANPAK ── -->
+<section class="sec">
+  <div class="sec-inner">
+    <div class="two-col">
+      <div>
+        <p class="eyebrow">Leiderschap als verbinder</p>
+        <h2 class="sec-title" style="margin-bottom:2rem">
+          Wij lossen niet op.<br>
+          Wij helpen <em>leren denken.</em>
+        </h2>
+        <p class="body-t">
+          In elke fase van onze samenwerking is de rol van leiderschap leidend. Niet als onderwerp van een training — maar als de actieve kracht die bepaalt hoe snel en hoe diep de organisatie groeit.
+        </p>
+        <p class="body-t">
+          Onze adviseurs stellen vragen in plaats van antwoorden te geven. Ze coachen leiders in het stellen van de juiste vragen aan hun teams. Ze maken zichtbaar waar leiderschapsgedrag de spiraal versnelt — of vertraagt.
+        </p>
+        <p class="body-t">
+          Het einddoel is altijd hetzelfde: een organisatie die zelf kan blijven leren, verbeteren en groeien — ook wanneer wij er niet meer zijn.
+        </p>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:1.5rem">
+        <div class="fase-block fb-grey">
+          <div class="fb-lbl">In fase 1 — Oriëntatie</div>
+          <p class="fb-body">We bevragen leiderschapspatronen samen met het management. Niet als beoordeling maar als spiegel: wat versterkt de spiraal en wat vertraagt haar?</p>
+        </div>
+        <div class="fase-block fb-red">
+          <div class="fb-lbl">In fase 2 — Ontwikkeling</div>
+          <p class="fb-body">We trainen leiders on the job: situationeel coachen, gemba walks begeleiden, verbeterprojecten leiden. Leren in de praktijk, niet in het klaslokaal.</p>
+        </div>
+        <div class="fase-block fb-amber">
+          <div class="fb-lbl">In fase 3 — Borging</div>
+          <p class="fb-body">We implementeren Leider Standaard Werk: vaste routines die leiderschap van incidenteel naar systematisch brengen. Van "goede bedoelingen" naar "dit doen we elke dag."</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── DE EWP-STRUCTUUR ── -->
+<section class="sec sec-mist">
+  <div class="sec-inner">
+    <div style="text-align:center;margin-bottom:4rem">
+      <p class="eyebrow">De EwP-structuur</p>
+      <h2 class="sec-title" style="margin-bottom:1rem">
+        Bewust worden. Bewust kiezen. <em>Bewust doen.</em>
+      </h2>
+      <p style="font-size:.95rem;line-height:1.8;color:var(--ink);opacity:.65;max-width:60ch;margin:0 auto">
+        Al onze programma's zijn opgebouwd langs drie lagen die we ontlenen aan het gedragspsychologisch model dat ten grondslag ligt aan duurzame verandering.
+      </p>
+    </div>
+    <div class="vl-grid">
+      <div class="vl-card vl-1">
+        <div class="vl-n">1</div>
+        <div class="vl-lbl">Become aware of</div>
+        <h3 class="vl-t">Bewust worden van patronen en mogelijkheden</h3>
+        <div class="dash-list">
+          <div class="dash-item"><div class="dash"></div><span>Huidige patronen en hun oorzaken</span></div>
+          <div class="dash-item"><div class="dash"></div><span>Sterke punten als basis voor groei</span></div>
+          <div class="dash-item"><div class="dash"></div><span>Welke stroom achterblijft en waarom</span></div>
+          <div class="dash-item"><div class="dash"></div><span>Leiderschapspatronen die versnellen of vertragen</span></div>
+        </div>
+      </div>
+      <div class="vl-card vl-2">
+        <div class="vl-n">2</div>
+        <div class="vl-lbl">Choose to</div>
+        <h3 class="vl-t">Bewust kiezen voor richting en aanpak</h3>
+        <div class="dash-list">
+          <div class="dash-item"><div class="dash"></div><span>Evenwichtige ontwikkeling van alle drie swirls</span></div>
+          <div class="dash-item"><div class="dash"></div><span>Leiderschap als actieve verbinder</span></div>
+          <div class="dash-item"><div class="dash"></div><span>Verliesvrij werken als doel</span></div>
+          <div class="dash-item"><div class="dash"></div><span>Consequenties van de verandering accepteren</span></div>
+        </div>
+      </div>
+      <div class="vl-card vl-3">
+        <div class="vl-n">3</div>
+        <div class="vl-lbl">Do by</div>
+        <h3 class="vl-t">Bewust doen door routines en eigenaarschap</h3>
+        <div class="dash-list">
+          <div class="dash-item"><div class="dash"></div><span>Leiderschapsroutines die dagelijks beklijven</span></div>
+          <div class="dash-item"><div class="dash"></div><span>Iedereen zinvol betrekken bij verbeteren</span></div>
+          <div class="dash-item"><div class="dash"></div><span>Kennis overdraagbaar maken</span></div>
+          <div class="dash-item"><div class="dash"></div><span>Successen vieren en borgen</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CTA ── -->
+<div class="cta-band">
+  <p class="cta-ey">De eerste stap</p>
+  <h2 class="cta-t">Een eerlijk gesprek over <em>waar uw organisatie staat</em></h2>
+  <p class="cta-b">We beginnen altijd met luisteren. Niet met een standaard presentatie maar met de juiste vragen. In een korte oriëntatie brengen we samen in kaart welke stroom achterblijft en waar de grootste groeikans ligt.</p>
+  <div class="cta-btns">
+    <a href="assessment.html" class="btn-dark">Doe het assessment</a>
+    <a href="../contact.html" class="btn-outline">Plan een gesprek &rarr;</a>
+  </div>
+</div>
+
+<footer>
+  <a href="../index.html" class="footer-logo">
+    <img src="../assets/img/ewp-logo-v2-white.png" alt="Excellence with Passion" class="footer-logo-img">
+  </a>
+  <div class="footer-nav">
+    <a href="assessment.html"  class="footer-link">Assessment &rarr;</a>
+    <a href="leiderschap.html" class="footer-link">&larr; Leiderschap</a>
+    <span class="footer-copy">info@excellencewithpassion.com</span>
+  </div>
+</footer>
+
+</body>
+</html>

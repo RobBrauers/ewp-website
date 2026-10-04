@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Glastuinbouw &amp; Tuinbouw — Excellence with Passion</title>
+  <meta name="description" content="Uw organisatie heeft rijke data en enorme vakkennis. Maar elk seizoen begint op hetzelfde punt. De sprong van data naar lerende organisatie — dat is waar de winst ligt.">
+
+  
+  <link rel="icon" type="image/png" sizes="16x16"   href="assets/img/ewp-favicon-16.png">
+  <link rel="icon" type="image/png" sizes="32x32"   href="assets/img/ewp-favicon-32.png">
+  <link rel="icon" type="image/png" sizes="64x64"   href="assets/img/ewp-favicon-64.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/img/ewp-favicon-192.png">
+  <link rel="apple-touch-icon"                      href="assets/img/ewp-favicon-512.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/main.css">
+
+  <style>
+    /* ── Hero: groene gloed ── */
+    .hero-bg-glow-grh {
+      position: absolute;
+      top: -100px; right: -100px;
+      width: 700px; height: 700px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(26,100,50,.18) 0%, transparent 65%);
+      pointer-events: none;
+    }
+
+    /* ── Paradox / Diagnose ── */
+    .diagnose-title     { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem,3vw,3rem); font-weight: 300; line-height: 1.2; color: var(--ink); margin-bottom: 2rem; }
+    .diagnose-title em  { font-style: italic; color: var(--greenhouse); }
+
+    .paradox-right      { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; }
+    .contrast-block     { padding: 2rem; }
+    .contrast-block.heeft   { background: var(--greenhouse-light); }
+    .contrast-block.mist-bl { background: #fdf0ea; }
+    .contrast-label     { font-size: .65rem; font-weight: 500; letter-spacing: .15em; text-transform: uppercase; margin-bottom: 1.25rem; }
+    .heeft .contrast-label  { color: var(--greenhouse); }
+    .mist-bl .contrast-label { color: var(--red); }
+    .contrast-items     { display: flex; flex-direction: column; gap: .6rem; }
+    .contrast-item      { display: flex; align-items: flex-start; gap: .6rem; font-size: .82rem; line-height: 1.5; color: var(--ink); opacity: .75; }
+    .contrast-icon      { font-size: .9rem; margin-top: .05rem; flex-shrink: 0; }
+
+    /* ── Aanpak / Vertaling section ── */
+    .aanpak-section  { background: var(--mist); padding: 8rem 4rem; }
+    .aanpak-inner    { max-width: 1200px; margin: 0 auto; }
+    .aanpak-header   { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; margin-bottom: 5rem; align-items: end; }
+    .aanpak-title    { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem,3.5vw,3.5rem); font-weight: 300; line-height: 1.2; color: var(--ink); }
+    .aanpak-title em { font-style: italic; color: var(--greenhouse); }
+    .aanpak-intro    { font-size: .95rem; line-height: 1.85; color: var(--ink); opacity: .65; padding-top: 1rem; }
+
+    .swirl-steps-4   { display: grid; grid-template-columns: repeat(4,1fr); gap: 2px; }
+    .swirl-step      { background: white; padding: 2.5rem; position: relative; overflow: hidden; display: flex; flex-direction: column; }
+    .step-accent     { position: absolute; top: 0; left: 0; right: 0; height: 4px; }
+    .accent-grey     { background: var(--grey); }
+    .accent-red      { background: var(--red); }
+    .accent-amber    { background: var(--amber); }
+    .accent-gold     { background: var(--gold); }
+
+    .step-num    { font-family: 'Cormorant Garamond', serif; font-size: 3rem; font-weight: 300; line-height: 1; margin-bottom: 1.25rem; color: var(--greenhouse); opacity: .08; }
+    .step-label  { font-size: .65rem; font-weight: 500; letter-spacing: .12em; text-transform: uppercase; margin-bottom: .6rem; }
+    .lbl-grey    { color: var(--grey-dark); }
+    .lbl-red     { color: var(--red); }
+    .lbl-amber   { color: var(--amber); }
+    .lbl-gold    { color: var(--gold); }
+    .step-title  { font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; font-weight: 600; color: var(--ink); margin-bottom: .75rem; line-height: 1.25; }
+    .step-body   { font-size: .82rem; line-height: 1.7; color: var(--ink); opacity: .65; margin-bottom: 1.25rem; flex: 1; }
+
+    .step-praktijk  { background: var(--greenhouse-light); padding: 1.25rem; }
+    .praktijk-label { font-size: .65rem; font-weight: 500; letter-spacing: .12em; text-transform: uppercase; color: var(--greenhouse); margin-bottom: .75rem; }
+    .praktijk-items { display: flex; flex-direction: column; gap: .4rem; }
+    .praktijk-item  { display: flex; align-items: center; gap: .6rem; font-size: .75rem; color: var(--ink); opacity: .7; }
+    .praktijk-dash  { width: 12px; height: 1px; background: var(--greenhouse); flex-shrink: 0; }
+
+    /* ── Seizoen section ── */
+    .seizoen-title     { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem,3vw,3rem); font-weight: 300; line-height: 1.2; color: var(--ink); margin-bottom: 1.5rem; }
+    .seizoen-title em  { font-style: italic; color: var(--greenhouse); }
+    .seizoen-right     { display: flex; flex-direction: column; gap: 1px; }
+    .leermoment-block  { padding: 1.75rem 2rem; background: var(--greenhouse-light); border-left: 3px solid transparent; }
+    .lm-context        { font-size: .65rem; font-weight: 500; letter-spacing: .12em; text-transform: uppercase; color: var(--greenhouse); margin-bottom: .5rem; }
+    .lm-title          { font-size: .92rem; font-weight: 500; color: var(--ink); margin-bottom: .4rem; }
+    .lm-body           { font-size: .82rem; line-height: 1.6; color: var(--ink); opacity: .6; }
+
+    /* ── Leiderschap section (goud) ── */
+    .leiderschap-inner  { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: start; }
+    .leiderschap-right  { display: flex; flex-direction: column; gap: 1.5rem; }
+    .leid-block         { padding: 2rem; background: white; border-left: 3px solid var(--gold); }
+    .leid-lbl           { font-size: .68rem; font-weight: 500; letter-spacing: .12em; text-transform: uppercase; color: var(--gold); margin-bottom: .5rem; }
+    .leid-title         { font-size: .92rem; font-weight: 500; color: var(--ink); margin-bottom: .5rem; }
+    .leid-body          { font-size: .82rem; line-height: 1.6; color: var(--ink); opacity: .6; }
+    .leid-main-title    { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem,3vw,3rem); font-weight: 300; line-height: 1.2; color: var(--ink); margin-bottom: 2rem; }
+    .leid-main-title em { font-style: italic; color: var(--red); }
+
+    /* ── Cases (greenhouse dark) ── */
+    .cases-section    { background: var(--greenhouse-dark); padding: 8rem 4rem; }
+    .cases-inner      { max-width: 1200px; margin: 0 auto; }
+    .cases-header     { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 4rem; }
+    .cases-title      { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.8rem,3vw,3rem); font-weight: 300; color: white; }
+    .cases-link       { font-size: .78rem; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; color: var(--amber-dim); text-decoration: none; }
+    .case-cards       { display: grid; grid-template-columns: repeat(3,1fr); gap: 2px; }
+    .case-card        { padding: 2.5rem; background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.07); text-decoration: none; display: block; }
+    .case-sector-tag  { font-size: .65rem; font-weight: 500; letter-spacing: .12em; text-transform: uppercase; color: rgba(160,210,160,.75); margin-bottom: 1.5rem; }
+    .case-company     { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; font-weight: 600; color: white; margin-bottom: .75rem; }
+    .case-challenge   { font-size: .85rem; line-height: 1.65; color: rgba(255,255,255,.68); margin-bottom: 2rem; }
+    .case-result      { font-size: .82rem; font-weight: 500; color: rgba(255,255,255,.7); border-top: 1px solid rgba(255,255,255,.1); padding-top: 1.25rem; }
+    .case-result span { color: var(--amber-dim); }
+
+    /* ── CTA override: greenhouse italic ── */
+    .em-grh { color: var(--greenhouse); }
+
+
+    /* Sector-tag stroomt mee in hero-content (niet absoluut) */
+    .hero-content .hero-sector-tag {
+      position: static;
+      top: auto; left: auto;
+      margin-bottom: 2rem;
+    }
+    /* ── Responsief ── */
+    @media (max-width: 900px) {
+      .aanpak-section, .cases-section { padding: 5rem 2rem; }
+      .aanpak-header, .paradox-right, .leiderschap-inner { grid-template-columns: 1fr; gap: 2rem; }
+      .swirl-steps-4, .case-cards { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<script src="assets/js/nav.js"></script>
+
+<!-- ── HERO ── -->
+<section class="hero hero-greenhouse">
+  <div class="hero-bg-grid"></div>
+  <div class="hero-bg-glow-grh"></div>
+  <div class="hero-content">
+    <div class="hero-sector-tag">
+      <div class="sector-badge sb-grh">Glastuinbouw &amp; Tuinbouw</div>
+      <span class="sector-years">Groeiende expertise</span>
+    </div>
+    <h1 class="hero-q">
+      Elk seizoen<br>
+      opnieuw <em>beginnen?</em>
+    </h1>
+    <p class="hero-a">
+      Uw organisatie heeft enorme vakkennis, rijke data en een sterk seizoensritme. Maar lessen worden niet geborgd, kennis zit bij individuen en elk nieuw seizoen begint op hetzelfde punt. De sprong van data naar lerende organisatie — dat is waar de winst ligt.
+    </p>
+    <div class="cta-row">
+      <a href="#paradox" class="btn-primary">Dit herken ik &rarr;</a>
+      <a href="#vertaling" class="btn-ghost">Onze aanpak</a>
+    </div>
+  </div>
+  <div class="hero-scroll"><div class="scroll-line"></div><span>Scroll</span></div>
+</section>
+
+<!-- ── PARADOX ── -->
+<section class="sec" id="paradox">
+  <div class="sec-inner">
+    <div class="two-col">
+      <div>
+        <p class="eyebrow">De tuinbouwparadox</p>
+        <h2 class="diagnose-title">
+          Technologisch voorop,<br>
+          organisatorisch<br>
+          <em>nog volop in beweging.</em>
+        </h2>
+        <p class="body-t">
+          De glastuinbouw investeert continu in technologie — robotisering, klimaatbeheersing, AI-gestuurde teeltsystemen. Maar organisatorische ontwikkeling — systematisch leren, gestructureerd verbeteren, leiderschap dat denken ontwikkelt — staat veelal nog aan het begin.
+        </p>
+        <p class="body-t">
+          Dat is geen kritiek maar een kans. De sector heeft alles wat nodig is: vakkennis, data en dagelijkse dynamiek. Het enige dat ontbreekt is het systeem om er structureel van te leren.
+        </p>
+      </div>
+      <div class="paradox-right">
+        <div class="contrast-block heeft">
+          <div class="contrast-label">&#10003; Wat u al heeft</div>
+          <div class="contrast-items">
+            <div class="contrast-item"><span class="contrast-icon">&#9679;</span><span>Rijke teelt- en klimaatdata</span></div>
+            <div class="contrast-item"><span class="contrast-icon">&#9679;</span><span>Diep vakmanschap bij teeltspecialisten</span></div>
+            <div class="contrast-item"><span class="contrast-icon">&#9679;</span><span>Sterk seizoensritme als natuurlijk leersysteem</span></div>
+            <div class="contrast-item"><span class="contrast-icon">&#9679;</span><span>Nauwe samenwerking teelt, techniek en arbeid</span></div>
+            <div class="contrast-item"><span class="contrast-icon">&#9679;</span><span>Hoge betrokkenheid van medewerkers</span></div>
+          </div>
+        </div>
+        <div class="contrast-block mist-bl">
+          <div class="contrast-label">&#9651; Wat er ontbreekt</div>
+          <div class="contrast-items">
+            <div class="contrast-item"><span class="contrast-icon">&#9651;</span><span>Systematisch leren van storingen en afwijkingen</span></div>
+            <div class="contrast-item"><span class="contrast-icon">&#9651;</span><span>Kennis die overdraagbaar is als mensen vertrekken</span></div>
+            <div class="contrast-item"><span class="contrast-icon">&#9651;</span><span>Vaste reflectiemomenten die leren borgen</span></div>
+            <div class="contrast-item"><span class="contrast-icon">&#9651;</span><span>Data die gesprek oproept in plaats van rapportage</span></div>
+            <div class="contrast-item"><span class="contrast-icon">&#9651;</span><span>Leiderschap dat vragen stelt in plaats van oplost</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── AANPAK / VERTALING ── -->
+<section class="aanpak-section" id="vertaling">
+  <div class="aanpak-inner">
+    <div class="aanpak-header">
+      <h2 class="aanpak-title">
+        De Passion Swirl<br>
+        in uw <em>kas</em>
+      </h2>
+      <p class="aanpak-intro">
+        Wij vertalen de vier elementen van ons model naar de taal en het ritme van de glastuinbouw. Geen abstracte methodieken — herkenbare situaties uit uw dagelijkse praktijk.
+      </p>
+    </div>
+    <div class="swirl-steps-4">
+
+      <div class="swirl-step">
+        <div class="step-accent accent-grey"></div>
+        <div class="step-num">01</div>
+        <div class="step-label lbl-grey">Continue Waardestroom</div>
+        <h3 class="step-title">Van teelt tot levering zonder verstoringen</h3>
+        <p class="step-body">In de glastuinbouw stroomt waarde van zaad tot levering. Overal zitten momenten waarop kwaliteit, tijd of afstemming verloren gaat. Wij maken die momenten zichtbaar.</p>
+        <div class="step-praktijk">
+          <div class="praktijk-label">In de praktijk</div>
+          <div class="praktijk-items">
+            <div class="praktijk-item"><div class="praktijk-dash"></div>Teelt en logistiek op klantvraag afgestemd</div>
+            <div class="praktijk-item"><div class="praktijk-dash"></div>Kwaliteitsverlies vroeg zichtbaar gemaakt</div>
+            <div class="praktijk-item"><div class="praktijk-dash"></div>Overdracht teelt–techniek–arbeid zonder ruis</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="swirl-step">
+        <div class="step-accent accent-red"></div>
+        <div class="step-num">02</div>
+        <div class="step-label lbl-red">Continu Verbeteren</div>
+        <h3 class="step-title">Storingen als leerbron</h3>
+        <p class="step-body">Elke kas heeft storingen, uitval en afwijkingen. De meeste worden opgelost — maar weinig worden geleerd. Met een eenvoudig verbeterstysteem worden afwijkingen bronnen van inzicht.</p>
+        <div class="step-praktijk">
+          <div class="praktijk-label">In de praktijk</div>
+          <div class="praktijk-items">
+            <div class="praktijk-item"><div class="praktijk-dash"></div>Storingsregistratie die patronen blootlegt</div>
+            <div class="praktijk-item"><div class="praktijk-dash"></div>Dagstart als vaste verbeterroutine</div>
+            <div class="praktijk-item"><div class="praktijk-dash"></div>PDCA-cyclus vertaald naar teeltritme</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="swirl-step">
+        <div class="step-accent accent-amber"></div>
+        <div class="step-num">03</div>
+        <div class="step-label lbl-amber">Lerende Organisatie</div>
+        <h3 class="step-title">Vakkennis die niet verdwijnt</h3>
+        <p class="step-body">Enorme vakkennis zit bij teeltspecialisten en technici. Die kennis is nu persoonlijk. Wij helpen die kennis collectief te maken — overdraagbaar, bespreekbaar en ingebouwd in het werk.</p>
+        <div class="step-praktijk">
+          <div class="praktijk-label">In de praktijk</div>
+          <div class="praktijk-items">
+            <div class="praktijk-item"><div class="praktijk-dash"></div>Teeltbesprekingen als leermoment</div>
+            <div class="praktijk-item"><div class="praktijk-dash"></div>Seizoensevaluatie als jaarlijks leersysteem</div>
+            <div class="praktijk-item"><div class="praktijk-dash"></div>Kennisoverdracht teelt–techniek geborgd</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="swirl-step">
+        <div class="step-accent accent-gold"></div>
+        <div class="step-num">04</div>
+        <div class="step-label lbl-gold">Leiderschap als kern</div>
+        <h3 class="step-title">Van vakexpert naar leider die laat leren</h3>
+        <p class="step-body">De eigenaar-manager is de sterkste vakexpert. De uitdaging is de stap van "ik los op" naar "ik laat het team leren." Zichtbaar Leiderschap is hier het kritische startpunt.</p>
+        <div class="step-praktijk">
+          <div class="praktijk-label">In de praktijk</div>
+          <div class="praktijk-items">
+            <div class="praktijk-item"><div class="praktijk-dash"></div>Vragen stellen i.p.v. antwoorden geven</div>
+            <div class="praktijk-item"><div class="praktijk-dash"></div>Aanwezig op de werkvloer als rolmodel</div>
+            <div class="praktijk-item"><div class="praktijk-dash"></div>Seizoensritme als Leider Standaard Werk</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── SEIZOENSRITME ── -->
+<section class="sec">
+  <div class="sec-inner">
+    <div class="two-col">
+      <div>
+        <p class="eyebrow">Uniek voor tuinbouw</p>
+        <h2 class="seizoen-title">
+          Het seizoensritme<br>
+          als <em>natuurlijk<br>leersysteem</em>
+        </h2>
+        <p class="body-t">
+          De glastuinbouw heeft iets dat de industrie niet heeft: een natuurlijk ritme van seizoenen, piekperiodes en rustigere momenten. Dat ritme is een onbenut leersysteem. Elk seizoen is een PDCA-cyclus op jaarbasis.
+        </p>
+        <p class="body-t">
+          Wij helpen u dat ritme bewust te gebruiken: als basis voor reflectie, kennisdeling en structurele verbetering. Zo begint elk nieuw seizoen sterker dan het vorige.
+        </p>
+      </div>
+      <div class="seizoen-right">
+        <div class="leermoment-block">
+          <div class="lm-context">Dagelijks leren</div>
+          <div class="lm-title">Dagstart op de werkvloer</div>
+          <div class="lm-body">Klimaat, opbrengst, storingen en bijzonderheden — kort besproken met het team. Data wordt gesprek, gesprek wordt actie.</div>
+        </div>
+        <div class="leermoment-block">
+          <div class="lm-context">Wekelijks leren</div>
+          <div class="lm-title">Teeltbespreking als verbetermoment</div>
+          <div class="lm-body">Niet alleen rapporteren wat er was — maar samen leren waarom het zo liep en wat de volgende week anders moet.</div>
+        </div>
+        <div class="leermoment-block">
+          <div class="lm-context">Periodiek leren</div>
+          <div class="lm-title">Storingsleren rond techniek</div>
+          <div class="lm-body">Van incident naar inzicht: storingen systematisch analyseren, patronen herkennen en standaarden aanpassen.</div>
+        </div>
+        <div class="leermoment-block">
+          <div class="lm-context">Seizoensleren</div>
+          <div class="lm-title">Evaluatie aan het einde van het seizoen</div>
+          <div class="lm-body">Wat ging beter? Waar zat verlies? Welke kennis nemen we mee? Zo voorkomt u dat elk seizoen opnieuw begint.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── LEIDERSCHAP IN GLASTUINBOUW ── -->
+<section class="sec sec-gold">
+  <div class="leiderschap-inner">
+    <div>
+      <p class="eyebrow eyebrow-gold">Leiderschap in glastuinbouw</p>
+      <h2 class="leid-main-title">
+        Van "ik los op"<br>
+        naar <em>"ik laat het<br>team leren"</em>
+      </h2>
+      <p class="body-t">
+        In glastuinbouw is de eigenaar-manager vaak de sterkste vakexpert — en daarmee soms de bottleneck voor organisatieontwikkeling. De leiderschapsontwikkeling begint hier met een fundamenteel andere vraag: wanneer grijp ik in en wanneer stel ik een vraag?
+      </p>
+      <p class="body-t">
+        Zichtbaar Leiderschap — leiderschap dat medewerkers inspireert om zelf te verbeteren — is in de tuinbouw het krachtigste startpunt. Een leider die zelf de dagstart leidt, vragen stelt bij storingen en aanwezig is op de werkvloer, creëert een cultuur waarin leren vanzelfsprekend wordt.
+      </p>
+    </div>
+    <div class="leiderschap-right">
+      <div class="leid-block">
+        <div class="leid-lbl">Zichtbaar Leiderschap</div>
+        <div class="leid-title">De leider als rolmodel op de werkvloer</div>
+        <div class="leid-body">Medewerkers doen wat zij denken dat de leider van hen verwacht. Een leider die zelf verbeteringen oppakt en vragen stelt, creëert een team dat hetzelfde wil.</div>
+      </div>
+      <div class="leid-block">
+        <div class="leid-lbl">Leiden van het Proces</div>
+        <div class="leid-title">Van brandjes blussen naar continu verbeteren</div>
+        <div class="leid-body">Teeltstoringen worden niet alleen opgelost maar onderzocht. De leider begeleidt het team in probleemoplossend denken in plaats van zelf het antwoord te geven.</div>
+      </div>
+      <div class="leid-block">
+        <div class="leid-lbl">Leider Standaard Werk</div>
+        <div class="leid-title">Het seizoensritme als leiderschapsroutine</div>
+        <div class="leid-body">Dagstart, teeltbespreking, seizoensevaluatie — het seizoensritme van glastuinbouw is een natuurlijke structuur voor Leider Standaard Werk. Wij bouwen dat bewust op.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── SUCCESVERHALEN ── -->
+<section class="cases-section">
+  <div class="cases-inner">
+    <div class="cases-header">
+      <h2 class="cases-title">Succesverhalen uit de tuinbouw</h2>
+      <a href="#" class="cases-link">Alle verhalen &rarr;</a>
+    </div>
+    <div class="case-cards">
+      <a href="#" class="case-card">
+        <div class="case-sector-tag">Glastuinbouw &mdash; Snijbloemen</div>
+        <div class="case-company">Bredefleur</div>
+        <div class="case-challenge">Vakkennis verspreid over teeltspecialisten. Bij vertrek verdween kennis. Geen systematisch leerproces aanwezig.</div>
+        <div class="case-result"><span>Resultaat:</span> Kennisborging opgebouwd, teeltbesprekingen getransformeerd naar vaste leermomenten.</div>
+      </a>
+      <a href="#" class="case-card">
+        <div class="case-sector-tag">Tuinbouw &mdash; Groenten &amp; Fruit</div>
+        <div class="case-company">Porta Nova</div>
+        <div class="case-challenge">Rijke productiedata werd nauwelijks benut voor leren en verbeteren. Teams werkten langs elkaar heen.</div>
+        <div class="case-result"><span>Resultaat:</span> Data omgezet naar dagelijkse verbeterdialoog, teelt en techniek leren nu samen.</div>
+      </a>
+      <a href="#" class="case-card">
+        <div class="case-sector-tag">Tuinbouw &mdash; Handel &amp; Logistiek</div>
+        <div class="case-company">The Greenery</div>
+        <div class="case-challenge">Logistieke complexiteit vroeg om stabiele processen en een organisatie die snel leert van verstoringen.</div>
+        <div class="case-result"><span>Resultaat:</span> Verbeterstysteem opgebouwd dat aansluit op het seizoensritme van de organisatie.</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ── CTA ── -->
+<div class="cta-band">
+  <p class="cta-ey">De eerste stap</p>
+  <h2 class="cta-t">Wat zou uw organisatie<br>leren als <em class="em-grh">data gesprek werd?</em></h2>
+  <p class="cta-b">In een verkennend gesprek brengen we samen in kaart welke leer- en verbeterkansen er in uw organisatie liggen. We spreken uw taal — en vertalen onze aanpak naar uw teelt, uw seizoen, uw mensen.</p>
+  <div class="cta-btns">
+    <a href="visie-assessment.html"  class="btn-greenhouse">Doe het assessment</a>
+    <a href="visie-leiderschap.html" class="btn-outline">Leiderschap als accelerator &rarr;</a>
+  </div>
+</div>
+
+<footer>
+  <a href="index.html" class="footer-logo">
+    <img src="assets/img/ewp-logo-v3-white.png" alt="Excellence with Passion" class="footer-logo-img">
+  </a>
+  <div class="footer-nav">
+    <a href="sector-industrie.html" class="footer-link">Naar Industrie &rarr;</a>
+    <span class="footer-copy">info@excellencewithpassion.com</span>
+  </div>
+</footer>
+
+</body>
+</html>

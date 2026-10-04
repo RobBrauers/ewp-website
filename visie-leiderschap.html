@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Leiderschap als accelerator — Excellence with Passion</title>
+  <meta name="description" content="Leiderschap maakt de spiraal sneller — of houdt hem tegen. Zes facetten van leiderschap die de Passion Swirl aandrijven.">
+
+  
+  <link rel="icon" type="image/png" sizes="16x16"   href="assets/img/ewp-favicon-16.png">
+  <link rel="icon" type="image/png" sizes="32x32"   href="assets/img/ewp-favicon-32.png">
+  <link rel="icon" type="image/png" sizes="64x64"   href="assets/img/ewp-favicon-64.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/img/ewp-favicon-192.png">
+  <link rel="apple-touch-icon"                      href="assets/img/ewp-favicon-512.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/main.css">
+
+  <style>
+    /* Sub-nav active indicator in goud voor deze pagina */
+    .sub-nav a.active { border-bottom-color: var(--gold); }
+
+    /* ── Symptoom-stapel ── */
+    .sym-stack { display: flex; flex-direction: column; gap: 1px; }
+    .sym { padding: 1.75rem 2rem; background: var(--cool-light); position: relative; }
+    .sym-n { font-family: 'Cormorant Garamond', serif; font-size: .85rem; color: var(--gold); opacity: .5; margin-bottom: .5rem; }
+    .sym-t { font-size: .9rem; font-weight: 500; color: var(--ink); margin-bottom: .35rem; }
+    .sym-b { font-size: .82rem; line-height: 1.6; color: var(--ink); opacity: .6; }
+
+    /* ── Vier leiderschapsrollen (donker) ── */
+    .role-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; }
+    .role-card {
+      padding: 3rem 2.5rem;
+      background: rgba(255,255,255,.04);
+      border: 1px solid rgba(255,255,255,.07);
+      position: relative;
+    }
+    .role-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: var(--gold); }
+    .role-n   { font-family: 'Cormorant Garamond', serif; font-size: 3.5rem; font-weight: 300; color: white; opacity: .08; line-height: 1; margin-bottom: 1.5rem; }
+    .role-lbl { font-size: .68rem; font-weight: 500; letter-spacing: .12em; text-transform: uppercase; color: rgba(255,255,255,.65); margin-bottom: .75rem; }
+    .role-t   { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; font-weight: 600; color: white; line-height: 1.25; margin-bottom: .6rem; }
+    .role-j   { font-size: .75rem; font-weight: 500; letter-spacing: .06em; color: var(--gold); margin-bottom: 1rem; }
+    .role-b   { font-size: .88rem; line-height: 1.75; color: rgba(255,255,255,.55); }
+
+    /* ── Twee integrerende elementen (mist) ── */
+    .int-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; }
+    .int-card { padding: 3rem 2.5rem; }
+    .int-gold  { background: rgba(184,154,90,.07); border: 1px solid rgba(184,154,90,.18); }
+    .int-grey  { background: rgba(157,158,160,.07); border: 1px solid rgba(157,158,160,.18); }
+    .int-lbl  { font-size: .68rem; font-weight: 500; letter-spacing: .12em; text-transform: uppercase; margin-bottom: .75rem; }
+    .il-gold  { color: var(--gold); }
+    .il-grey  { color: var(--grey-dark); }
+    .int-j    { font-size: .78rem; font-weight: 500; color: var(--red); margin-bottom: .75rem; }
+    .int-t    { font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-weight: 300; color: var(--ink); margin-bottom: .75rem; }
+    .int-t em { font-style: italic; color: var(--red); }
+    .int-b    { font-size: .88rem; line-height: 1.75; color: var(--ink); opacity: .7; margin-bottom: 1.5rem; }
+
+    /* ── Sector-kaartjes in leiderschap (donker) ── */
+    .sc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; }
+    .sc-card { padding: 3rem 2.5rem; text-decoration: none; display: block; }
+    .sc-ind  { background: var(--industry); }
+    .sc-grh  { background: var(--greenhouse); }
+    .sc-lbl  { font-size: .68rem; font-weight: 500; letter-spacing: .12em; text-transform: uppercase; color: rgba(255,255,255,.65); margin-bottom: 1.25rem; }
+    .sc-t    { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: white; margin-bottom: 1.25rem; line-height: 1.25; }
+    .sc-b    { font-size: .88rem; line-height: 1.75; color: rgba(255,255,255,.65); }
+
+    /* ── Tradities-blokken (hergebruik van wortels-stijl) ── */
+    .tradition-stack { display: flex; flex-direction: column; gap: 1.5rem; padding-top: 1rem; }
+    .tb { padding: 1.75rem 2rem; border-left: 3px solid; }
+    .tb-grey  { border-color: var(--grey); background: var(--cool-light); }
+    .tb-red   { border-color: var(--red);  background: rgba(227,0,27,.04); }
+    .tb-gold  { border-color: var(--gold); background: rgba(184,154,90,.05); }
+    .tb-lbl   { font-size: .68rem; font-weight: 500; letter-spacing: .12em; text-transform: uppercase; margin-bottom: .5rem; }
+    .tb-grey .tb-lbl  { color: var(--grey-dark); }
+    .tb-red .tb-lbl   { color: var(--red); }
+    .tb-gold .tb-lbl  { color: var(--gold); }
+    .tb-body  { font-size: .88rem; line-height: 1.65; color: var(--ink); opacity: .7; }
+
+    /* ── Responsief ── */
+    @media (max-width: 900px) {
+      .role-grid, .int-grid, .sc-grid { grid-template-columns: 1fr; gap: 2rem; }
+    }
+  </style>
+</head>
+<body>
+
+<script src="assets/js/nav.js"></script>
+
+
+<!-- ── HERO ── -->
+<section class="hero">
+  <div class="hero-bg-grid"></div>
+  <div class="hero-bg-glow-gold"></div>
+  <div class="hero-content">
+    <div class="sector-badge sb-gold">Leiderschap als accelerator</div>
+    <h1 class="hero-q">
+      Leiderschap maakt<br>
+      de spiraal <em class="em-gold">sneller</em> —<br>
+      of houdt hem tegen.
+    </h1>
+    <p class="hero-a">
+      In dertig jaar werken aan organisatieontwikkeling zien wij één constante: de snelheid en diepte van groei worden altijd bepaald door de kwaliteit van leiderschap. Niet als achterliggende factor — maar als de actieve kracht die de drie swirls dagelijks in beweging brengt, in balans houdt en versnelt.
+    </p>
+    <div class="cta-row">
+      <a href="visie-assessment.html" class="btn-primary">Doe het assessment &rarr;</a>
+      <a href="#facetten"       class="btn-ghost">De zes facetten</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── DIAGNOSE ── -->
+<section class="sec">
+  <div class="sec-inner">
+    <div class="two-col">
+      <div>
+        <p class="eyebrow">De diagnose</p>
+        <h2 class="sec-title" style="margin-bottom:2rem">
+          Zonder leiderschap<br>
+          <em>staat de spiraal stil</em>
+        </h2>
+        <p class="body-t">
+          Wij zien vier patronen die zich steeds herhalen wanneer leiderschap ontbreekt of versnippert. Ze zijn herkenbaar in zowel industrie als tuinbouw — en ze verklaren waarom verbeterprogramma's vastlopen ondanks goede methodieken.
+        </p>
+        <p class="body-t">
+          Leiderschap is niet één van de drie swirls. Het is de kern die bepaalt hoe snel en hoe diep de drie stromen zich ontwikkelen. Zonder die kern draait de spiraal — maar niet omhoog.
+        </p>
+      </div>
+      <div class="sym-stack">
+        <div class="sym">
+          <div class="sym-n">01</div>
+          <div class="sym-t">Verbeteringen zijn persoonsafhankelijk</div>
+          <div class="sym-b">Initiatieven lopen wanneer één persoon het trekt. Zodra diegene vertrekt, begint de organisatie opnieuw. Kennis verdwijnt met de persoon.</div>
+        </div>
+        <div class="sym">
+          <div class="sym-n">02</div>
+          <div class="sym-t">Leiders lossen op in plaats van te ontwikkelen</div>
+          <div class="sym-b">Snelheid van oplossen gaat boven diepte van leren. Teams groeien niet in probleemoplossend vermogen — ze wachten op het antwoord van de leider.</div>
+        </div>
+        <div class="sym">
+          <div class="sym-n">03</div>
+          <div class="sym-t">Leiderschapsroutines ontbreken</div>
+          <div class="sym-b">Goede intenties maar geen vaste gedragingen. De dagstart wordt overgeslagen, de gemba walk vergeten. Leiderschap is incidenteel in plaats van systematisch.</div>
+        </div>
+        <div class="sym">
+          <div class="sym-n">04</div>
+          <div class="sym-t">Richting en verbeteren zijn gescheiden werelden</div>
+          <div class="sym-b">Strategische ambities en dagelijkse verbeteractiviteiten spreken niet met elkaar. Teams verbeteren — maar niet in de richting die de organisatie nodig heeft.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── ZES FACETTEN ── -->
+<section class="sec sec-dark" id="facetten">
+  <div class="sec-inner">
+    <div style="text-align:center;margin-bottom:5rem;max-width:700px;margin-left:auto;margin-right:auto">
+      <p class="eyebrow-gold-dim" style="font-size:.72rem;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:var(--gold-light);margin-bottom:1.25rem;display:block">De zes facetten</p>
+      <h2 class="sec-title-light" style="margin-bottom:1.5rem">
+        Leiderschap op <em class="em-gold">vier niveaus</em>
+      </h2>
+      <p style="font-size:.95rem;line-height:1.8;color:rgba(255,255,255,.5)">
+        Effectief leiderschap vraagt dat leiders zichzelf kennen, hun team kunnen ontwikkelen, processen kunnen verbeteren én de organisatie kunnen leiden. Elk niveau heeft zijn eigen groeireis — van afhankelijk naar zelfstandig, van reactief naar richting-gevend.
+      </p>
+    </div>
+    <div class="role-grid">
+      <div class="role-card">
+        <div class="role-n">1</div>
+        <div class="role-lbl">Leiden van Zichzelf</div>
+        <h3 class="role-t">Leiden van Zichzelf</h3>
+        <div class="role-j">Van afhankelijk naar een onafhankelijk individu</div>
+        <p class="role-b">Een leider die zijn eigen patronen, krachten en motieven kent, schept ruimte voor anderen om te groeien. Zelfkennis, reflectie en het vermogen om te kiezen zijn de basis waarop al het andere rust. Zonder dit fundament lekt leiderschapskracht weg naar crisisbeheersing.</p>
+      </div>
+      <div class="role-card">
+        <div class="role-n">2</div>
+        <div class="role-lbl">Leiden van het Individu &amp; het Team</div>
+        <h3 class="role-t">Leiden van het Individu &amp; het Team</h3>
+        <div class="role-j">Van samen werken naar werkelijk samenwerken</div>
+        <p class="role-b">Teams presteren beter wanneer de leider zichtbaar is, situationeel coacht en de onafhankelijkheid van het team actief vergroot. Effectief teamleiderschap is adaptief: het past zich aan het niveau en de behoefte van het team aan — en bouwt bewust aan psychologische veiligheid als voorwaarde voor leren.</p>
+      </div>
+      <div class="role-card">
+        <div class="role-n">3</div>
+        <div class="role-lbl">Leiden van het Proces</div>
+        <h3 class="role-t">Leiden van het Proces</h3>
+        <div class="role-j">Van brandjes blussen naar continu verbeteren</div>
+        <p class="role-b">De leider als verbetermotor: verliezen zichtbaar maken, gemba walks uitvoeren, probleemoplossing begeleiden en standaarden bewaken. Continu verbeteren als drijfveer voor persoonlijke en teamontwikkeling — niet als opgelegd systeem maar als gedeelde manier van werken.</p>
+      </div>
+      <div class="role-card">
+        <div class="role-n">4</div>
+        <div class="role-lbl">Leiden van de Organisatie</div>
+        <h3 class="role-t">Leiden van de Organisatie</h3>
+        <div class="role-j">Van overleven naar de continu lerende organisatie</div>
+        <p class="role-b">Vanuit visie en kernwaarden sturen, cultuur uitdragen, verandering leiden en successen vieren. De organisatieleider zorgt dat leren en verbeteren niet lokale initiatieven blijven maar een organisatiebrede beweging worden die aansluit op de strategische richting.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── TWEE INTEGRERENDE ELEMENTEN ── -->
+<section class="sec sec-mist">
+  <div class="sec-inner">
+    <div style="margin-bottom:4rem">
+      <p class="eyebrow">Twee integrerende elementen</p>
+      <h2 class="sec-title" style="margin-bottom:1rem">
+        Leiderschap dat <em>zichtbaar is</em><br>
+        en dat <em>beklijft</em>
+      </h2>
+      <p class="body-t" style="max-width:65ch">
+        Naast de vier leiderschapsrollen zijn er twee elementen die door alle niveaus heen werken. Ze bepalen of leiderschap voelbaar is voor de organisatie — en of het gedrag beklijft of terugvalt in oude patronen.
+      </p>
+    </div>
+    <div class="int-grid">
+      <div class="int-card int-gold">
+        <div class="int-lbl il-gold">Facet 5 — Zichtbaar Leiderschap</div>
+        <div class="int-j">Van "moeten" naar "willen"</div>
+        <h3 class="int-t">Zichtbaar Leiderschap: <em>de leider als rolmodel</em></h3>
+        <p class="int-b">
+          Medewerkers doen wat zij denken dat de leider van hen verwacht. Niet wat staat in het beleidsdocument — maar wat de leider zelf doet. Zichtbaar leiderschap bepaalt de cultuur. Een leider die zelf verbetert, vragen stelt en aanwezig is op de werkvloer, creëert een omgeving waarin anderen hetzelfde willen.
+        </p>
+        <div class="dash-list">
+          <div class="dash-item"><div class="dash"></div><span>Zichtbaar aanwezig op de werkvloer — de leider gaat naar de gemba</span></div>
+          <div class="dash-item"><div class="dash"></div><span>Erkenning en beloning als dagelijks instrument, niet als jaarlijks ritueel</span></div>
+          <div class="dash-item"><div class="dash"></div><span>Consistent gedrag dat vertrouwen opbouwt over tijd</span></div>
+          <div class="dash-item"><div class="dash"></div><span>De leider als teacher en trainer — niet als probleemoplosser</span></div>
+          <div class="dash-item"><div class="dash"></div><span>Betrokkenheid bij álle lagen van de organisatie</span></div>
+        </div>
+      </div>
+      <div class="int-card int-grey">
+        <div class="int-lbl il-grey">Facet 6 — Leider Standaard Werk</div>
+        <div class="int-j">Van losse delen naar samenhang</div>
+        <h3 class="int-t">Leider Standaard Werk: <em>leiderschapsroutines die beklijven</em></h3>
+        <p class="int-b">
+          Goede intenties zijn niet genoeg. Leiderschap dat echt beklijft vraagt vaste gedragingen en routines die structuur geven aan het dagelijkse werk. Leider Standaard Werk maakt leiderschap voorspelbaar, consistent en zichtbaar — en voorkomt terugval in oud gedrag zodra de druk toeneemt.
+        </p>
+        <div class="dash-list">
+          <div class="dash-item"><div class="dash"></div><span>Procesobs. en gemba interacties als vaste dagelijkse routine</span></div>
+          <div class="dash-item"><div class="dash"></div><span>Communicatie en performance management — dagstarts, weekreviews</span></div>
+          <div class="dash-item"><div class="dash"></div><span>Verbeteractiviteiten leiden, volgen en borgen</span></div>
+          <div class="dash-item"><div class="dash"></div><span>Standaarden handhaven en actief bijstellen op basis van leren</span></div>
+          <div class="dash-item"><div class="dash"></div><span>Motivatie, erkenning en persoonlijke en teamontwikkeling</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── TOYOTA + SENGE ── -->
+<section class="sec">
+  <div class="sec-inner">
+    <div class="two-col">
+      <div>
+        <p class="eyebrow eyebrow-gold">Twee tradities</p>
+        <h2 class="sec-title" style="margin-bottom:2rem">
+          Toyota vormt gedrag.<br>
+          Senge vormt denken.<br>
+          <em>Beide zijn nodig.</em>
+        </h2>
+        <p class="body-t">
+          Toyota's benadering van leiderschap is gedragsmatig: leiders leren door te doen, via standaarden en probleemoplossing op de werkvloer. Senge's benadering is systemisch: leiders bouwen gedeelde visie, bevorderen teamdialoog en bevragen aannames.
+        </p>
+        <p class="body-t">
+          In een instabiele operatie begin je met Toyota — structuur, routines, directe feedback. Als de basis stabiel is open je de Senge-laag: waarom werken we zo, welke aannames zitten hieronder, wat ziet het systeem dat wij niet zien? Dat is de bewuste volgorde die wij hanteren.
+        </p>
+      </div>
+      <div class="tradition-stack">
+        <div class="tb tb-grey">
+          <div class="tb-lbl">Toyota — gedrag in het werk</div>
+          <p class="tb-body">Leiders leren via standaarden, dagstarts, gemba walks en probleemoplossing begeleiden. Gedrag vormt denkvermogen — systematisch en herhaalbaar.</p>
+        </div>
+        <div class="tb tb-red">
+          <div class="tb-lbl">Senge — denken als systeem</div>
+          <p class="tb-body">Leiders bouwen gedeelde visie, stimuleren teamleren en bevragen mentale modellen. Denken vormt nieuw gedrag — op alle niveaus van de organisatie.</p>
+        </div>
+        <div class="tb tb-gold">
+          <div class="tb-lbl">EwP — de bewuste volgorde</div>
+          <p class="tb-body">Eerst structuur en routines (Toyota-laag), dan verdieping en systeemdenken (Senge-laag). Die volgorde is geen toeval — het is de spiraal.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── LEIDERSCHAP IN CONTEXT ── -->
+<section class="sec sec-dark">
+  <div class="sec-inner">
+    <div style="margin-bottom:4rem">
+      <p class="eyebrow-gold-dim" style="font-size:.72rem;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:var(--gold-light);margin-bottom:1.25rem;display:block">Leiderschap in context</p>
+      <h2 class="sec-title-light" style="margin-bottom:0">
+        Dezelfde principes.<br>
+        <em class="em-gold">Twee verschillende groeitrajecten.</em>
+      </h2>
+    </div>
+    <div class="sc-grid">
+      <a href="sector-industrie.html" class="sc-card sc-ind">
+        <div class="sc-lbl">Industrie — 30 jaar ervaring</div>
+        <h3 class="sc-t">Van technisch competent naar systemisch leidend</h3>
+        <p class="sc-b">In industrieorganisaties met een rijp verbeterprogramma kennen leiders de methoden. De volgende stap is: van technisch competent naar systemisch leidend. Leider Standaard Werk verbindt alle verbeterroutines tot één coherent leiderschapssysteem. De uitdaging is niet meer weten — maar consistenter doen.</p>
+      </a>
+      <a href="sector-glastuinbouw.html" class="sc-card sc-grh">
+        <div class="sc-lbl">Glastuinbouw — groeiende expertise</div>
+        <h3 class="sc-t">Van vakexpert naar leider die laten leren</h3>
+        <p class="sc-b">In glastuinbouw is de eigenaar-manager vaak de sterkste vakexpert — en daarmee soms de bottleneck voor organisatieontwikkeling. De leiderschapsontwikkeling begint hier met Zichtbaar Leiderschap: van "ik los op" naar "ik laat het team leren." Dat vraagt bewuste keuzes over wanneer je ingrijpt en wanneer je een vraag stelt.</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ── CTA ── -->
+<div class="cta-band">
+  <p class="cta-ey">De volgende stap</p>
+  <h2 class="cta-t">Waar staat uw leiderschap<br>in de <em class="em-gold">spiraal?</em></h2>
+  <p class="cta-b">In een verkennend gesprek brengen we samen in kaart op welke leiderschapsfacetten de grootste groeikans ligt — en wat dat betekent voor de snelheid van jullie verbeterprogramma.</p>
+  <div class="cta-btns">
+    <a href="visie-assessment.html"     class="btn-dark">Doe het assessment</a>
+    <a href="visie-hoe-wij-werken.html" class="btn-outline">Hoe wij werken &rarr;</a>
+  </div>
+</div>
+
+<footer>
+  <a href="index.html" class="footer-logo">
+    <img src="assets/img/ewp-logo-v3-white.png" alt="Excellence with Passion" class="footer-logo-img">
+  </a>
+  <div class="footer-nav">
+    <a href="visie-hoe-wij-werken.html" class="footer-link">Hoe wij werken &rarr;</a>
+    <a href="visie-assessment.html"     class="footer-link">Assessment &rarr;</a>
+    <span class="footer-copy">info@excellencewithpassion.com</span>
+  </div>
+</footer>
+
+</body>
+</html>
