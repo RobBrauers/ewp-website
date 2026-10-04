@@ -15,52 +15,52 @@ collections:
         name: "index"
         file: "index.html"
         fields:
-          - { label: "Paginainhoud (HTML)", name: "body", widget: "code", default_language: "html" }
+          - { label: "Paginainhoud (HTML)", name: "body", widget: "text" }
 
       - label: "Contact"
         name: "contact"
         file: "contact.html"
         fields:
-          - { label: "Paginainhoud (HTML)", name: "body", widget: "code", default_language: "html" }
+          - { label: "Paginainhoud (HTML)", name: "body", widget: "text" }
 
       - label: "Visie — Passion Swirl"
         name: "visie-passion-swirl"
         file: "visie-passion-swirl.html"
         fields:
-          - { label: "Paginainhoud (HTML)", name: "body", widget: "code", default_language: "html" }
+          - { label: "Paginainhoud (HTML)", name: "body", widget: "text" }
 
       - label: "Visie — Leiderschap"
         name: "visie-leiderschap"
         file: "visie-leiderschap.html"
         fields:
-          - { label: "Paginainhoud (HTML)", name: "body", widget: "code", default_language: "html" }
+          - { label: "Paginainhoud (HTML)", name: "body", widget: "text" }
 
       - label: "Visie — Hoe wij werken"
         name: "visie-hoe-wij-werken"
         file: "visie-hoe-wij-werken.html"
         fields:
-          - { label: "Paginainhoud (HTML)", name: "body", widget: "code", default_language: "html" }
+          - { label: "Paginainhoud (HTML)", name: "body", widget: "text" }
 
       - label: "Visie — Assessment"
         name: "visie-assessment"
         file: "visie-assessment.html"
         fields:
-          - { label: "Paginainhoud (HTML)", name: "body", widget: "code", default_language: "html" }
+          - { label: "Paginainhoud (HTML)", name: "body", widget: "text" }
 
       - label: "Sector — Industrie"
         name: "sector-industrie"
         file: "sector-industrie.html"
         fields:
-          - { label: "Paginainhoud (HTML)", name: "body", widget: "code", default_language: "html" }
+          - { label: "Paginainhoud (HTML)", name: "body", widget: "text" }
 
       - label: "Sector — Glastuinbouw"
         name: "sector-glastuinbouw"
         file: "sector-glastuinbouw.html"
         fields:
-          - { label: "Paginainhoud (HTML)", name: "body", widget: "code", default_language: "html" }
+          - { label: "Paginainhoud (HTML)", name: "body", widget: "text" }
 
       - label: "Succesverhaal — Bakkerij Fuite"
         name: "succesverhaal-bakkerij-fuite"
         file: "succesverhaal-bakkerij-fuite.html"
         fields:
-          - { label: "Paginainhoud (HTML)", name: "body", widget: "code", default_language: "html" }
+          - { label: "Paginainhoud (HTML)", name: "body", widget: "text" }
