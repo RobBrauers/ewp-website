@@ -37,6 +37,19 @@ collections:
           - { label: "Sectoren — Introtekst", name: "sectoren_intro", widget: "text" }
           - { label: "Sector Industrie — Cardtekst", name: "sector1_body", widget: "text" }
           - { label: "Sector Glastuinbouw — Cardtekst", name: "sector2_body", widget: "text" }
+          - { label: "Labels — Swirls sectie", name: "swirls_label", widget: "string" }
+          - { label: "Titel — Drie krachten", name: "swirls_titel", widget: "string" }
+          - { label: "Label — De kern", name: "samenhang_label", widget: "string" }
+          - { label: "Label — Swirl 1", name: "si_label1", widget: "string" }
+          - { label: "Label — Swirl 2", name: "si_label2", widget: "string" }
+          - { label: "Label — Swirl 3", name: "si_label3", widget: "string" }
+          - { label: "Label — Kern", name: "si_label4", widget: "string" }
+          - { label: "Label — Sectoren sectie", name: "sectoren_label", widget: "string" }
+          - { label: "Titel — Sectoren", name: "sectoren_titel", widget: "string" }
+          - { label: "Tag — Industrie card", name: "sector1_tag", widget: "string" }
+          - { label: "Link — Industrie card", name: "sector1_link", widget: "string" }
+          - { label: "Tag — Glastuinbouw card", name: "sector2_tag", widget: "string" }
+          - { label: "Link — Glastuinbouw card", name: "sector2_link", widget: "string" }
 
       - label: "Contact"
         name: "contact"
@@ -49,6 +62,11 @@ collections:
           - { label: "Waarom EwP 2 — Tekst", name: "wc2_body", widget: "text" }
           - { label: "Waarom EwP 3 — Titel", name: "wc3_titel", widget: "string" }
           - { label: "Waarom EwP 3 — Tekst", name: "wc3_body", widget: "text" }
+          - { label: "Expertise 1", name: "expertise1", widget: "string" }
+          - { label: "Expertise 2", name: "expertise2", widget: "string" }
+          - { label: "Expertise 3", name: "expertise3", widget: "string" }
+          - { label: "Expertise 4", name: "expertise4", widget: "string" }
+          - { label: "Expertise 5", name: "expertise5", widget: "string" }
 
       - label: "Visie — Passion Swirl"
         name: "visie-passion-swirl"
@@ -109,6 +127,29 @@ collections:
           - { label: "Principe 9 — Tekst", name: "pc9_body", widget: "text" }
           - { label: "Leiderschap — Tekst", name: "lb_body", widget: "text" }
           - { label: "CTA — Tekst", name: "cta_body", widget: "text" }
+          - { label: "Swirl 1 bullet 1", name: "step1_item1", widget: "string" }
+          - { label: "Swirl 1 bullet 2", name: "step1_item2", widget: "string" }
+          - { label: "Swirl 1 bullet 3", name: "step1_item3", widget: "string" }
+          - { label: "Swirl 2 bullet 1", name: "step2_item1", widget: "string" }
+          - { label: "Swirl 2 bullet 2", name: "step2_item2", widget: "string" }
+          - { label: "Swirl 2 bullet 3", name: "step2_item3", widget: "string" }
+          - { label: "Swirl 3 bullet 1", name: "step3_item1", widget: "string" }
+          - { label: "Swirl 3 bullet 2", name: "step3_item2", widget: "string" }
+          - { label: "Swirl 3 bullet 3", name: "step3_item3", widget: "string" }
+          - { label: "Stagnatie intro", name: "stagnatie_intro", widget: "text" }
+          - { label: "Stagnatie label 1", name: "stag1_scenario", widget: "string" }
+          - { label: "Stagnatie label 2", name: "stag2_scenario", widget: "string" }
+          - { label: "Stagnatie label 3", name: "stag3_scenario", widget: "string" }
+          - { label: "Stagnatie label 4", name: "stag4_scenario", widget: "string" }
+          - { label: "Principe 1 zonder dit", name: "pc1_zonder", widget: "text" }
+          - { label: "Principe 2 zonder dit", name: "pc2_zonder", widget: "text" }
+          - { label: "Principe 3 zonder dit", name: "pc3_zonder", widget: "text" }
+          - { label: "Principe 4 zonder dit", name: "pc4_zonder", widget: "text" }
+          - { label: "Principe 5 zonder dit", name: "pc5_zonder", widget: "text" }
+          - { label: "Principe 6 zonder dit", name: "pc6_zonder", widget: "text" }
+          - { label: "Principe 7 zonder dit", name: "pc7_zonder", widget: "text" }
+          - { label: "Principe 8 zonder dit", name: "pc8_zonder", widget: "text" }
+          - { label: "Principe 9 zonder dit", name: "pc9_zonder", widget: "text" }
 
       - label: "Visie — Leiderschap"
         name: "visie-leiderschap"
@@ -136,6 +177,36 @@ collections:
           - { label: "Sector Industrie — Tekst", name: "sc1_body", widget: "text" }
           - { label: "Sector Glastuinbouw — Tekst", name: "sc2_body", widget: "text" }
           - { label: "CTA — Tekst", name: "cta_body", widget: "text" }
+          - { label: "Symptoom 1", name: "sym1_titel", widget: "string" }
+          - { label: "Symptoom 2", name: "sym2_titel", widget: "string" }
+          - { label: "Symptoom 3", name: "sym3_titel", widget: "string" }
+          - { label: "Symptoom 4", name: "sym4_titel", widget: "string" }
+          - { label: "Facetten intro", name: "facetten_intro", widget: "text" }
+          - { label: "Rol 1 titel", name: "role1_titel", widget: "string" }
+          - { label: "Rol 1 journey", name: "role1_journey", widget: "string" }
+          - { label: "Rol 2 titel", name: "role2_titel", widget: "string" }
+          - { label: "Rol 2 journey", name: "role2_journey", widget: "string" }
+          - { label: "Rol 3 titel", name: "role3_titel", widget: "string" }
+          - { label: "Rol 3 journey", name: "role3_journey", widget: "string" }
+          - { label: "Rol 4 titel", name: "role4_titel", widget: "string" }
+          - { label: "Rol 4 journey", name: "role4_journey", widget: "string" }
+          - { label: "Facet 5 label", name: "int1_lbl", widget: "string" }
+          - { label: "Facet 5 journey", name: "int1_journey", widget: "string" }
+          - { label: "Facet 5 bullet 1", name: "int1_dash1", widget: "string" }
+          - { label: "Facet 5 bullet 2", name: "int1_dash2", widget: "string" }
+          - { label: "Facet 5 bullet 3", name: "int1_dash3", widget: "string" }
+          - { label: "Facet 5 bullet 4", name: "int1_dash4", widget: "string" }
+          - { label: "Facet 5 bullet 5", name: "int1_dash5", widget: "string" }
+          - { label: "Facet 6 label", name: "int2_lbl", widget: "string" }
+          - { label: "Facet 6 journey", name: "int2_journey", widget: "string" }
+          - { label: "Facet 6 bullet 1", name: "int2_dash1", widget: "string" }
+          - { label: "Facet 6 bullet 2", name: "int2_dash2", widget: "string" }
+          - { label: "Facet 6 bullet 3", name: "int2_dash3", widget: "string" }
+          - { label: "Facet 6 bullet 4", name: "int2_dash4", widget: "string" }
+          - { label: "Facet 6 bullet 5", name: "int2_dash5", widget: "string" }
+          - { label: "Sector context 1 titel", name: "sc1_titel", widget: "string" }
+          - { label: "Sector context 2 titel", name: "sc2_titel", widget: "string" }
+          - { label: "CTA eyebrow", name: "cta_eyebrow", widget: "string" }
 
       - label: "Visie — Hoe wij werken"
         name: "visie-hoe-wij-werken"
@@ -168,6 +239,31 @@ collections:
           - { label: "Laag 2 — Titel", name: "vl2_titel", widget: "string" }
           - { label: "Laag 3 — Titel", name: "vl3_titel", widget: "string" }
           - { label: "CTA — Tekst", name: "cta_body", widget: "text" }
+          - { label: "Fase 1 bullet 1", name: "fase1_dash1", widget: "string" }
+          - { label: "Fase 1 bullet 2", name: "fase1_dash2", widget: "string" }
+          - { label: "Fase 1 bullet 3", name: "fase1_dash3", widget: "string" }
+          - { label: "Fase 1 bullet 4", name: "fase1_dash4", widget: "string" }
+          - { label: "Fase 2 bullet 1", name: "fase2_dash1", widget: "string" }
+          - { label: "Fase 2 bullet 2", name: "fase2_dash2", widget: "string" }
+          - { label: "Fase 2 bullet 3", name: "fase2_dash3", widget: "string" }
+          - { label: "Fase 2 bullet 4", name: "fase2_dash4", widget: "string" }
+          - { label: "Fase 3 bullet 1", name: "fase3_dash1", widget: "string" }
+          - { label: "Fase 3 bullet 2", name: "fase3_dash2", widget: "string" }
+          - { label: "Fase 3 bullet 3", name: "fase3_dash3", widget: "string" }
+          - { label: "Fase 3 bullet 4", name: "fase3_dash4", widget: "string" }
+          - { label: "Verdieping 1 bullet 1", name: "vl1_dash1", widget: "string" }
+          - { label: "Verdieping 1 bullet 2", name: "vl1_dash2", widget: "string" }
+          - { label: "Verdieping 1 bullet 3", name: "vl1_dash3", widget: "string" }
+          - { label: "Verdieping 1 bullet 4", name: "vl1_dash4", widget: "string" }
+          - { label: "Verdieping 2 bullet 1", name: "vl2_dash1", widget: "string" }
+          - { label: "Verdieping 2 bullet 2", name: "vl2_dash2", widget: "string" }
+          - { label: "Verdieping 2 bullet 3", name: "vl2_dash3", widget: "string" }
+          - { label: "Verdieping 2 bullet 4", name: "vl2_dash4", widget: "string" }
+          - { label: "Verdieping 3 bullet 1", name: "vl3_dash1", widget: "string" }
+          - { label: "Verdieping 3 bullet 2", name: "vl3_dash2", widget: "string" }
+          - { label: "Verdieping 3 bullet 3", name: "vl3_dash3", widget: "string" }
+          - { label: "Verdieping 3 bullet 4", name: "vl3_dash4", widget: "string" }
+          - { label: "CTA eyebrow", name: "cta_eyebrow", widget: "string" }
 
       - label: "Visie — Assessment"
         name: "visie-assessment"
@@ -205,6 +301,27 @@ collections:
           - { label: "Stap 2 — Tekst", name: "stap2_body", widget: "text" }
           - { label: "Stap 3 — Tekst", name: "stap3_body", widget: "text" }
           - { label: "CTA — Tekst", name: "cta_body", widget: "text" }
+          - { label: "Swirl label 1", name: "vb1_lbl", widget: "string" }
+          - { label: "Swirl label 2", name: "vb2_lbl", widget: "string" }
+          - { label: "Swirl label 3", name: "vb3_lbl", widget: "string" }
+          - { label: "Swirl label 4", name: "vb4_lbl", widget: "string" }
+          - { label: "Niveau 1 bullet 1", name: "ng1_dash1", widget: "string" }
+          - { label: "Niveau 1 bullet 2", name: "ng1_dash2", widget: "string" }
+          - { label: "Niveau 1 bullet 3", name: "ng1_dash3", widget: "string" }
+          - { label: "Niveau 1 bullet 4", name: "ng1_dash4", widget: "string" }
+          - { label: "Niveau 2 bullet 1", name: "ng2_dash1", widget: "string" }
+          - { label: "Niveau 2 bullet 2", name: "ng2_dash2", widget: "string" }
+          - { label: "Niveau 2 bullet 3", name: "ng2_dash3", widget: "string" }
+          - { label: "Niveau 2 bullet 4", name: "ng2_dash4", widget: "string" }
+          - { label: "Niveau 3 bullet 1", name: "ng3_dash1", widget: "string" }
+          - { label: "Niveau 3 bullet 2", name: "ng3_dash2", widget: "string" }
+          - { label: "Niveau 3 bullet 3", name: "ng3_dash3", widget: "string" }
+          - { label: "Niveau 3 bullet 4", name: "ng3_dash4", widget: "string" }
+          - { label: "Niveau 4 bullet 1", name: "ng4_dash1", widget: "string" }
+          - { label: "Niveau 4 bullet 2", name: "ng4_dash2", widget: "string" }
+          - { label: "Niveau 4 bullet 3", name: "ng4_dash3", widget: "string" }
+          - { label: "Niveau 4 bullet 4", name: "ng4_dash4", widget: "string" }
+          - { label: "CTA eyebrow", name: "cta_eyebrow", widget: "string" }
 
       - label: "Sector — Industrie"
         name: "sector-industrie"
@@ -237,6 +354,34 @@ collections:
           - { label: "Groeifase 3 — Tekst", name: "groei3_body", widget: "text" }
           - { label: "Groeifase 4 — Tekst", name: "groei4_body", widget: "text" }
           - { label: "CTA — Tekst", name: "cta_body", widget: "text" }
+          - { label: "Sectie titel groei", name: "groei_titel", widget: "string" }
+          - { label: "Groeistap 1 naam", name: "groei1_titel", widget: "string" }
+          - { label: "Groeistap 2 naam", name: "groei2_titel", widget: "string" }
+          - { label: "Groeistap 3 naam", name: "groei3_titel", widget: "string" }
+          - { label: "Groeistap 4 naam", name: "groei4_titel", widget: "string" }
+          - { label: "Swirl 1 bullet 1", name: "si_step1_1", widget: "string" }
+          - { label: "Swirl 1 bullet 2", name: "si_step1_2", widget: "string" }
+          - { label: "Swirl 1 bullet 3", name: "si_step1_3", widget: "string" }
+          - { label: "Swirl 2 bullet 1", name: "si_step2_1", widget: "string" }
+          - { label: "Swirl 2 bullet 2", name: "si_step2_2", widget: "string" }
+          - { label: "Swirl 2 bullet 3", name: "si_step2_3", widget: "string" }
+          - { label: "Swirl 3 bullet 1", name: "si_step3_1", widget: "string" }
+          - { label: "Swirl 3 bullet 2", name: "si_step3_2", widget: "string" }
+          - { label: "Swirl 3 bullet 3", name: "si_step3_3", widget: "string" }
+          - { label: "Leiderschap bullet 1", name: "si_step4_1", widget: "string" }
+          - { label: "Leiderschap bullet 2", name: "si_step4_2", widget: "string" }
+          - { label: "Leiderschap bullet 3", name: "si_step4_3", widget: "string" }
+          - { label: "Cases sectie titel", name: "cases_titel", widget: "string" }
+          - { label: "Case 1 bedrijf", name: "case1_company", widget: "string" }
+          - { label: "Case 1 uitdaging", name: "case1_challenge", widget: "text" }
+          - { label: "Case 1 resultaat", name: "case1_result", widget: "text" }
+          - { label: "Case 2 bedrijf", name: "case2_company", widget: "string" }
+          - { label: "Case 2 uitdaging", name: "case2_challenge", widget: "text" }
+          - { label: "Case 2 resultaat", name: "case2_result", widget: "text" }
+          - { label: "Case 3 bedrijf", name: "case3_company", widget: "string" }
+          - { label: "Case 3 uitdaging", name: "case3_challenge", widget: "text" }
+          - { label: "Case 3 resultaat", name: "case3_result", widget: "text" }
+          - { label: "CTA eyebrow", name: "cta_eyebrow", widget: "string" }
 
       - label: "Sector — Glastuinbouw"
         name: "sector-glastuinbouw"
@@ -273,6 +418,33 @@ collections:
           - { label: "Leiderschapsstijl 3 — Titel", name: "leid3_titel", widget: "string" }
           - { label: "Leiderschapsstijl 3 — Tekst", name: "leid3_body", widget: "text" }
           - { label: "CTA — Tekst", name: "cta_body", widget: "text" }
+          - { label: "Heeft al 1", name: "heeft1", widget: "string" }
+          - { label: "Heeft al 2", name: "heeft2", widget: "string" }
+          - { label: "Heeft al 3", name: "heeft3", widget: "string" }
+          - { label: "Heeft al 4", name: "heeft4", widget: "string" }
+          - { label: "Heeft al 5", name: "heeft5", widget: "string" }
+          - { label: "Mist nog 1", name: "mist1", widget: "string" }
+          - { label: "Mist nog 2", name: "mist2", widget: "string" }
+          - { label: "Mist nog 3", name: "mist3", widget: "string" }
+          - { label: "Mist nog 4", name: "mist4", widget: "string" }
+          - { label: "Mist nog 5", name: "mist5", widget: "string" }
+          - { label: "Stap 1 bullet 1", name: "step1_prak1", widget: "string" }
+          - { label: "Stap 1 bullet 2", name: "step1_prak2", widget: "string" }
+          - { label: "Stap 1 bullet 3", name: "step1_prak3", widget: "string" }
+          - { label: "Stap 2 bullet 1", name: "step2_prak1", widget: "string" }
+          - { label: "Stap 2 bullet 2", name: "step2_prak2", widget: "string" }
+          - { label: "Stap 2 bullet 3", name: "step2_prak3", widget: "string" }
+          - { label: "Stap 3 bullet 1", name: "step3_prak1", widget: "string" }
+          - { label: "Stap 3 bullet 2", name: "step3_prak2", widget: "string" }
+          - { label: "Stap 3 bullet 3", name: "step3_prak3", widget: "string" }
+          - { label: "Stap 4 bullet 1", name: "step4_prak1", widget: "string" }
+          - { label: "Stap 4 bullet 2", name: "step4_prak2", widget: "string" }
+          - { label: "Stap 4 bullet 3", name: "step4_prak3", widget: "string" }
+          - { label: "Leermoment label 1", name: "lm1_context", widget: "string" }
+          - { label: "Leermoment label 2", name: "lm2_context", widget: "string" }
+          - { label: "Leermoment label 3", name: "lm3_context", widget: "string" }
+          - { label: "Leermoment label 4", name: "lm4_context", widget: "string" }
+          - { label: "CTA eyebrow", name: "cta_eyebrow", widget: "string" }
 
       - label: "Succesverhaal — Bakkerij Fuite"
         name: "succesverhaal-bakkerij-fuite"
