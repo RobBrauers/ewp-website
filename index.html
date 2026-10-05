@@ -30,7 +30,10 @@
       overflow: hidden;
     }
     .home-hero-bg { position: absolute; inset: 0; background: radial-gradient(ellipse 80% 60% at 70% 40%, rgba(227,0,27,.07) 0%, transparent 60%); pointer-events: none; }
-    .home-hero-content { position: relative; z-index: 1; max-width: 720px; }
+    .home-hero-content { position: relative; z-index: 1; max-width: 600px; }
+    .home-hero-swirl { position: absolute; right: 5rem; top: 50%; transform: translateY(-50%); width: 360px; opacity: .92; pointer-events: none; z-index: 0; }
+    @media (max-width: 1100px) { .home-hero-swirl { width: 260px; right: 3rem; } }
+    @media (max-width: 768px) { .home-hero-swirl { width: 180px; right: 1.5rem; opacity: .5; } }
     .home-tag { font-size: .68rem; font-weight: 500; letter-spacing: .15em; text-transform: uppercase; color: var(--kleur-verbeteren); margin-bottom: 2rem; }
     .home-q { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.8rem,5vw,5rem); font-weight: 300; line-height: 1.1; color: #fff; margin: 0 0 2rem; }
     .home-a { font-size: 1rem; line-height: 1.8; color: rgba(255,255,255,.6); max-width: 52ch; margin-bottom: 3rem; }
@@ -42,9 +45,7 @@
     .swirls-section { background: var(--kleur-achtergrond); padding: 6rem 4rem; }
     .swirls-label { font-size: .68rem; font-weight: 500; letter-spacing: .15em; text-transform: uppercase; color: var(--kleur-waardestroom); margin-bottom: 1rem; }
     .swirls-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.8rem,3vw,2.8rem); font-weight: 300; color: var(--kleur-tekst); margin-bottom: 0; }
-    .swirls-intro-row { display: grid; grid-template-columns: 1fr auto; align-items: flex-end; gap: 3rem; margin-bottom: 4rem; }
-    .swirl-diagram { width: 220px; display: block; opacity: .95; }
-    @media (max-width: 600px) { .swirls-intro-row { grid-template-columns: 1fr; } .swirl-diagram { width: 140px; margin-top: 1.5rem; } }
+    .swirls-intro-row { margin-bottom: 4rem; }
     .swirls-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; }
     .swirl-card { padding: 2.5rem; border-top: 3px solid var(--card-color, var(--kleur-waardestroom)); background: #fff; display: flex; flex-direction: column; }
     .swirl-num { font-family: 'Cormorant Garamond', serif; font-size: 3rem; font-weight: 300; color: var(--card-color); line-height: 1; margin-bottom: 1rem; }
@@ -98,6 +99,7 @@
 <!-- ── Hero ── -->
 <section class="home-hero">
   <div class="home-hero-bg"></div>
+  <img src="assets/img/ewp-spiraal-v3-cropped.png?v=2" alt="" class="home-hero-swirl" aria-hidden="true">
   <div class="home-hero-content">
     <div class="home-tag" data-cms="hero_tag">De Passion Swirl — 30 jaar ervaring</div>
     <h1 class="home-q" data-cms="hero_titel">
@@ -118,11 +120,8 @@
 <!-- ── Drie Swirls ── -->
 <section class="swirls-section">
   <div class="swirls-intro-row">
-    <div>
-      <div class="swirls-label" data-cms="swirls_label">De drie swirls</div>
-      <h2 class="swirls-title" data-cms="swirls_titel">Één model. Drie krachten.</h2>
-    </div>
-    <img src="assets/img/ewp-spiraal-v3-cropped.png?v=2" alt="De EwP Passion Swirl — drie verweven krachten" class="swirl-diagram">
+    <div class="swirls-label" data-cms="swirls_label">De drie swirls</div>
+    <h2 class="swirls-title" data-cms="swirls_titel">Één model. Drie krachten.</h2>
   </div>
   <div class="swirls-grid">
 
