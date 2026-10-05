@@ -19,24 +19,96 @@ collections:
           - { label: "Eyebrow tekst (boven de titel)", name: "hero_tag", widget: "string" }
           - { label: "Hoofdtitel", name: "hero_titel", widget: "text" }
           - { label: "Introtekst", name: "hero_intro", widget: "text" }
-          - { label: "Swirl 1 — Tekst (Continue Waardestroom)", name: "swirl1_body", widget: "text" }
-          - { label: "Swirl 2 — Tekst (Continu Verbeteren)", name: "swirl2_body", widget: "text" }
-          - { label: "Swirl 3 — Tekst (Lerende Organisatie)", name: "swirl3_body", widget: "text" }
+          - { label: "Swirl 1 — Titel", name: "swirl1_titel", widget: "string" }
+          - { label: "Swirl 1 — Ondertitel", name: "swirl1_sub", widget: "string" }
+          - { label: "Swirl 1 — Tekst", name: "swirl1_body", widget: "text" }
+          - { label: "Swirl 2 — Titel", name: "swirl2_titel", widget: "string" }
+          - { label: "Swirl 2 — Ondertitel", name: "swirl2_sub", widget: "string" }
+          - { label: "Swirl 2 — Tekst", name: "swirl2_body", widget: "text" }
+          - { label: "Swirl 3 — Titel", name: "swirl3_titel", widget: "string" }
+          - { label: "Swirl 3 — Ondertitel", name: "swirl3_sub", widget: "string" }
+          - { label: "Swirl 3 — Tekst", name: "swirl3_body", widget: "text" }
           - { label: "Kern — Alinea 1", name: "kern_intro1", widget: "text" }
           - { label: "Kern — Alinea 2", name: "kern_intro2", widget: "text" }
+          - { label: "Kern — Item 1", name: "si_body1", widget: "text" }
+          - { label: "Kern — Item 2", name: "si_body2", widget: "text" }
+          - { label: "Kern — Item 3", name: "si_body3", widget: "text" }
+          - { label: "Kern — Item 4", name: "si_body4", widget: "text" }
           - { label: "Sectoren — Introtekst", name: "sectoren_intro", widget: "text" }
+          - { label: "Sector Industrie — Cardtekst", name: "sector1_body", widget: "text" }
+          - { label: "Sector Glastuinbouw — Cardtekst", name: "sector2_body", widget: "text" }
 
       - label: "Contact"
         name: "contact"
         file: "content/contact.json"
         fields:
           - { label: "Introtekst onder de titel", name: "hero_sub", widget: "text" }
+          - { label: "Waarom EwP 1 — Titel", name: "wc1_titel", widget: "string" }
+          - { label: "Waarom EwP 1 — Tekst", name: "wc1_body", widget: "text" }
+          - { label: "Waarom EwP 2 — Titel", name: "wc2_titel", widget: "string" }
+          - { label: "Waarom EwP 2 — Tekst", name: "wc2_body", widget: "text" }
+          - { label: "Waarom EwP 3 — Titel", name: "wc3_titel", widget: "string" }
+          - { label: "Waarom EwP 3 — Tekst", name: "wc3_body", widget: "text" }
 
       - label: "Visie — Passion Swirl"
         name: "visie-passion-swirl"
         file: "content/visie-passion-swirl.json"
         fields:
           - { label: "Introtekst", name: "hero_intro", widget: "text" }
+          - { label: "Overtuiging — Alinea 1", name: "overtuiging_body1", widget: "text" }
+          - { label: "Overtuiging — Alinea 2", name: "overtuiging_body2", widget: "text" }
+          - { label: "Observatie 1 — Titel", name: "ob1_titel", widget: "string" }
+          - { label: "Observatie 1 — Tekst", name: "ob1_body", widget: "text" }
+          - { label: "Observatie 2 — Titel", name: "ob2_titel", widget: "string" }
+          - { label: "Observatie 2 — Tekst", name: "ob2_body", widget: "text" }
+          - { label: "Observatie 3 — Titel", name: "ob3_titel", widget: "string" }
+          - { label: "Observatie 3 — Tekst", name: "ob3_body", widget: "text" }
+          - { label: "Observatie 4 — Titel", name: "ob4_titel", widget: "string" }
+          - { label: "Observatie 4 — Tekst", name: "ob4_body", widget: "text" }
+          - { label: "Aanpak — Introtekst", name: "aanpak_intro", widget: "text" }
+          - { label: "Stroom 1 — Titel", name: "step1_titel", widget: "string" }
+          - { label: "Stroom 1 — Tekst", name: "step1_body", widget: "text" }
+          - { label: "Stroom 2 — Titel", name: "step2_titel", widget: "string" }
+          - { label: "Stroom 2 — Tekst", name: "step2_body", widget: "text" }
+          - { label: "Stroom 3 — Titel", name: "step3_titel", widget: "string" }
+          - { label: "Stroom 3 — Tekst", name: "step3_body", widget: "text" }
+          - { label: "Stagnatie 1 — Titel", name: "stag1_titel", widget: "string" }
+          - { label: "Stagnatie 1 — Tekst", name: "stag1_body", widget: "text" }
+          - { label: "Stagnatie 1 — Gevolg", name: "stag1_gevolg", widget: "text" }
+          - { label: "Stagnatie 2 — Titel", name: "stag2_titel", widget: "string" }
+          - { label: "Stagnatie 2 — Tekst", name: "stag2_body", widget: "text" }
+          - { label: "Stagnatie 2 — Gevolg", name: "stag2_gevolg", widget: "text" }
+          - { label: "Stagnatie 3 — Titel", name: "stag3_titel", widget: "string" }
+          - { label: "Stagnatie 3 — Tekst", name: "stag3_body", widget: "text" }
+          - { label: "Stagnatie 3 — Gevolg", name: "stag3_gevolg", widget: "text" }
+          - { label: "Stagnatie 4 — Titel", name: "stag4_titel", widget: "string" }
+          - { label: "Stagnatie 4 — Tekst", name: "stag4_body", widget: "text" }
+          - { label: "Stagnatie 4 — Gevolg", name: "stag4_gevolg", widget: "text" }
+          - { label: "Wortels — Alinea 1", name: "wortels_body1", widget: "text" }
+          - { label: "Wortels — Alinea 2", name: "wortels_body2", widget: "text" }
+          - { label: "Traditie Toyota — Tekst", name: "tb1_body", widget: "text" }
+          - { label: "Traditie Senge — Tekst", name: "tb2_body", widget: "text" }
+          - { label: "Traditie Integratie — Tekst", name: "tb3_body", widget: "text" }
+          - { label: "Principe 1 — Titel", name: "pc1_titel", widget: "string" }
+          - { label: "Principe 1 — Tekst", name: "pc1_body", widget: "text" }
+          - { label: "Principe 2 — Titel", name: "pc2_titel", widget: "string" }
+          - { label: "Principe 2 — Tekst", name: "pc2_body", widget: "text" }
+          - { label: "Principe 3 — Titel", name: "pc3_titel", widget: "string" }
+          - { label: "Principe 3 — Tekst", name: "pc3_body", widget: "text" }
+          - { label: "Principe 4 — Titel", name: "pc4_titel", widget: "string" }
+          - { label: "Principe 4 — Tekst", name: "pc4_body", widget: "text" }
+          - { label: "Principe 5 — Titel", name: "pc5_titel", widget: "string" }
+          - { label: "Principe 5 — Tekst", name: "pc5_body", widget: "text" }
+          - { label: "Principe 6 — Titel", name: "pc6_titel", widget: "string" }
+          - { label: "Principe 6 — Tekst", name: "pc6_body", widget: "text" }
+          - { label: "Principe 7 — Titel", name: "pc7_titel", widget: "string" }
+          - { label: "Principe 7 — Tekst", name: "pc7_body", widget: "text" }
+          - { label: "Principe 8 — Titel", name: "pc8_titel", widget: "string" }
+          - { label: "Principe 8 — Tekst", name: "pc8_body", widget: "text" }
+          - { label: "Principe 9 — Titel", name: "pc9_titel", widget: "string" }
+          - { label: "Principe 9 — Tekst", name: "pc9_body", widget: "text" }
+          - { label: "Leiderschap — Tekst", name: "lb_body", widget: "text" }
+          - { label: "CTA — Tekst", name: "cta_body", widget: "text" }
 
       - label: "Visie — Leiderschap"
         name: "visie-leiderschap"
@@ -45,33 +117,166 @@ collections:
           - { label: "Introtekst", name: "hero_intro", widget: "text" }
           - { label: "Diagnose — Alinea 1", name: "diagnose_intro1", widget: "text" }
           - { label: "Diagnose — Alinea 2", name: "diagnose_intro2", widget: "text" }
+          - { label: "Symptoom 1", name: "sym1_body", widget: "text" }
+          - { label: "Symptoom 2", name: "sym2_body", widget: "text" }
+          - { label: "Symptoom 3", name: "sym3_body", widget: "text" }
+          - { label: "Symptoom 4", name: "sym4_body", widget: "text" }
+          - { label: "Rol 1 — Tekst", name: "role1_body", widget: "text" }
+          - { label: "Rol 2 — Tekst", name: "role2_body", widget: "text" }
+          - { label: "Rol 3 — Tekst", name: "role3_body", widget: "text" }
+          - { label: "Rol 4 — Tekst", name: "role4_body", widget: "text" }
+          - { label: "Twee elementen — Introtekst", name: "int_intro", widget: "text" }
+          - { label: "Integrerend element 1 — Tekst", name: "int1_body", widget: "text" }
+          - { label: "Integrerend element 2 — Tekst", name: "int2_body", widget: "text" }
+          - { label: "Toyota/Senge — Alinea 1", name: "toyota_body1", widget: "text" }
+          - { label: "Toyota/Senge — Alinea 2", name: "toyota_body2", widget: "text" }
+          - { label: "Traditie Toyota — Tekst", name: "leid_tb1_body", widget: "text" }
+          - { label: "Traditie Senge — Tekst", name: "leid_tb2_body", widget: "text" }
+          - { label: "Traditie Integratie — Tekst", name: "leid_tb3_body", widget: "text" }
+          - { label: "Sector Industrie — Tekst", name: "sc1_body", widget: "text" }
+          - { label: "Sector Glastuinbouw — Tekst", name: "sc2_body", widget: "text" }
+          - { label: "CTA — Tekst", name: "cta_body", widget: "text" }
 
       - label: "Visie — Hoe wij werken"
         name: "visie-hoe-wij-werken"
         file: "content/visie-hoe-wij-werken.json"
         fields:
           - { label: "Introtekst", name: "hero_intro", widget: "text" }
+          - { label: "Veranderprincipes — Alinea 1", name: "veranderp_body1", widget: "text" }
+          - { label: "Veranderprincipes — Alinea 2", name: "veranderp_body2", widget: "text" }
+          - { label: "Principe 1 — Titel", name: "bw1_titel", widget: "string" }
+          - { label: "Principe 1 — Tekst", name: "bw1_body", widget: "text" }
+          - { label: "Principe 2 — Titel", name: "bw2_titel", widget: "string" }
+          - { label: "Principe 2 — Tekst", name: "bw2_body", widget: "text" }
+          - { label: "Principe 3 — Titel", name: "bw3_titel", widget: "string" }
+          - { label: "Principe 3 — Tekst", name: "bw3_body", widget: "text" }
+          - { label: "Werkwijze — Introtekst", name: "werkwijze_intro", widget: "text" }
+          - { label: "Fase 1 — Titel", name: "fase1_titel", widget: "string" }
+          - { label: "Fase 1 — Tekst", name: "fase1_body", widget: "text" }
+          - { label: "Fase 2 — Titel", name: "fase2_titel", widget: "string" }
+          - { label: "Fase 2 — Tekst", name: "fase2_body", widget: "text" }
+          - { label: "Fase 3 — Titel", name: "fase3_titel", widget: "string" }
+          - { label: "Fase 3 — Tekst", name: "fase3_body", widget: "text" }
+          - { label: "Leiderschap — Alinea 1", name: "leiderschap_body1", widget: "text" }
+          - { label: "Leiderschap — Alinea 2", name: "leiderschap_body2", widget: "text" }
+          - { label: "Leiderschap — Alinea 3", name: "leiderschap_body3", widget: "text" }
+          - { label: "Leiderschapsfase 1 — Tekst", name: "fb1_body", widget: "text" }
+          - { label: "Leiderschapsfase 2 — Tekst", name: "fb2_body", widget: "text" }
+          - { label: "Leiderschapsfase 3 — Tekst", name: "fb3_body", widget: "text" }
+          - { label: "EwP Structuur — Introtekst", name: "structuur_intro", widget: "text" }
+          - { label: "Laag 1 — Titel", name: "vl1_titel", widget: "string" }
+          - { label: "Laag 2 — Titel", name: "vl2_titel", widget: "string" }
+          - { label: "Laag 3 — Titel", name: "vl3_titel", widget: "string" }
+          - { label: "CTA — Tekst", name: "cta_body", widget: "text" }
 
       - label: "Visie — Assessment"
         name: "visie-assessment"
         file: "content/visie-assessment.json"
         fields:
           - { label: "Introtekst", name: "hero_intro", widget: "text" }
+          - { label: "Vier vragen — Alinea 1", name: "vragen_body1", widget: "text" }
+          - { label: "Vier vragen — Alinea 2", name: "vragen_body2", widget: "text" }
+          - { label: "Vraag 1 — Titel", name: "vb1_titel", widget: "string" }
+          - { label: "Vraag 1 — Tekst", name: "vb1_body", widget: "text" }
+          - { label: "Vraag 2 — Titel", name: "vb2_titel", widget: "string" }
+          - { label: "Vraag 2 — Tekst", name: "vb2_body", widget: "text" }
+          - { label: "Vraag 3 — Titel", name: "vb3_titel", widget: "string" }
+          - { label: "Vraag 3 — Tekst", name: "vb3_body", widget: "text" }
+          - { label: "Vraag 4 — Titel", name: "vb4_titel", widget: "string" }
+          - { label: "Vraag 4 — Tekst", name: "vb4_body", widget: "text" }
+          - { label: "Niveaus — Introtekst", name: "niveaus_intro", widget: "text" }
+          - { label: "Niveau 1 — Titel", name: "ng1_titel", widget: "string" }
+          - { label: "Niveau 1 — Tekst", name: "ng1_body", widget: "text" }
+          - { label: "Niveau 2 — Titel", name: "ng2_titel", widget: "string" }
+          - { label: "Niveau 2 — Tekst", name: "ng2_body", widget: "text" }
+          - { label: "Niveau 3 — Titel", name: "ng3_titel", widget: "string" }
+          - { label: "Niveau 3 — Tekst", name: "ng3_body", widget: "text" }
+          - { label: "Niveau 4 — Titel", name: "ng4_titel", widget: "string" }
+          - { label: "Niveau 4 — Tekst", name: "ng4_body", widget: "text" }
+          - { label: "Per swirl 1 — Titel", name: "snc1_titel", widget: "string" }
+          - { label: "Per swirl 1 — Tekst", name: "snc1_body", widget: "text" }
+          - { label: "Per swirl 2 — Titel", name: "snc2_titel", widget: "string" }
+          - { label: "Per swirl 2 — Tekst", name: "snc2_body", widget: "text" }
+          - { label: "Per swirl 3 — Titel", name: "snc3_titel", widget: "string" }
+          - { label: "Per swirl 3 — Tekst", name: "snc3_body", widget: "text" }
+          - { label: "Assessment oplevert — Alinea 1", name: "assessment_body1", widget: "text" }
+          - { label: "Assessment oplevert — Alinea 2", name: "assessment_body2", widget: "text" }
+          - { label: "Stap 1 — Tekst", name: "stap1_body", widget: "text" }
+          - { label: "Stap 2 — Tekst", name: "stap2_body", widget: "text" }
+          - { label: "Stap 3 — Tekst", name: "stap3_body", widget: "text" }
+          - { label: "CTA — Tekst", name: "cta_body", widget: "text" }
 
       - label: "Sector — Industrie"
         name: "sector-industrie"
         file: "content/sector-industrie.json"
         fields:
           - { label: "Introtekst", name: "hero_intro", widget: "text" }
+          - { label: "Diagnose — Alinea 1", name: "diagnose_body1", widget: "text" }
+          - { label: "Diagnose — Alinea 2", name: "diagnose_body2", widget: "text" }
+          - { label: "Symptoom 1 — Titel", name: "sym1_titel", widget: "string" }
+          - { label: "Symptoom 1 — Tekst", name: "sym1_body", widget: "text" }
+          - { label: "Symptoom 2 — Titel", name: "sym2_titel", widget: "string" }
+          - { label: "Symptoom 2 — Tekst", name: "sym2_body", widget: "text" }
+          - { label: "Symptoom 3 — Titel", name: "sym3_titel", widget: "string" }
+          - { label: "Symptoom 3 — Tekst", name: "sym3_body", widget: "text" }
+          - { label: "Symptoom 4 — Titel", name: "sym4_titel", widget: "string" }
+          - { label: "Symptoom 4 — Tekst", name: "sym4_body", widget: "text" }
+          - { label: "Symptoom 5 — Titel", name: "sym5_titel", widget: "string" }
+          - { label: "Symptoom 5 — Tekst", name: "sym5_body", widget: "text" }
+          - { label: "Aanpak — Introtekst", name: "aanpak_intro", widget: "text" }
+          - { label: "Stap 1 — Titel", name: "step1_titel", widget: "string" }
+          - { label: "Stap 1 — Tekst", name: "step1_body", widget: "text" }
+          - { label: "Stap 2 — Titel", name: "step2_titel", widget: "string" }
+          - { label: "Stap 2 — Tekst", name: "step2_body", widget: "text" }
+          - { label: "Stap 3 — Titel", name: "step3_titel", widget: "string" }
+          - { label: "Stap 3 — Tekst", name: "step3_body", widget: "text" }
+          - { label: "Stap 4 — Titel", name: "step4_titel", widget: "string" }
+          - { label: "Stap 4 — Tekst", name: "step4_body", widget: "text" }
+          - { label: "Groeifase 1 — Tekst", name: "groei1_body", widget: "text" }
+          - { label: "Groeifase 2 — Tekst", name: "groei2_body", widget: "text" }
+          - { label: "Groeifase 3 — Tekst", name: "groei3_body", widget: "text" }
+          - { label: "Groeifase 4 — Tekst", name: "groei4_body", widget: "text" }
+          - { label: "CTA — Tekst", name: "cta_body", widget: "text" }
 
       - label: "Sector — Glastuinbouw"
         name: "sector-glastuinbouw"
         file: "content/sector-glastuinbouw.json"
         fields:
           - { label: "Introtekst", name: "hero_intro", widget: "text" }
+          - { label: "Paradox — Alinea 1", name: "paradox_body1", widget: "text" }
+          - { label: "Paradox — Alinea 2", name: "paradox_body2", widget: "text" }
+          - { label: "Aanpak — Introtekst", name: "aanpak_intro", widget: "text" }
+          - { label: "Stap 1 — Titel", name: "step1_titel", widget: "string" }
+          - { label: "Stap 1 — Tekst", name: "step1_body", widget: "text" }
+          - { label: "Stap 2 — Titel", name: "step2_titel", widget: "string" }
+          - { label: "Stap 2 — Tekst", name: "step2_body", widget: "text" }
+          - { label: "Stap 3 — Titel", name: "step3_titel", widget: "string" }
+          - { label: "Stap 3 — Tekst", name: "step3_body", widget: "text" }
+          - { label: "Stap 4 — Titel", name: "step4_titel", widget: "string" }
+          - { label: "Stap 4 — Tekst", name: "step4_body", widget: "text" }
+          - { label: "Seizoensritme — Alinea 1", name: "seizoen_body1", widget: "text" }
+          - { label: "Seizoensritme — Alinea 2", name: "seizoen_body2", widget: "text" }
+          - { label: "Leermoment 1 — Titel", name: "lm1_titel", widget: "string" }
+          - { label: "Leermoment 1 — Tekst", name: "lm1_body", widget: "text" }
+          - { label: "Leermoment 2 — Titel", name: "lm2_titel", widget: "string" }
+          - { label: "Leermoment 2 — Tekst", name: "lm2_body", widget: "text" }
+          - { label: "Leermoment 3 — Titel", name: "lm3_titel", widget: "string" }
+          - { label: "Leermoment 3 — Tekst", name: "lm3_body", widget: "text" }
+          - { label: "Leermoment 4 — Titel", name: "lm4_titel", widget: "string" }
+          - { label: "Leermoment 4 — Tekst", name: "lm4_body", widget: "text" }
+          - { label: "Leiderschap — Alinea 1", name: "leiderschap_body1", widget: "text" }
+          - { label: "Leiderschap — Alinea 2", name: "leiderschap_body2", widget: "text" }
+          - { label: "Leiderschapsstijl 1 — Titel", name: "leid1_titel", widget: "string" }
+          - { label: "Leiderschapsstijl 1 — Tekst", name: "leid1_body", widget: "text" }
+          - { label: "Leiderschapsstijl 2 — Titel", name: "leid2_titel", widget: "string" }
+          - { label: "Leiderschapsstijl 2 — Tekst", name: "leid2_body", widget: "text" }
+          - { label: "Leiderschapsstijl 3 — Titel", name: "leid3_titel", widget: "string" }
+          - { label: "Leiderschapsstijl 3 — Tekst", name: "leid3_body", widget: "text" }
+          - { label: "CTA — Tekst", name: "cta_body", widget: "text" }
 
       - label: "Succesverhaal — Bakkerij Fuite"
         name: "succesverhaal-bakkerij-fuite"
         file: "content/succesverhaal-bakkerij-fuite.json"
         fields:
-          - { label: "Introtekst", name: "hero_intro", widget: "text" }
+          - { label: "Hero — Ondertitel", name: "hero_sub", widget: "text" }
+          - { label: "Coming soon — Tekst", name: "coming_text", widget: "text" }
