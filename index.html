@@ -48,14 +48,13 @@
     .swirl-t { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; font-weight: 600; color: var(--kleur-tekst); margin-bottom: .5rem; }
     .swirl-sub { font-size: .78rem; font-style: italic; color: var(--card-color); margin-bottom: 1.25rem; }
     .swirl-body { font-size: .88rem; line-height: 1.75; color: #555; margin-bottom: 1.5rem; }
-    .swirl-items { list-style: none; padding: 0; margin: auto 0 0; display: flex; flex-direction: column; gap: .5rem; }
-    .swirl-items li { font-size: .82rem; color: #555; padding: .55rem .75rem .55rem .85rem; border-left: 3px solid var(--card-color); background: rgba(0,0,0,.03); position: relative; }
-    .swirl-items li::before { display: none; }
-    .swirl-items li.li-ind { border-color: var(--kleur-industrie); background: #dce8f2; }
-    .swirl-items li.li-grh { border-color: var(--kleur-glastuinbouw); background: #d8eddf; }
-    .swirl-sector-tag { display: block; font-size: .57rem; font-weight: 500; letter-spacing: .12em; text-transform: uppercase; margin-bottom: .2rem; }
-    .li-ind .swirl-sector-tag { color: var(--kleur-industrie); }
-    .li-grh .swirl-sector-tag { color: var(--kleur-glastuinbouw); }
+    .swirl-examples { display: grid; grid-template-columns: 1fr 1fr; margin: auto 0 0; }
+    .swirl-ex { padding: .75rem .85rem; font-size: .78rem; line-height: 1.5; color: #444; }
+    .swirl-ex.si-ind { background: #dce8f2; border-top: 3px solid var(--kleur-industrie); border-right: 1px solid rgba(255,255,255,.7); }
+    .swirl-ex.si-grh { background: #d8eddf; border-top: 3px solid var(--kleur-glastuinbouw); }
+    .swirl-ex-tag { display: block; font-size: .55rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; margin-bottom: .3rem; }
+    .si-ind .swirl-ex-tag { color: var(--kleur-industrie); }
+    .si-grh .swirl-ex-tag { color: var(--kleur-glastuinbouw); }
 
     /* ── Samenhang / Kern ── */
     .samenhang-section { background: var(--kleur-industrie); padding: 6rem 4rem; }
@@ -124,10 +123,10 @@
       <div class="swirl-t" data-cms="swirl1_titel">Continue Waardestroom</div>
       <div class="swirl-sub" data-cms="swirl1_sub">Waarde stroomt ononderbroken naar de klant</div>
       <p class="swirl-body" data-cms="swirl1_body">Elk proces is zo ingericht dat waarde vloeiend stroomt, in het ritme van de klantvraag — zonder verspilling, wachttijden of kwaliteitsverlies. Kwaliteit ontstaat in het proces.</p>
-      <ul class="swirl-items">
-        <li class="li-ind"><span class="swirl-sector-tag">Industrie</span>Stabiele processen en daardoor voorspelbare doorlooptijden</li>
-        <li class="li-grh"><span class="swirl-sector-tag">Glastuinbouw</span>Teelt, techniek en logistiek naadloos op elkaar afgestemd, zeker bij schaalvergroting.</li>
-      </ul>
+      <div class="swirl-examples">
+        <div class="swirl-ex si-ind"><span class="swirl-ex-tag">Industrie</span>Stabiele processen en daardoor voorspelbare doorlooptijden</div>
+        <div class="swirl-ex si-grh"><span class="swirl-ex-tag">Glastuinbouw</span>Teelt, techniek en logistiek naadloos op elkaar afgestemd, zeker bij schaalvergroting.</div>
+      </div>
     </div>
 
     <div class="swirl-card" style="--card-color: var(--kleur-verbeteren);">
@@ -135,10 +134,10 @@
       <div class="swirl-t" data-cms="swirl2_titel">Continu Verbeteren</div>
       <div class="swirl-sub" data-cms="swirl2_sub">Elke afwijking is een kans om beter te worden</div>
       <p class="swirl-body" data-cms="swirl2_body">Verbeteren is geen project maar een dagelijkse werkwijze. Standaarden zijn het vertrekpunt. Afwijkingen worden onmiddellijk zichtbaar en bespreekbaar. Verbeteringen worden geborgd — en vormen de volgende standaard.</p>
-      <ul class="swirl-items">
-        <li class="li-ind"><span class="swirl-sector-tag">Industrie</span>Van losse projecten naar integraal dagelijks verbeteren</li>
-        <li class="li-grh"><span class="swirl-sector-tag">Glastuinbouw</span>Standaarden brengen stabiliteit, bijv. minder handelingsschade, in het werk en ruimte voor groei.</li>
-      </ul>
+      <div class="swirl-examples">
+        <div class="swirl-ex si-ind"><span class="swirl-ex-tag">Industrie</span>Van losse projecten naar integraal dagelijks verbeteren</div>
+        <div class="swirl-ex si-grh"><span class="swirl-ex-tag">Glastuinbouw</span>Standaarden brengen stabiliteit, bijv. minder handelingsschade, in het werk en ruimte voor groei.</div>
+      </div>
     </div>
 
     <div class="swirl-card" style="--card-color: var(--kleur-lerende-org);">
@@ -146,10 +145,10 @@
       <div class="swirl-t" data-cms="swirl3_titel">Continu Lerende Organisatie</div>
       <div class="swirl-sub" data-cms="swirl3_sub">Mensen groeien mee met de organisatie</div>
       <p class="swirl-body" data-cms="swirl3_body">Vakmanschap ontwikkelt zich in het dagelijkse werk. Kennis wordt collectief eigendom van de organisatie. Leiderschap creëert de condities waarin leren veilig, zichtbaar en gewoon is.</p>
-      <ul class="swirl-items">
-        <li class="li-ind"><span class="swirl-sector-tag">Industrie</span>Van individuele expertise naar organisatieleren</li>
-        <li class="li-grh"><span class="swirl-sector-tag">Glastuinbouw</span>Vakkennis in de aansturende laag overdraagbaar maken voor de hele organisatie</li>
-      </ul>
+      <div class="swirl-examples">
+        <div class="swirl-ex si-ind"><span class="swirl-ex-tag">Industrie</span>Van individuele expertise naar organisatieleren</div>
+        <div class="swirl-ex si-grh"><span class="swirl-ex-tag">Glastuinbouw</span>Vakkennis in de aansturende laag overdraagbaar maken voor de hele organisatie</div>
+      </div>
     </div>
 
   </div>
