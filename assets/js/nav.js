@@ -9,7 +9,7 @@
   var sectorActive = sectorPages.indexOf(page) !== -1;
 
   var html = '<nav id="main-nav">'
-    + '<a href="index.html" class="nav-logo"><img src="assets/img/ewp-logo-v3-nav.png" alt="Excellence with Passion" class="nav-logo-img"></a>'
+    + '<a href="index.html" class="nav-logo"><img src="assets/img/ewp-logo-v3-nav.png?v=2" alt="Excellence with Passion" class="nav-logo-img"></a>'
     + '<button class="nav-hamburger" id="nav-hamburger" aria-label="Menu openen" aria-expanded="false"><span></span><span></span><span></span></button>'
     + '<div class="nav-overlay" id="nav-overlay"></div>'
     + '<ul class="nav-links" id="nav-links">'

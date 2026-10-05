@@ -1,7 +1,7 @@
 /* ═══════════════════════════════════════════════════════════════
    Excellence with Passion — Gedeelde stijlen v3
-   --kleur-verbeteren   #e3001b  (Continu Verbeteren)
-   --kleur-lerende-org  #c07800  (Lerende Organisatie)
+   --kleur-verbeteren   #c07800  (Continu Verbeteren)
+   --kleur-lerende-org  #e3001b  (Lerende Organisatie)
    --kleur-waardestroom #9d9ea0  (Continue Waardestroom)
    --kleur-industrie    #1e2d3d  (sector donkerblauw)
    --kleur-glastuinbouw #1a2e22  (sector donkergroen)
@@ -12,8 +12,8 @@
 :root {
   /* ── Definitieve merkkleur (semantisch) ── */
   --kleur-waardestroom:   #9d9ea0;  /* grijs  — Continue Waardestroom  */
-  --kleur-verbeteren:     #e3001b;  /* rood   — Continu Verbeteren     */
-  --kleur-lerende-org:    #c07800;  /* amber  — Lerende Organisatie    */
+  --kleur-verbeteren:     #c07800;  /* amber  — Continu Verbeteren     */
+  --kleur-lerende-org:    #e3001b;  /* rood   — Lerende Organisatie    */
   --kleur-industrie:      #1e2d3d;  /* donkerblauw — sectorkleur       */
   --kleur-glastuinbouw:   #1a2e22;  /* donkergroen — sectorkleur       */
   --kleur-achtergrond:    #f5f2ec;  /* warm wit                        */
@@ -21,9 +21,9 @@
   --kleur-mist:           #e8e4db;  /* lichte secties                  */
 
   /* ── Aliassen voor bestaande CSS (backward-compat) ── */
-  --red:          var(--kleur-verbeteren);
+  --red:          #e3001b;
   --red-dim:      #ff4d60;
-  --amber:        var(--kleur-lerende-org);
+  --amber:        #c07800;
   --amber-dim:    #e09030;
   --grey:         var(--kleur-waardestroom);
   --grey-dark:    #6d6e70;
