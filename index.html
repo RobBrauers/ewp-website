@@ -43,16 +43,16 @@
     .swirls-label { font-size: .68rem; font-weight: 500; letter-spacing: .15em; text-transform: uppercase; color: var(--kleur-waardestroom); margin-bottom: 1rem; }
     .swirls-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.8rem,3vw,2.8rem); font-weight: 300; color: var(--kleur-tekst); margin-bottom: 4rem; }
     .swirls-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; }
-    .swirl-card { padding: 2.5rem; border-top: 3px solid var(--card-color, var(--kleur-waardestroom)); background: #fff; }
+    .swirl-card { padding: 2.5rem; border-top: 3px solid var(--card-color, var(--kleur-waardestroom)); background: #fff; display: flex; flex-direction: column; }
     .swirl-num { font-family: 'Cormorant Garamond', serif; font-size: 3rem; font-weight: 300; color: var(--card-color); line-height: 1; margin-bottom: 1rem; }
     .swirl-t { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; font-weight: 600; color: var(--kleur-tekst); margin-bottom: .5rem; }
     .swirl-sub { font-size: .78rem; font-style: italic; color: var(--card-color); margin-bottom: 1.25rem; }
     .swirl-body { font-size: .88rem; line-height: 1.75; color: #555; margin-bottom: 1.5rem; }
-    .swirl-items { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: .5rem; }
+    .swirl-items { list-style: none; padding: 0; margin: auto 0 0; display: flex; flex-direction: column; gap: .5rem; }
     .swirl-items li { font-size: .82rem; color: #555; padding: .55rem .75rem .55rem .85rem; border-left: 3px solid var(--card-color); background: rgba(0,0,0,.03); position: relative; }
     .swirl-items li::before { display: none; }
-    .swirl-items li.li-ind { border-color: var(--kleur-industrie); background: rgba(30,45,61,.06); }
-    .swirl-items li.li-grh { border-color: var(--kleur-glastuinbouw); background: rgba(26,46,34,.06); }
+    .swirl-items li.li-ind { border-color: var(--kleur-industrie); background: #dce8f2; }
+    .swirl-items li.li-grh { border-color: var(--kleur-glastuinbouw); background: #d8eddf; }
     .swirl-sector-tag { display: block; font-size: .57rem; font-weight: 500; letter-spacing: .12em; text-transform: uppercase; margin-bottom: .2rem; }
     .li-ind .swirl-sector-tag { color: var(--kleur-industrie); }
     .li-grh .swirl-sector-tag { color: var(--kleur-glastuinbouw); }
@@ -107,7 +107,7 @@
     </h1>
     <p class="home-a" data-cms="hero_intro">Duurzame groei vraagt dat drie krachten tegelijk ontwikkelen: excellente processen, systematisch verbeteren en een organisatie die leert. Leiderschap is de kern die alle drie in beweging brengt.</p>
     <div class="home-cta-row">
-      <a href="sector-industrie.html" class="btn-primary">Industrie</a>
+      <a href="sector-industrie.html" class="btn-dark">Industrie</a>
       <a href="sector-glastuinbouw.html" class="btn-greenhouse">Glastuinbouw</a>
     </div>
   </div>
