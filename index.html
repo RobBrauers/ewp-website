@@ -41,7 +41,10 @@
     /* ── Drie Swirls ── */
     .swirls-section { background: var(--kleur-achtergrond); padding: 6rem 4rem; }
     .swirls-label { font-size: .68rem; font-weight: 500; letter-spacing: .15em; text-transform: uppercase; color: var(--kleur-waardestroom); margin-bottom: 1rem; }
-    .swirls-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.8rem,3vw,2.8rem); font-weight: 300; color: var(--kleur-tekst); margin-bottom: 4rem; }
+    .swirls-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.8rem,3vw,2.8rem); font-weight: 300; color: var(--kleur-tekst); margin-bottom: 0; }
+    .swirls-intro-row { display: grid; grid-template-columns: 1fr auto; align-items: flex-end; gap: 3rem; margin-bottom: 4rem; }
+    .swirl-diagram { width: 160px; display: block; }
+    @media (max-width: 600px) { .swirls-intro-row { grid-template-columns: 1fr; } .swirl-diagram { width: 120px; margin-top: 1.5rem; } }
     .swirls-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; }
     .swirl-card { padding: 2.5rem; border-top: 3px solid var(--card-color, var(--kleur-waardestroom)); background: #fff; display: flex; flex-direction: column; }
     .swirl-num { font-family: 'Cormorant Garamond', serif; font-size: 3rem; font-weight: 300; color: var(--card-color); line-height: 1; margin-bottom: 1rem; }
@@ -114,8 +117,13 @@
 
 <!-- ── Drie Swirls ── -->
 <section class="swirls-section">
-  <div class="swirls-label" data-cms="swirls_label">De drie swirls</div>
-  <h2 class="swirls-title" data-cms="swirls_titel">Één model. Drie krachten.</h2>
+  <div class="swirls-intro-row">
+    <div>
+      <div class="swirls-label" data-cms="swirls_label">De drie swirls</div>
+      <h2 class="swirls-title" data-cms="swirls_titel">Één model. Drie krachten.</h2>
+    </div>
+    <img src="assets/img/ewp-spiraal-v3-cropped.png" alt="De EwP Passion Swirl — drie verweven krachten" class="swirl-diagram">
+  </div>
   <div class="swirls-grid">
 
     <div class="swirl-card" style="--card-color: var(--kleur-waardestroom);">
