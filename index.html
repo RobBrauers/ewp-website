@@ -48,13 +48,14 @@
     .swirl-t { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; font-weight: 600; color: var(--kleur-tekst); margin-bottom: .5rem; }
     .swirl-sub { font-size: .78rem; font-style: italic; color: var(--card-color); margin-bottom: 1.25rem; }
     .swirl-body { font-size: .88rem; line-height: 1.75; color: #555; margin-bottom: 1.5rem; }
-    .swirl-items { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: .6rem; }
-    .swirl-items li { font-size: .82rem; color: #666; padding-left: 1.4rem; position: relative; }
-    .swirl-items li::before { content: ''; position: absolute; left: 0; top: .55em; width: .65rem; height: 2px; background: var(--card-color); }
-    .swirl-items li.li-ind::before { background: var(--red-dim); }
-    .swirl-items li.li-grh::before { background: var(--greenhouse); }
-    .swirl-items li.li-ind { color: #555; }
-    .swirl-items li.li-grh { color: #555; }
+    .swirl-items { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: .5rem; }
+    .swirl-items li { font-size: .82rem; color: #555; padding: .55rem .75rem .55rem .85rem; border-left: 3px solid var(--card-color); background: rgba(0,0,0,.03); position: relative; }
+    .swirl-items li::before { display: none; }
+    .swirl-items li.li-ind { border-color: var(--kleur-industrie); background: rgba(30,45,61,.06); }
+    .swirl-items li.li-grh { border-color: var(--kleur-glastuinbouw); background: rgba(26,46,34,.06); }
+    .swirl-sector-tag { display: block; font-size: .57rem; font-weight: 500; letter-spacing: .12em; text-transform: uppercase; margin-bottom: .2rem; }
+    .li-ind .swirl-sector-tag { color: var(--kleur-industrie); }
+    .li-grh .swirl-sector-tag { color: var(--kleur-glastuinbouw); }
 
     /* ── Samenhang / Kern ── */
     .samenhang-section { background: var(--kleur-industrie); padding: 6rem 4rem; }
@@ -124,8 +125,8 @@
       <div class="swirl-sub" data-cms="swirl1_sub">Waarde stroomt ononderbroken naar de klant</div>
       <p class="swirl-body" data-cms="swirl1_body">Elk proces is zo ingericht dat waarde vloeiend stroomt, in het ritme van de klantvraag — zonder verspilling, wachttijden of kwaliteitsverlies. Kwaliteit ontstaat in het proces.</p>
       <ul class="swirl-items">
-        <li class="li-ind">Stabiele processen en daardoor voorspelbare doorlooptijden</li>
-        <li class="li-grh">Teelt, techniek en logistiek naadloos op elkaar afgestemd, zeker bij schaalvergroting.</li>
+        <li class="li-ind"><span class="swirl-sector-tag">Industrie</span>Stabiele processen en daardoor voorspelbare doorlooptijden</li>
+        <li class="li-grh"><span class="swirl-sector-tag">Glastuinbouw</span>Teelt, techniek en logistiek naadloos op elkaar afgestemd, zeker bij schaalvergroting.</li>
       </ul>
     </div>
 
@@ -135,8 +136,8 @@
       <div class="swirl-sub" data-cms="swirl2_sub">Elke afwijking is een kans om beter te worden</div>
       <p class="swirl-body" data-cms="swirl2_body">Verbeteren is geen project maar een dagelijkse werkwijze. Standaarden zijn het vertrekpunt. Afwijkingen worden onmiddellijk zichtbaar en bespreekbaar. Verbeteringen worden geborgd — en vormen de volgende standaard.</p>
       <ul class="swirl-items">
-        <li class="li-ind">Van losse projecten naar integraal dagelijks verbeteren</li>
-        <li class="li-grh">Standaarden brengen stabiliteit, bijv. minder handelingsschade, in het werk en ruimte voor groei.</li>
+        <li class="li-ind"><span class="swirl-sector-tag">Industrie</span>Van losse projecten naar integraal dagelijks verbeteren</li>
+        <li class="li-grh"><span class="swirl-sector-tag">Glastuinbouw</span>Standaarden brengen stabiliteit, bijv. minder handelingsschade, in het werk en ruimte voor groei.</li>
       </ul>
     </div>
 
@@ -146,8 +147,8 @@
       <div class="swirl-sub" data-cms="swirl3_sub">Mensen groeien mee met de organisatie</div>
       <p class="swirl-body" data-cms="swirl3_body">Vakmanschap ontwikkelt zich in het dagelijkse werk. Kennis wordt collectief eigendom van de organisatie. Leiderschap creëert de condities waarin leren veilig, zichtbaar en gewoon is.</p>
       <ul class="swirl-items">
-        <li class="li-ind">Van individuele expertise naar organisatieleren</li>
-        <li class="li-grh">Vakkennis in de aansturende laag overdraagbaar maken voor de hele organisatie</li>
+        <li class="li-ind"><span class="swirl-sector-tag">Industrie</span>Van individuele expertise naar organisatieleren</li>
+        <li class="li-grh"><span class="swirl-sector-tag">Glastuinbouw</span>Vakkennis in de aansturende laag overdraagbaar maken voor de hele organisatie</li>
       </ul>
     </div>
 
