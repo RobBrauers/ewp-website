@@ -99,3 +99,49 @@
     });
   });
 }());
+
+/* ── Universele kaartgrid hoogte-egalisering ── */
+(function () {
+  var GRIDS = [
+    '.swirl-steps-4',
+    '.swirl-steps',
+    '.stagnatie-cards',
+    '.principe-cards',
+    '.case-cards',
+    '.phase-grid',
+    '.vl-grid',
+    '.niveau-grid',
+    '.swirl-niveau-grid',
+    '.groei-right',
+    '.waarom-grid'
+  ];
+
+  function equaliseAll() {
+    GRIDS.forEach(function (sel) {
+      document.querySelectorAll(sel).forEach(function (grid) {
+        var items = Array.from(grid.children);
+        items.forEach(function (el) { el.style.minHeight = ''; });
+        var rows = {};
+        items.forEach(function (el) {
+          var key = el.offsetTop;
+          if (!rows[key]) rows[key] = [];
+          rows[key].push(el);
+        });
+        Object.keys(rows).forEach(function (key) {
+          var row = rows[key];
+          var max = row.reduce(function (m, el) { return Math.max(m, el.offsetHeight); }, 0);
+          row.forEach(function (el) { el.style.minHeight = max + 'px'; });
+        });
+      });
+    });
+  }
+
+  function reset() {
+    GRIDS.forEach(function (sel) {
+      document.querySelectorAll(sel + ' > *').forEach(function (el) { el.style.minHeight = ''; });
+    });
+  }
+
+  document.addEventListener('cms-loaded', equaliseAll);
+  window.addEventListener('resize', function () { reset(); equaliseAll(); });
+}());
