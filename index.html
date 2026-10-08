@@ -235,7 +235,7 @@
       els.forEach(function(el) { el.style.minHeight = max + 'px'; });
     });
   }
-  document.addEventListener('DOMContentLoaded', equaliseSwirls);
+  document.addEventListener('cms-loaded', equaliseSwirls);
   window.addEventListener('resize', function() {
     document.querySelectorAll('.swirl-t, .swirl-sub, .swirl-body, .swirl-examples').forEach(function(el) {
       el.style.minHeight = '';

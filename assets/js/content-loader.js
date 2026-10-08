@@ -8,6 +8,9 @@
           el.innerHTML = d[k].replace(/\n/g, '<br>');
         });
       });
+      document.dispatchEvent(new CustomEvent('cms-loaded'));
     })
-    .catch(function () {});
+    .catch(function () {
+      document.dispatchEvent(new CustomEvent('cms-loaded'));
+    });
 })();
