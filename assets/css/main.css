@@ -376,6 +376,10 @@ nav.menu-open .nav-overlay { display: block; }
 .three-col  { display: grid; grid-template-columns: repeat(3,1fr); gap: 2px; }
 .four-grid  { display: grid; grid-template-columns: 1fr 1fr;       gap: 2px; }
 
+/* Kaartgrids: gelijke hoogte, inhoud naar onderkant */
+.card-grid { display: grid; gap: 2rem; align-items: stretch; }
+.card-grid > * { height: 100%; box-sizing: border-box; }
+
 /* ── 9. Hero (donker, subpagina's) ───────────────────────── */
 
 .hero {
