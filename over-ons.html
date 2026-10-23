@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Over EwP — Excellence with Passion</title>
+  <meta name="description" content="Excellence with Passion is opgericht door Rob Brauers en Joeri de Beer — twee verbeteraars met één overtuiging: organisaties groeien alleen als processen, leren en leiderschap tegelijk in beweging zijn.">
+
+  <link rel="icon" type="image/png" sizes="16x16"   href="assets/img/ewp-favicon-16.png">
+  <link rel="icon" type="image/png" sizes="32x32"   href="assets/img/ewp-favicon-32.png">
+  <link rel="icon" type="image/png" sizes="64x64"   href="assets/img/ewp-favicon-64.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/img/ewp-favicon-192.png">
+  <link rel="apple-touch-icon"                      href="assets/img/ewp-favicon-512.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/main.css?v=2">
+
+  <style>
+    /* ── Profiel-duo ── */
+    .profiel-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2px;
+    }
+    .profiel-card {
+      padding: 3rem 2.5rem;
+      background: var(--cool-light);
+    }
+    .profiel-foto {
+      width: 100%;
+      max-width: 200px;
+      aspect-ratio: 2 / 3;
+      object-fit: cover;
+      object-position: top;
+      display: block;
+      margin-bottom: 1.75rem;
+      filter: grayscale(15%);
+    }
+    .profiel-opleiding {
+      font-size: .68rem;
+      font-weight: 500;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--red);
+      margin-bottom: .75rem;
+      display: block;
+    }
+    .profiel-naam {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.9rem;
+      font-weight: 300;
+      color: var(--ink);
+      line-height: 1.1;
+      margin-bottom: 1.25rem;
+    }
+    .profiel-body {
+      font-size: .88rem;
+      line-height: 1.8;
+      color: var(--ink);
+      opacity: .75;
+    }
+
+    /* ── Overtuiging-intro ── */
+    .overtuiging-sec {
+      padding: 5rem 2rem;
+      max-width: 720px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .overtuiging-eyebrow {
+      font-size: .68rem;
+      font-weight: 500;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+      color: var(--red);
+      display: block;
+      margin-bottom: 1.25rem;
+    }
+    .overtuiging-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.2rem, 4vw, 3.2rem);
+      font-weight: 300;
+      line-height: 1.15;
+      color: var(--ink);
+      margin-bottom: 1.75rem;
+    }
+    .overtuiging-title em {
+      font-style: italic;
+      color: var(--red);
+    }
+    .overtuiging-body {
+      font-size: .95rem;
+      line-height: 1.85;
+      color: var(--ink);
+      opacity: .7;
+    }
+
+    /* ── Netwerk-balk ── */
+    .netwerk-sec {
+      background: var(--ink);
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+    .netwerk-inner {
+      max-width: 640px;
+      margin: 0 auto;
+    }
+    .netwerk-label {
+      font-size: .68rem;
+      font-weight: 500;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,.45);
+      display: block;
+      margin-bottom: 1rem;
+    }
+    .netwerk-body {
+      font-size: .95rem;
+      line-height: 1.8;
+      color: rgba(255,255,255,.65);
+    }
+
+    /* ── CTA ── */
+    .over-cta {
+      padding: 5rem 2rem;
+      text-align: center;
+    }
+    .over-cta-t {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.8rem, 3vw, 2.6rem);
+      font-weight: 300;
+      color: var(--ink);
+      margin-bottom: 1.5rem;
+      line-height: 1.2;
+    }
+    .over-cta-t em { font-style: italic; color: var(--red); }
+
+    /* ── Responsief ── */
+    @media (max-width: 700px) {
+      .profiel-grid { grid-template-columns: 1fr; gap: 2rem; }
+      .profiel-card { padding: 2rem 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+<script src="assets/js/nav.js"></script>
+
+<!-- ── HERO ── -->
+<section class="hero">
+  <div class="hero-bg-grid"></div>
+  <div class="hero-bg-glow-gold"></div>
+  <div class="hero-content">
+    <div class="sector-badge sb-gold">Over EwP</div>
+    <h1 class="hero-q">
+      Twee verbeteraars.<br>
+      <em class="em-gold">Één overtuiging.</em>
+    </h1>
+    <p class="hero-a">
+      Excellence with Passion is in 2015 opgericht door Rob Brauers en Joeri de Beer — niet als bureau met een breed aanbod, maar vanuit een gedeelde overtuiging: organisaties verbeteren pas duurzaam als processen, leren en leiderschap tegelijk in beweging zijn. Die overtuiging heet de Passion Swirl.
+    </p>
+  </div>
+</section>
+
+<!-- ── TWEE PROFIELEN ── -->
+<section class="sec">
+  <div class="profiel-grid">
+
+    <div class="profiel-card">
+      <img src="assets/img/Rob-Brauers.jpg" alt="Rob Brauers" class="profiel-foto">
+      <span class="profiel-opleiding">Luchtvaart Technische Bedrijfskunde — TU Delft</span>
+      <h2 class="profiel-naam">Rob Brauers</h2>
+      <p class="profiel-body">
+        Rob implementeert verbeterprogramma's sinds 1997 — in industrie en glastuinbouw, van werkvloer tot directie. Zijn kracht zit in het snel en grondig doorgronden van processen én mensen. Hij werkt vanuit rust en nabijheid: vragen stellen in plaats van oplossen, ruimte maken voor wat de organisatie zelf al weet maar nog niet ziet.
+      </p>
+    </div>
+
+    <div class="profiel-card">
+      <img src="assets/img/joeri-de-beer.jpg" alt="Joeri de Beer" class="profiel-foto">
+      <span class="profiel-opleiding">Werktuigbouwkunde &amp; Technische Bedrijfskunde — HTS Tilburg</span>
+      <h2 class="profiel-naam">Joeri de Beer</h2>
+      <p class="profiel-body">
+        Joeri begon zijn loopbaan bij Goodyear, waar hij groeide van CI-manager tot manufacturing manager. Hij behaalde certificaten als Lean Master en Master Black Belt. Zijn aanpak draait om meesterschap en zingeving: mensen groeien en resultaten verbeteren zijn geen tegenpolen — ze versterken elkaar. Je hoeft tenslotte niet ziek te zijn om beter te worden.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ── PARTNERNETWERK ── -->
+<section class="netwerk-sec">
+  <div class="netwerk-inner">
+    <span class="netwerk-label">Ons netwerk</span>
+    <p class="netwerk-body">
+      Naast ons tweeën werken wij samen met een vaste kring van partners voor specifieke vraagstukken — zodat wij altijd de juiste kennis en ervaring kunnen inzetten die uw situatie vraagt.
+    </p>
+  </div>
+</section>
+
+<!-- ── CTA ── -->
+<section class="over-cta">
+  <h2 class="over-cta-t">Klaar om kennis te maken?<br><em>Plan een gesprek.</em></h2>
+  <a href="contact.html" class="btn-primary">Plan een gesprek &rarr;</a>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <a href="index.html" class="footer-logo">
+    <img src="assets/img/ewp-logo-v3-white.png?v=2" alt="Excellence with Passion" class="footer-logo-img">
+  </a>
+  <div class="footer-nav">
+    <a href="visie-passion-swirl.html" class="footer-link">De Passion Swirl &rarr;</a>
+    <a href="contact.html"             class="footer-link">Contact &rarr;</a>
+    <span class="footer-copy">info@excellencewithpassion.com</span>
+  </div>
+</footer>
+
+</body>
+</html>

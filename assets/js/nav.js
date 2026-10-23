@@ -39,6 +39,9 @@
     /* Succesverhalen */
     + '<li><a href="succesverhaal-bakkerij-fuite.html"' + a('succesverhaal-bakkerij-fuite.html') + '>Succesverhalen</a></li>'
 
+    /* Over ons */
+    + '<li><a href="over-ons.html"' + a('over-ons.html') + '>Over ons</a></li>'
+
     /* CTA */
     + '<li><a href="contact.html" class="nav-cta' + (page === 'contact.html' ? ' active' : '') + '">Plan een gesprek</a></li>'
 
