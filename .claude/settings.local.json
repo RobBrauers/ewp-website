@@ -44,7 +44,12 @@
       "Bash(git commit -m 'Tekst principe 5: '\\\\''Bijsturen en leren zijn altijd te laat.'\\\\'' *)",
       "Bash(xargs -I{} basename {})",
       "Bash(curl -s \"https://www.excellencewithpassion.com/wp-content/uploads/2016/08/joeri-lr.jpg\" -o /Users/robbrauers/Downloads/ewp-website/assets/img/joeri-de-beer.jpg)",
-      "Bash(git commit -m 'Verwijder AI-schrijfpatronen uit alle teksten *)"
+      "Bash(git commit -m 'Verwijder AI-schrijfpatronen uit alle teksten *)",
+      "Bash(git commit -m 'Verwijder herhalende woordpatronen uit alle teksten *)",
+      "Bash(git commit -m 'Fix hoogte-uitlijning stag-gevolg blokjes op passion-swirl pagina *)",
+      "Bash(git commit -m 'Pin stag-gevolg blokjes onderaan via flexbox *)",
+      "Bash(git commit -m 'Fix stag-gevolg uitlijning via margin-top:auto *)",
+      "Bash(git commit -m 'Egaliseer hoogte stag-gevolg blokjes via equalizer *)"
     ]
   }
 }

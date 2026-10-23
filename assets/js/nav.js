@@ -154,11 +154,27 @@
   function equaliseInners() {
     INNER_GROUPS.forEach(function (group) {
       document.querySelectorAll(group.parent).forEach(function (container) {
-        group.children.forEach(function (childSel) {
-          var els = Array.from(container.querySelectorAll(childSel));
-          els.forEach(function (el) { el.style.minHeight = ''; });
-          var max = els.reduce(function (m, el) { return Math.max(m, el.offsetHeight); }, 0);
-          els.forEach(function (el) { el.style.minHeight = max + 'px'; });
+        /* Groepeer directe kinderen per rij (offsetTop) */
+        var cards = Array.from(container.children);
+        var rows = {};
+        cards.forEach(function (card) {
+          var key = card.offsetTop;
+          if (!rows[key]) rows[key] = [];
+          rows[key].push(card);
+        });
+        /* Egaliseer inner-elementen alleen binnen dezelfde rij */
+        Object.keys(rows).forEach(function (key) {
+          var row = rows[key];
+          group.children.forEach(function (childSel) {
+            var els = [];
+            row.forEach(function (card) {
+              var el = card.querySelector(childSel);
+              if (el) els.push(el);
+            });
+            els.forEach(function (el) { el.style.minHeight = ''; });
+            var max = els.reduce(function (m, el) { return Math.max(m, el.offsetHeight); }, 0);
+            els.forEach(function (el) { el.style.minHeight = max + 'px'; });
+          });
         });
       });
     });
