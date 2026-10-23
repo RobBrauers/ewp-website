@@ -117,7 +117,8 @@
     '.swirl-niveau-grid',
     '.groei-right',
     '.waarom-grid',
-    '.int-grid'
+    '.int-grid',
+    '.profiel-grid'
   ];
 
   function equaliseAll() {
@@ -146,7 +147,8 @@
     { parent: '.swirl-steps-4',   children: ['.step-title', '.step-body', '.step-praktijk'] },
     { parent: '.stagnatie-cards', children: ['.stag-title', '.stag-body'] },
     { parent: '.principe-cards',  children: ['.pc-title',   '.pc-body']  },
-    { parent: '.int-grid',        children: ['.int-lbl', '.int-j', '.int-t', '.int-b', '.dash-list'] }
+    { parent: '.int-grid',        children: ['.int-lbl', '.int-j', '.int-t', '.int-b', '.dash-list'] },
+    { parent: '.profiel-grid',    children: ['.profiel-opleiding', '.profiel-naam', '.profiel-body'] }
   ];
 
   function equaliseInners() {

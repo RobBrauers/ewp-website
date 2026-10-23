@@ -31,10 +31,10 @@
     }
     .profiel-foto {
       width: 100%;
-      max-width: 200px;
-      aspect-ratio: 2 / 3;
+      max-width: 220px;
+      height: 300px;
       object-fit: cover;
-      object-position: top;
+      object-position: top center;
       display: block;
       margin-bottom: 1.75rem;
       filter: grayscale(15%);
@@ -148,6 +148,7 @@
 <body>
 
 <script src="assets/js/nav.js"></script>
+<script>document.addEventListener('DOMContentLoaded', function () { document.dispatchEvent(new CustomEvent('cms-loaded')); });</script>
 
 <!-- ── HERO ── -->
 <section class="hero">
