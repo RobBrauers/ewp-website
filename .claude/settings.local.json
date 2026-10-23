@@ -57,7 +57,10 @@
       "Bash(git commit -m 'Revert flex:1 op cta-btns: tekst wraps bij lange labels *)",
       "Bash(git commit -m 'Bump main.css naar v=3 voor cache-busting knopfix *)",
       "Bash(git commit -m 'Fix cta-row knoppen: column op mobiel ipv flex:1 *)",
-      "Bash(git commit -m 'Bump main.css naar v=4 voor cache-busting column-fix *)"
+      "Bash(git commit -m 'Bump main.css naar v=4 voor cache-busting column-fix *)",
+      "Bash(curl -s \"https://glowing-custard-89734c.netlify.app/assets/css/main.css?v=4\")",
+      "Bash(sed -i '' 's/main\\\\.css?v=4/main.css?v=5/g' index.html sector-glastuinbouw.html over-ons.html contact.html succesverhaal-bakkerij-fuite.html visie-hoe-wij-werken.html visie-assessment.html sector-industrie.html visie-passion-swirl.html visie-leiderschap.html visie/hoe-wij-werken.html visie/assessment.html visie/passion-swirl.html visie/leiderschap.html)",
+      "Bash(git commit -m 'Fix cta-btns op mobiel: column zodat lange knoptekst past *)"
     ]
   }
 }
