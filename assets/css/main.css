@@ -484,6 +484,7 @@ nav.menu-open .nav-overlay { display: block; }
 }
 
 .cta-row { display: flex; gap: 1rem; flex-wrap: wrap; }
+.cta-row a { flex: 1; min-width: 140px; justify-content: center; }
 
 /* Sector-badge */
 .sector-badge {
