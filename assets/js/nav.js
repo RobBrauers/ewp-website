@@ -136,12 +136,44 @@
     });
   }
 
+  /* Egaliseer inner-elementen (titel, body) per kaartgroep */
+  var INNER_GROUPS = [
+    { parent: '.swirl-steps',     children: ['.step-title', '.step-body'] },
+    { parent: '.swirl-steps-4',   children: ['.step-title', '.step-body'] },
+    { parent: '.stagnatie-cards', children: ['.stag-title', '.stag-body'] },
+    { parent: '.principe-cards',  children: ['.pc-title',   '.pc-body']  }
+  ];
+
+  function equaliseInners() {
+    INNER_GROUPS.forEach(function (group) {
+      document.querySelectorAll(group.parent).forEach(function (container) {
+        group.children.forEach(function (childSel) {
+          var els = Array.from(container.querySelectorAll(childSel));
+          els.forEach(function (el) { el.style.minHeight = ''; });
+          var max = els.reduce(function (m, el) { return Math.max(m, el.offsetHeight); }, 0);
+          els.forEach(function (el) { el.style.minHeight = max + 'px'; });
+        });
+      });
+    });
+  }
+
+  function resetInners() {
+    INNER_GROUPS.forEach(function (group) {
+      INNER_GROUPS.forEach(function (g) {
+        g.children.forEach(function (childSel) {
+          document.querySelectorAll(childSel).forEach(function (el) { el.style.minHeight = ''; });
+        });
+      });
+    });
+  }
+
   function reset() {
     GRIDS.forEach(function (sel) {
       document.querySelectorAll(sel + ' > *').forEach(function (el) { el.style.minHeight = ''; });
     });
+    resetInners();
   }
 
-  document.addEventListener('cms-loaded', equaliseAll);
-  window.addEventListener('resize', function () { reset(); equaliseAll(); });
+  document.addEventListener('cms-loaded', function () { equaliseAll(); equaliseInners(); });
+  window.addEventListener('resize', function () { reset(); equaliseAll(); equaliseInners(); });
 }());
