@@ -60,7 +60,10 @@
       "Bash(git commit -m 'Bump main.css naar v=4 voor cache-busting column-fix *)",
       "Bash(curl -s \"https://glowing-custard-89734c.netlify.app/assets/css/main.css?v=4\")",
       "Bash(sed -i '' 's/main\\\\.css?v=4/main.css?v=5/g' index.html sector-glastuinbouw.html over-ons.html contact.html succesverhaal-bakkerij-fuite.html visie-hoe-wij-werken.html visie-assessment.html sector-industrie.html visie-passion-swirl.html visie-leiderschap.html visie/hoe-wij-werken.html visie/assessment.html visie/passion-swirl.html visie/leiderschap.html)",
-      "Bash(git commit -m 'Fix cta-btns op mobiel: column zodat lange knoptekst past *)"
+      "Bash(git commit -m 'Fix cta-btns op mobiel: column zodat lange knoptekst past *)",
+      "Bash(curl -s \"https://glowing-custard-89734c.netlify.app/assets/css/main.css?v=5\")",
+      "Bash(sed -i '' 's/main\\\\.css?v=5/main.css?v=6/g' index.html sector-glastuinbouw.html over-ons.html contact.html succesverhaal-bakkerij-fuite.html visie-hoe-wij-werken.html visie-assessment.html sector-industrie.html visie-passion-swirl.html visie-leiderschap.html visie/hoe-wij-werken.html visie/assessment.html visie/passion-swirl.html visie/leiderschap.html)",
+      "Bash(git commit -m 'Fix lange knoptekst: minder padding op mobiel in cta-btns *)"
     ]
   }
 }
