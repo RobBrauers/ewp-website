@@ -271,7 +271,7 @@ nav.menu-open .nav-overlay { display: block; }
   display: inline-flex;
   align-items: center;
   gap: .5rem;
-  padding: 1rem 2.2rem;
+  padding: 1rem 2.5rem;
   background: var(--greenhouse);
   color: white;
   font-size: .82rem;
