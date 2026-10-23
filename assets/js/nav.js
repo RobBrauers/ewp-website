@@ -138,8 +138,8 @@
 
   /* Egaliseer inner-elementen (titel, body) per kaartgroep */
   var INNER_GROUPS = [
-    { parent: '.swirl-steps',     children: ['.step-title', '.step-body'] },
-    { parent: '.swirl-steps-4',   children: ['.step-title', '.step-body'] },
+    { parent: '.swirl-steps',     children: ['.step-title', '.step-body', '.step-list'] },
+    { parent: '.swirl-steps-4',   children: ['.step-title', '.step-body', '.step-praktijk'] },
     { parent: '.stagnatie-cards', children: ['.stag-title', '.stag-body'] },
     { parent: '.principe-cards',  children: ['.pc-title',   '.pc-body']  }
   ];
