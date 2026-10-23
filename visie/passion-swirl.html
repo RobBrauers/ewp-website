@@ -77,6 +77,8 @@
       background: rgba(255,255,255,.04);
       border: 1px solid rgba(255,255,255,.07);
       position: relative;
+      display: flex;
+      flex-direction: column;
     }
     .stagnatie-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; }
     .sc-grey::before   { background: var(--grey); }
@@ -92,7 +94,7 @@
     .ss-gold  { color: rgba(184,154,90,.8); }
 
     .stag-title  { font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; font-weight: 600; color: white; margin-bottom: .75rem; line-height: 1.25; }
-    .stag-body   { font-size: .82rem; line-height: 1.7; color: rgba(255,255,255,.5); margin-bottom: 1.25rem; }
+    .stag-body   { font-size: .82rem; line-height: 1.7; color: rgba(255,255,255,.5); margin-bottom: 1.25rem; flex-grow: 1; }
     .stag-gevolg { padding: .9rem 1rem; background: rgba(255,255,255,.04); border-left: 2px solid rgba(227,0,27,.4); font-size: .78rem; line-height: 1.5; color: rgba(255,255,255,.4); font-style: italic; }
 
     /* ── Wortels-sectie ── */
