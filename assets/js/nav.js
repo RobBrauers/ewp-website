@@ -113,7 +113,8 @@
     '.niveau-grid',
     '.swirl-niveau-grid',
     '.groei-right',
-    '.waarom-grid'
+    '.waarom-grid',
+    '.int-grid'
   ];
 
   function equaliseAll() {
@@ -141,7 +142,8 @@
     { parent: '.swirl-steps',     children: ['.step-title', '.step-body', '.step-list'] },
     { parent: '.swirl-steps-4',   children: ['.step-title', '.step-body', '.step-praktijk'] },
     { parent: '.stagnatie-cards', children: ['.stag-title', '.stag-body'] },
-    { parent: '.principe-cards',  children: ['.pc-title',   '.pc-body']  }
+    { parent: '.principe-cards',  children: ['.pc-title',   '.pc-body']  },
+    { parent: '.int-grid',        children: ['.int-lbl', '.int-j', '.int-t', '.int-b', '.dash-list'] }
   ];
 
   function equaliseInners() {
