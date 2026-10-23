@@ -582,6 +582,7 @@ nav.menu-open .nav-overlay { display: block; }
   margin-bottom: 3rem;
 }
 .cta-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+.cta-btns a { flex: 1; min-width: 140px; justify-content: center; }
 
 /* ── 13. Footer ───────────────────────────────────────────── */
 
