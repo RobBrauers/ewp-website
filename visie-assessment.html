@@ -81,8 +81,10 @@
     .sb-body  { font-size: .88rem; line-height: 1.65; color: var(--ink); opacity: .7; }
 
     /* ── Responsief ── */
+    .vragen-layout { display: grid; grid-template-columns: 1fr 2fr; gap: 6rem; align-items: start; }
     @media (max-width: 900px) {
       .niveau-grid, .swirl-niveau-grid { grid-template-columns: 1fr; gap: 2rem; }
+      .vragen-layout { grid-template-columns: 1fr; gap: 2.5rem; }
     }
   </style>
 </head>
@@ -115,7 +117,7 @@
 <!-- ── VIER VRAGEN ── -->
 <section class="sec" id="vragen">
   <div class="sec-inner">
-    <div style="display:grid;grid-template-columns:1fr 2fr;gap:6rem;align-items:start">
+    <div class="vragen-layout">
       <div>
         <p class="eyebrow">Vier sleutelvragen</p>
         <h2 class="sec-title" style="margin-bottom:2rem">

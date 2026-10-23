@@ -80,8 +80,10 @@
     .vl-t { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; font-weight: 600; color: var(--ink); margin-bottom: 1rem; }
 
     /* ── Responsief ── */
+    .veranderp-layout { display: grid; grid-template-columns: 1fr 2fr; gap: 6rem; align-items: start; }
     @media (max-width: 900px) {
       .bewust-grid, .phase-grid, .vl-grid { grid-template-columns: 1fr; gap: 2rem; }
+      .veranderp-layout { grid-template-columns: 1fr; gap: 2.5rem; }
     }
   </style>
 </head>
@@ -128,7 +130,7 @@
 <!-- ── VERANDERFILOSOFIE ── -->
 <section class="sec">
   <div class="sec-inner">
-    <div style="display:grid;grid-template-columns:1fr 2fr;gap:6rem;align-items:start">
+    <div class="veranderp-layout">
       <div>
         <p class="eyebrow">Veranderprincipes</p>
         <h2 class="sec-title" style="margin-bottom:2rem">
