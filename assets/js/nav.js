@@ -145,7 +145,7 @@
   var INNER_GROUPS = [
     { parent: '.swirl-steps',     children: ['.step-title', '.step-body', '.step-list'] },
     { parent: '.swirl-steps-4',   children: ['.step-title', '.step-body', '.step-praktijk'] },
-    { parent: '.stagnatie-cards', children: ['.stag-title', '.stag-body'] },
+    { parent: '.stagnatie-cards', children: ['.stag-title', '.stag-body', '.stag-gevolg'] },
     { parent: '.principe-cards',  children: ['.pc-title',   '.pc-body']  },
     { parent: '.int-grid',        children: ['.int-lbl', '.int-j', '.int-t', '.int-b', '.dash-list'] },
     { parent: '.profiel-grid',    children: ['.profiel-opleiding', '.profiel-naam', '.profiel-body'] }
